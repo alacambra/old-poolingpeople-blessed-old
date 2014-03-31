@@ -1,0 +1,12 @@
+{
+"description":"faked task to use with efforts",
+"title":"EffortedTask",
+"progress":0.25,
+"duration":34,
+"effort":"0",
+"endDate":1,
+"startDate":2,
+"id":"1288f305-21a3-4515-9fbd-3777e4175b8f",
+"priority":"NORMAL",
+"status":"COMPLETED"
+}

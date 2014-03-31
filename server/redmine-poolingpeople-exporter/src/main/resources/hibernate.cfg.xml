@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.bytecode.use_reflection_optimizer">false</property>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.password">root</property>
+        <property name="hibernate.connection.url">jdbc:mysql://cacaolat/redmine</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</property>
+        <property name="hibernate.search.autoregister_listeners">false</property>
+        <mapping class="poolingpeople.exporter.redmine.Users" />
+        <mapping class="poolingpeople.exporter.redmine.Watchers" />
+        <mapping class="poolingpeople.exporter.redmine.MemberRoles" />
+        <mapping class="poolingpeople.exporter.redmine.CustomFieldsTrackers" />
+        <mapping class="poolingpeople.exporter.redmine.CustomFieldsProjects" />
+        <mapping class="poolingpeople.exporter.redmine.Rates" />
+        <mapping class="poolingpeople.exporter.redmine.CustomFields" />
+        <mapping class="poolingpeople.exporter.redmine.Messages" />
+        <mapping class="poolingpeople.exporter.redmine.Boards" />
+        <mapping class="poolingpeople.exporter.redmine.ChangesetParents" />
+        <mapping class="poolingpeople.exporter.redmine.UserPreferences" />
+        <mapping class="poolingpeople.exporter.redmine.Settings" />
+        <mapping class="poolingpeople.exporter.redmine.Changes" />
+        <mapping class="poolingpeople.exporter.redmine.Comments" />
+        <mapping class="poolingpeople.exporter.redmine.WikiContentVersions" />
+        <mapping class="poolingpeople.exporter.redmine.Queries" />
+        <mapping class="poolingpeople.exporter.redmine.JournalDetails" />
+        <mapping class="poolingpeople.exporter.redmine.ScheduledIssues" />
+        <mapping class="poolingpeople.exporter.redmine.Versions" />
+        <mapping class="poolingpeople.exporter.redmine.Changesets" />
+        <mapping class="poolingpeople.exporter.redmine.GroupsUsers" />
+        <mapping class="poolingpeople.exporter.redmine.SchemaMigrations" />
+        <mapping class="poolingpeople.exporter.redmine.Journals" />
+        <mapping class="poolingpeople.exporter.redmine.Roles" />
+        <mapping class="poolingpeople.exporter.redmine.Attachments" />
+        <mapping class="poolingpeople.exporter.redmine.Tokens" />
+        <mapping class="poolingpeople.exporter.redmine.Deliverables" />
+        <mapping class="poolingpeople.exporter.redmine.ProjectsTrackers" />
+        <mapping class="poolingpeople.exporter.redmine.IssueStatuses" />
+        <mapping class="poolingpeople.exporter.redmine.Members" />
+        <mapping class="poolingpeople.exporter.redmine.AuthSources" />
+        <mapping class="poolingpeople.exporter.redmine.IssueCategories" />
+        <mapping class="poolingpeople.exporter.redmine.Trackers" />
+        <mapping class="poolingpeople.exporter.redmine.Workflows" />
+        <mapping class="poolingpeople.exporter.redmine.WikiContents" />
+        <mapping class="poolingpeople.exporter.redmine.Documents" />
+        <mapping class="poolingpeople.exporter.redmine.News" />
+        <mapping class="poolingpeople.exporter.redmine.Wikis" />
+        <mapping class="poolingpeople.exporter.redmine.Repositories" />
+        <mapping class="poolingpeople.exporter.redmine.ScheduleDefaults" />
+        <mapping class="poolingpeople.exporter.redmine.TimeEntries" />
+        <mapping class="poolingpeople.exporter.redmine.Issues" />
+        <mapping class="poolingpeople.exporter.redmine.ScheduleEntries" />
+        <mapping class="poolingpeople.exporter.redmine.CustomValues" />
+        <mapping class="poolingpeople.exporter.redmine.ScheduleClosedEntries" />
+        <mapping class="poolingpeople.exporter.redmine.WikiRedirects" />
+        <mapping class="poolingpeople.exporter.redmine.WikiPages" />
+        <mapping class="poolingpeople.exporter.redmine.OpenIdAuthenticationNonces" />
+        <mapping class="poolingpeople.exporter.redmine.EnabledModules" />
+        <mapping class="poolingpeople.exporter.redmine.ChangesetsIssues" />
+        <mapping class="poolingpeople.exporter.redmine.OpenIdAuthenticationAssociations" />
+        <mapping class="poolingpeople.exporter.redmine.Projects" />
+        <mapping class="poolingpeople.exporter.redmine.Enumerations" />
+        <mapping class="poolingpeople.exporter.redmine.IssueRelations" />
+    </session-factory>
+</hibernate-configuration>
