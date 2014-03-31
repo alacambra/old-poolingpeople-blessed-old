@@ -1,0 +1,91 @@
+[{
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "DefaultUser",
+    "email": "a@a.com",
+    "id": "ea8d4d56-3338-4f8a-8e10-2fa2cb39b187"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Redmine",
+    "email": "dev@ion2s.com",
+    "id": "8b5f05c1-368e-4d3b-9863-b5bd3c372b54"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "",
+    "email": "1393236106813@s.com",
+    "id": "e9b98500-e554-4fa6-8024-0158de3f016c"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Kerstin",
+    "email": "kerstin.tome@ion2s.com",
+    "id": "7388eae9-fc6c-4a44-af33-8dc9dd62bc18"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Michael ",
+    "email": "michael.gaertner@ion2s.com",
+    "id": "65811496-d466-46b6-b032-71322447738c"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Konstantin",
+    "email": "kp@ion2s.com",
+    "id": "76688e7d-14cb-4fd8-adf8-ab69dae22c8e"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "test",
+    "email": "k.tome@ion2s.com",
+    "id": "c1e7c9f6-4693-4f93-9ca2-fe7f910aa623"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Mathias",
+    "email": "mathias.eckhardt@ion2s.com",
+    "id": "9417cd25-ba9e-4dab-ad2f-566bdf41b60b"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Dawid",
+    "email": "dawid.sochacki@ion2s.com",
+    "id": "708a4694-e35a-44c6-8a1b-d0db4a6e6faf"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Andre",
+    "email": "andre.weiland@ion2s.com",
+    "id": "6b826041-9e25-47b9-bddb-083b8d865bcf"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Sascha ",
+    "email": "sascha.ivanov@ion2s.com",
+    "id": "3dfb5d2f-b554-4b8d-9674-1eced1aa6454"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Fania",
+    "email": "fania.joeck@ion2s.com",
+    "id": "0e49e5b1-ef1b-4b1b-99b5-ca99191bb7f7"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Felix",
+    "email": "felix.schreiber@ion2s.com",
+    "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Lina",
+    "email": "lina.ebbinghaus@ion2s.com",
+    "id": "cca36572-4563-4d60-a163-7769ef5ff1a0"
+}, {
+    "lastName": null,
+    "birthDate": null,
+    "firstName": "Daniela",
+    "email": "daniela.strauss@ion2s.com",
+    "id": "8c61ec4a-4148-4302-becc-5cb86c9b8536"
+}]

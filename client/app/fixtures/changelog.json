@@ -1,0 +1,39 @@
+[{
+    "action": {
+        "code": null,
+        "oldValue": "DNS Eintrag",
+        "newValue": "change",
+        "id": "12658548-0bdd-4f4e-ad16-8eb9dc1affe1",
+        "changedAttributeName": "Title"
+    },
+    "date": null,
+    "subject": {
+        "email": "albert.lacambra@ion2s.com",
+        "firstName": "Albert",
+        "lastName": null,
+        "birthDate": null,
+        "id": "bcc4f44e-b95d-4b4c-9655-cbf41bf20e81"
+    },
+    "id": "12658548-0bdd-4f4e-ad16-8eb9dc1affe1",
+    "objectComments": [],
+    "nodeType": "CHANGELOG"
+}, {
+    "action": {
+        "code": null,
+        "oldValue": "change",
+        "newValue": "change111",
+        "id": "d698a276-89b7-44d5-b452-d1c43b81cf2c",
+        "changedAttributeName": "Title"
+    },
+    "date": 1395841865562,
+    "subject": {
+        "email": "a@a.com",
+        "firstName": "DefaultUser",
+        "lastName": null,
+        "birthDate": null,
+        "id": "ea8d4d56-3338-4f8a-8e10-2fa2cb39b187"
+    },
+    "id": "d698a276-89b7-44d5-b452-d1c43b81cf2c",
+    "objectComments": [],
+    "nodeType": "CHANGELOG"
+}]

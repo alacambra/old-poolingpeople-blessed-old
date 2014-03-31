@@ -1,0 +1,150 @@
+<div>
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="close()">&times;</button>
+		<h4 class="modal-title">{{ modal.title }}</h4>
+	</div>
+	<div class="modal-body">
+
+		<form name="form.model" class="form-horizontal" role="form" novalidate="">
+			<!-- Date -->
+			<div class="form-group">
+				<label for="dateInput" class="col-sm-3 control-label">Datum</label>
+
+				<div class="col-sm-5 input-group">
+					<input name="date"
+						   ng-model="modal.newEffort.date"
+						   pp-convert-date="dd.MM.yyyy"
+						   class="form-control"
+						   id="dateInput"
+						   datepicker-popup="dd.MM.yyyy"
+						   min="'1900-01-01'"
+						   max="'2100-01-01'"
+						   ng-blur="form.datePickerOpened = false"
+						   disabled="disabled"
+						   is-open="form.datePickerOpened">
+					<span class="input-group-btn">
+						<button class="btn btn-default" ng-click="openDatePicker($event, 'datePickerOpened')">
+							<i class="glyphicon glyphicon-calendar"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+
+			<!-- Time -->
+			<div class="form-group">
+				<label for="timeInput" class="col-sm-3 control-label">Zeit</label>
+
+				<div class="col-sm-5 input-group">
+					<input name="time"
+						   ng-model="modal.newEffort.time"
+						   pp-model=""
+						   pp-convert-time=""
+						   type="number"
+						   class="form-control text-right"
+						   id="timeInput"
+						   placeholder="Zeit"
+						   required=""
+						   ng-enter=""
+						   min="1">
+					<span class="input-group-addon">Stunden</span>
+				</div>
+				<div class="error col-sm-9 col-sm-offset-3" ng-if="form.model.time.$invalid">
+					<small class="error" ng-show="form.model.time.$error.required">Eine Zeit Angabe ist erforderlich.</small>
+				</div>
+			</div>
+
+			<!-- Comment -->
+			<div class="form-group">
+				<label for="commentInput" class="col-sm-3 control-label">Kommentar</label>
+
+				<div class="col-sm-9">
+					<input name="comment"
+						   ng-model="modal.newEffort.comment"
+						   pp-model=""
+						   type="text"
+						   class="form-control"
+						   id="commentInput"
+						   placeholder="Kommentar"
+						   ng-enter="editable.comment = false; save()">
+				</div>
+				<div class="error col-sm-9 col-sm-offset-3" ng-if="form.model.title.$invalid">
+					<small class="error" ng-show="form.model.title.$error.required">Ein Kommentar ist erforderlich.</small>
+				</div>
+			</div>
+		</form>
+
+		<hr />
+
+		<table class="table">
+			<thead>
+			<tr>
+				<th>Zeit</th>
+				<th>Kommentar</th>
+				<th>Datum</th>
+				<th></th>
+			</tr>
+			</thead>
+			<tbody ng-loading="effortModal.efforts.{{ modal.task.id }}" >
+				<tr>
+					<td colspan="4" class="text-center">
+						<img src="images/load_indicator.gif" alt="" style="padding:50px" />
+					</td>
+				</tr>
+			</tbody>
+			<tbody ng-loading="!effortModal.efforts.{{ modal.task.id }}" >
+			<tr ng-loading="effortModal.newEffort">
+				<td class="text-center" colspan="4">
+					<img src="images/load_indicator.gif" alt="" width="16" />
+				</td>
+			</tr>
+			<tr ng-repeat="effort in modal.task.efforts | orderBy:'-date'" ng-controller="EffortCtrl">
+				<td>
+					<span ng-hide="editable.time" ng-click="editable.time = true">{{ effort.time | minutesToHours | number:2 }}</span>
+					<div ng-if="editable.time">
+						<input ng-model="editableEffort.time"
+							   pp-model=""
+							   pp-convert-time=""
+							   type="text"
+							   set-focus=""
+							   ng-blur="editable.time = false; updateEffort()"
+						   	   ng-enter="editable.comment = false; save()">
+					</div>
+				</td>
+				<td>
+					<div ng-hide="editable.comment" ng-click="editable.comment = true">{{ effort.comment }}</div>
+					<div ng-if="editable.comment">
+						<input ng-model="editableEffort.comment"
+							   pp-model=""
+							   type="text"
+							   set-focus=""
+							   ng-blur="editable.comment = false; updateEffort()"
+						   	   ng-enter="editable.comment = false; save()">
+					</div>
+				</td>
+				<td>
+					<span ng-hide="editable.datepicker.date" ng-click="openDatePicker($event)">{{ (effort.date | date:'dd.MM.yyyy') || '-----' }}</span>
+					<div ng-if="editable.datepicker.date">
+						<input ng-model="editableEffort.date"
+							   pp-convert-date="dd.MM.yyyy"
+							   datepicker-popup="dd.MM.yyyy"
+							   min="'1900-01-01'"
+							   max="'2100-01-01'"
+							   is-open="editable.datepicker.date"
+							   disabled="disabled"
+							   ng-change="updateEffort()"
+						   	   ng-enter="editable.comment = false; save()">
+					</div>
+				</td>
+				<td>
+					<button type="button" class="close" ng-click="remove(effort)" ng-loading="!effortModal.effortList.effort.{{ effort.id }}">&times;</button>
+					<img src="images/load_indicator.gif" alt="" width="16" ng-loading="effortModal.effortList.effort.{{ effort.id }}" />
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" ng-click="close()">Schließen</button>
+		<button type="button" class="btn btn-primary" ng-click="save()">Speichern</button>
+	</div>
+</div>

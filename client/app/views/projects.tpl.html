@@ -1,0 +1,242 @@
+<div>
+	<div class="loader" ng-show="loader.projects || loader.users"></div>
+	<table class="table" ng-hide="loader.projects || loader.users">
+		<thead>
+		<tr>
+			<th><!-- Aktion --></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'title') ? '-title' : 'title'" ng-init="sorting = 'title'">
+				<span>Titel <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'title', 'glyphicon-arrow-up': sorting === '-title' }"></span></span>
+			</a></th>
+			<th></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'owner.firstName') ? '-owner.firstName' : 'owner.firstName'">
+				<span>Zugewiesen <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'owner.firstName', 'glyphicon-arrow-up': sorting === '-owner.firstName' }"></span></span>
+			</a></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'status') ? '-status' : 'status'">
+				<span>Status <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'status', 'glyphicon-arrow-up': sorting === '-status' }"></span></span>
+			</a></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'startDate') ? '-startDate' : 'startDate'">
+				<span>Start <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'startDate', 'glyphicon-arrow-up': sorting === '-startDate' }"></span></span>
+			</a></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'endDate') ? '-endDate' : 'endDate'">
+				<span>Ende <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'endDate', 'glyphicon-arrow-up': sorting === '-endDate' }"></span></span>
+			</a></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'duration') ? '-duration' : 'duration'">
+				<span>Aufwand<br />geschätzt <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'duration', 'glyphicon-arrow-up': sorting === '-duration' }"></span></span>
+			</a></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'effort') ? '-effort' : 'effort'">
+				<span>Zeit<br />aufgewendet <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'effort', 'glyphicon-arrow-up': sorting === '-effort' }"></span></span>
+			</a></th>
+			<th><a href="javascript:void(0);" ng-click="sorting = (sorting === 'progress') ? '-progress' : 'progress'">
+				<span>Fortschritt <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'progress', 'glyphicon-arrow-up': sorting === '-progress' }"></span></span>
+			</a></th>
+		</tr>
+		</thead>
+		<tbody ng-loading="projects.projectList">
+			<tr>
+				<td class="text-center" colspan="10">
+					<img src="images/load_indicator.gif" alt="" style="padding:50px" />
+				</td>
+			</tr>
+		</tbody>
+		<tbody ng-loading="!projects.projectList">
+		<tr>
+			<td colspan="10">
+				<button ng-if="!list.selectedProject" class="btn btn-default btn-block" ng-click="newProject()"><b>Neues Project erstellen</b></button>
+				<div class="dropdown" ng-if="list.selectedProject">
+					<button href="javascript:void(0);" class="dropdown-toggle btn btn-default btn-block" ng-disabled="disableActions()"><b>Aktion auswählen</b></button>
+					<ul class="dropdown-menu btn-block">
+						<li class="text-center">
+							<a href="javascript:void(0);" ng-click="editSelectedProject()">Projekt bearbeiten</a>
+						</li>
+						<li class="text-center">
+							<a href="javascript:void(0);" ng-click="createProjectTask()">Aufgabe für Projekt erstellen</a>
+						</li>
+						<li class="text-center">
+							<a href="javascript:void(0);" ng-click="deleteSelected()">Löschen</a>
+						</li>
+					</ul>
+				</div>
+			</td>
+		</tr>
+		<tr class="ng-table-group" ng-repeat-start="project in list.projects | orderBy:sorting | startFrom: list.pagination.currentPage*list.pagination.itemsPerPage | limitTo:list.pagination.itemsPerPage" ng-controller="ProjectCtrl">
+			<!-- Action -->
+			<td class="text-center">
+				<input type="checkbox" ng-click="selectProject(project)" ng-checked="list.selectedProject === project" ng-loading="!projects.projectList.project.{{ project.id }}" />
+				<img src="images/load_indicator.gif" alt="" width="16" ng-loading="projects.projectList.project.{{ project.id }}" />
+			</td>
+
+			<!-- Title -->
+			<td>
+				<span ng-hide="editable.title">
+					<span class="editable" ng-click="editable.title = true">{{ project.title }} </span>
+					<a ng-loading="!projects.projectList.project.{{ project.id }}.subtasks"
+					   href="javascript:void(0);"
+					   class="glyphicon"
+					   ng-hide="item.loader.tasks.load"
+					   ng-class="{ 'glyphicon-plus': !project.$ui.showTasks, 'glyphicon-minus': project.$ui.showTasks }"
+					   ng-click="showTasks(project)"
+					   ng-if="project.taskCount > 0">
+					</a>
+					<img ng-loading="projects.projectList.project.{{ project.id }}.subtasks" src="images/load_indicator.gif" alt="" width="16" />
+				</span>
+				<div ng-if="editable.title">
+					<input type="text"
+						   ng-model="project.title"
+						   pp-model=""
+						   set-focus=""
+						   ng-blur="editable.title = false"
+						   ng-change="editable.title = false; updateProject()">
+				</div>
+			</td>
+
+			<!-- Description -->
+			<td>
+				<span>
+					<button type="button" class="btn btn-xs btn-default" ng-click="list.selectedProject = project; editSelectedProject()">Bearbeiten</button>
+				</span>
+			</td>
+
+			<!-- Owner -->
+			<td>
+				<span ng-hide="editable.owner">
+					<span class="editable" ng-click="editable.owner = true">{{ (project.owner) ? project.owner.firstName + ' ' + project.owner.lastName : 'no owner'}}</span>
+				</span>
+				<div ng-if="editable.owner">
+					<select ng-model="project.owner"
+							ng-options="user as (user.firstName + ' ' + user.lastName) for user in list.assignableUsers track by user.id"
+							set-focus=""
+							ng-blur="editable.owner = false"
+							ng-change="editable.owner = false; assignProjectToUser(project)">
+					</select>
+				</div>
+			</td>
+
+			<!-- Status -->
+			<td>
+				<span ng-hide="editable.status">
+					<span class="editable" ng-click="editable.status = true">{{ project.statusList[project.status] }}</span>
+				</span>
+				<div ng-if="editable.status">
+					<select ng-model="project.status"
+							ng-options="key as status for (key, status) in project.statusList"
+							set-focus=""
+							ng-blur="editable.status = false"
+							ng-change="editable.status = false; updateProject()">
+					</select>
+				</div>
+			</td>
+
+			<!-- Start Date -->
+			<td>
+				<span ng-hide="list.datepicker[project.id + 'startDate']">
+					<span ng-click="openDatePicker($event, project.id + 'startDate')" class="editable">{{ (project.startDate | date:'dd.MM.yyyy') || '---------------' }}</span>
+				</span>
+				<div ng-if="list.datepicker[project.id + 'startDate']">
+					<input ng-model="project.startDate"
+						   pp-convert-date="dd.MM.yyyy"
+						   min="'1900-01-01'"
+						   max="project.endDate"
+						   ng-blur="form.datePickerOpened = false"
+						   is-open="list.datepicker[project.id + 'startDate']"
+						   disabled="disabled"
+						   ng-change="updateProject()">
+				</div>
+			</td>
+
+			<!-- End Date -->
+			<td>
+				<span ng-hide="list.datepicker[project.id + 'endDate']">
+					<span ng-click="openDatePicker($event, project.id + 'endDate')" class="editable">{{ (project.endDate | date:'dd.MM.yyyy') || '---------------' }}</span>
+				</span>
+				<div ng-if="list.datepicker[project.id + 'endDate']">
+					<input ng-model="project.endDate"
+						   pp-convert-date="dd.MM.yyyy"
+						   datepicker-popup="dd.MM.yyyy"
+						   min="project.startDate"
+						   max="'2100-01-01'"
+						   ng-blur="form.datePickerOpened = false"
+						   is-open="list.datepicker[project.id + 'endDate']"
+						   disabled="disabled"
+						   ng-change="updateProject()">
+				</div>
+			</td>
+
+			<!-- Duration -->
+			<td>
+				<span ng-hide="editable.duration">
+					<span class="editable" ng-click="editable.duration = true">{{ project.duration | minutesToHours | number:2 }}h</span>
+				</span>
+				<div ng-if="editable.duration">
+					<input ng-model="project.duration"
+						   pp-model=""
+						   pp-convert-time=""
+						   type="text"
+						   set-focus=""
+						   ng-blur="editable.duration = false"
+						   ng-change="editable.duration = false; updateProject()">
+				</div>
+			</td>
+
+			<!-- Effort -->
+			<td>
+				<span ng-hide="editable.effort">
+					<span class="editable" ng-click="editable.effort = true">{{ project.effort | minutesToHours | number:2 }}h</span>
+				</span>
+				<div ng-if="editable.effort">
+					<input ng-model="project.effort"
+						   pp-model=""
+						   pp-convert-time=""
+						   type="text"
+						   set-focus=""
+						   ng-blur="editable.effort = false"
+						   ng-change="editable.effort = false; updateProject()">
+				</div>
+			</td>
+
+			<!-- Progress -->
+			<td>
+				<span ng-hide="editable.progress">
+					<span class="editable" ng-click="editable.progress = true">{{ project.progress * 100 | number:2 }}%</span>
+				</span>
+				<div ng-if="editable.progress">
+					<input ng-model="project.progress"
+						   pp-model=""
+						   pp-convert-percent=""
+						   type="number"
+						   min="0"
+						   max="100"
+						   set-focus=""
+						   ng-blur="editable.progress = false"
+						   ng-change="editable.progress = false; updateProject()">
+				</div>
+			</td>
+		</tr>
+		<tr ng-repeat="task in project.getTasks() | orderBy:taskSorting" ng-if="project.$ui.showTasks" ng-init="taskSorting = 'title'" ng-repeat-end="">
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks"></td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks" colspan="2">{{ task.title }}</td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks">{{ task.assignee.firstName + ' ' + task.assignee.lastName }}</td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks">{{ task.statusList[project.status] }}</td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks">{{ task.startDate | date:'dd.MM.yyyy' }}</td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks">{{ task.endDate | date:'dd.MM.yyyy' }}</td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks">{{ task.duration | minutesToHours | number:2 }}h</td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks">{{ task.effort | minutesToHours | number:2 }}h</td>
+			<td ng-loading="!projects.projectList.project.{{ project.id }}.subtasks">{{ task.progress * 100 }}</td>
+		</tr>
+		</tbody>
+	</table>
+	<div ng-if="list.pagination.totalPages() > 1">
+	    <ul class="pagination" ng-loading="!projects.projectList">
+	        <li ng-class="{disabled: list.pagination.currentPage == 0}">
+	            <a href ng-click="list.pagination.prevPage()">« Prev</a>
+	        </li>
+	        <li ng-repeat="i in [] | range:(list.pagination.totalPages() + 1)"
+	            ng-class="{active: i == list.pagination.currentPage}"
+	        	ng-click="list.pagination.setPage()">
+	            <a href="" ng-click="list.pagination.gotoPage(i)" ng-if="list.pagination.showPaginationIndex(i)">{{ i + 1 }}</a>
+	        </li>
+	        <li ng-class="{disabled: list.pagination.currentPage == list.pagination.totalPages() }">
+	            <a href ng-click="list.pagination.nextPage()">Next »</a>
+	        </li>
+	    </ul>
+	</div>
+</div>

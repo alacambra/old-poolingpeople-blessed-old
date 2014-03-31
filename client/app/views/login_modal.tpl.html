@@ -1,0 +1,65 @@
+<div>
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="close()">&times;</button>
+		<h4 class="modal-title">{{ modal.title }}</h4>
+	</div>
+	<div class="modal-body">
+		<form name="form.login" class="form-horizontal" role="form" novalidate="">
+			<div class="text-center" style="padding-bottom: 25px;">
+				<img src="images/pp_logo.png" />
+				<p ng-if="modal.message" style="padding-top: 25px;" class="error">{{ modal.message }}</p>
+			</div>
+
+			<!-- username -->
+			<div class="form-group">
+				<div class="col-sm-6 col-sm-offset-3">
+					<input name="username"
+						   ng-model="modal.login.username"
+						   pp-model=""
+						   type="text"
+						   class="form-control"
+						   id="username"
+						   placeholder="Username"
+						   ng-minlength="1"
+						   ng-maxlength="50"
+						   required=""
+						   ng-enter="save()">
+				</div>
+				<div class="error col-sm-6 col-sm-offset-3" ng-if="form.login.username.$dirty && form.login.username.$invalid && modal.login.username != ''">
+					<small class="error" ng-show="form.login.username.$error.required">Username is required.</small>
+					<small class="error" ng-show="form.login.username.$error.minlength">Username is required to be at least 3 characters.</small>
+					<small class="error" ng-show="form.login.username.$error.maxlength">Username can't be longer than 50 characters.</small>
+				</div>
+			</div>
+
+			<!-- password -->
+			<div class="form-group">
+				<div class="col-sm-6 col-sm-offset-3">
+					<input name="password"
+						   ng-model="modal.login.password"
+						   pp-model=""
+						   type="password"
+						   class="form-control"
+						   id="password"
+						   placeholder="Password"
+						   ng-minlength="1"
+						   ng-maxlength="50"
+						   required=""
+						   ng-enter="save()">
+				</div>
+				<div class="error col-sm-6 col-sm-offset-3" ng-if="form.login.password.$dirty && form.login.password.$invalid">
+					<small class="error" ng-show="form.login.password.$error.required">Password is required.</small>
+					<small class="error" ng-show="form.login.password.$error.minlength">Password is required to be at least 6 characters.</small>
+					<small class="error" ng-show="form.login.password.$error.maxlength">Password can't be longer than 50 characters.</small>
+				</div>
+			</div>
+			<div class="error col-sm-6 col-sm-offset-3" ng-if="error">
+				<small class="error">User and/or password was incorrect</small>
+			</div>
+		</form>
+	</div>
+	<div class="modal-footer">
+		<button type="button" class="btn btn-default" ng-click="close()">Cancel</button>
+		<button type="button" class="btn btn-primary" ng-click="save()">Login</button>
+	</div>
+</div>

@@ -1,0 +1,32 @@
+[
+	{
+		"id": "e001",
+		"date": 1393259625342,
+		"comment": "Das ist der erste Kommentar",
+		"time": 75
+	},
+	{
+		"id": "e002",
+		"date": 1393259625342,
+		"comment": "Das ist der zweite Kommentar",
+		"time": 105
+	},
+	{
+		"id": "e003",
+		"date": 1393259625342,
+		"comment": "Das ist der dritte Kommentar und ist ziemlich lang. Das ist der dritte Kommentar und ist ziemlich lang. Das ist der dritte Kommentar und ist ziemlich lang.",
+		"time": 90
+	},
+	{
+		"id": "e004",
+		"date": 1393259625342,
+		"comment": "Das ist der vierte Kommentar",
+		"time": 30
+	},
+	{
+		"id": "e005",
+		"date": 1393259625342,
+		"comment": "Das ist der fünfte Kommentar",
+		"time": 45
+	}
+]

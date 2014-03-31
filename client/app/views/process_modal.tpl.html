@@ -1,0 +1,194 @@
+<div>
+	<div class="modal-header">
+		<button type="button" class="close" ng-click="close()">&times;</button>
+		<h4 class="modal-title">{{ modal.title }}</h4>
+	</div>
+	<div class="modal-body">
+		<div class="loader" ng-show="loader.users"></div>
+		<form name="form.model" class="form-horizontal" role="form" novalidate="" ng-hide="loader.users">
+
+			<!-- Title -->
+			<div class="form-group">
+				<label for="titleInput" class="col-sm-3 control-label">Title</label>
+
+				<div class="col-sm-9">
+					<input name="title"
+						   ng-model="modal.model.title"
+						   pp-model=""
+						   type="text"
+						   class="form-control"
+						   id="titleInput"
+						   placeholder="Title"
+						   ng-minlength="3"
+						   ng-maxlength="50"
+						   required="">
+				</div>
+				<div class="error col-sm-9 col-sm-offset-3" ng-if="form.model.title.$dirty && form.model.title.$invalid">
+					<small class="error" ng-show="form.model.title.$error.required">Project title is required.</small>
+					<small class="error" ng-show="form.model.title.$error.minlength">Project title is required to be at least 3 characters.</small>
+					<small class="error" ng-show="form.model.title.$error.maxlength">Project title can't be longer than 50 characters.</small>
+				</div>
+			</div>
+
+			<!-- Description -->
+			<div class="form-group">
+				<label for="descriptionInput" class="col-sm-3 control-label">
+					<span>Description</span>
+					<br/>
+					<small ng-show="form.model.description.$viewValue" ng-class="{ error: form.model.description.$viewValue.length > 3000 }">
+						<span>({{ form.model.description.$viewValue.length }}/3000)</span>
+					</small>
+				</label>
+				<div class="col-sm-9">
+					<textarea name="description"
+							  ng-model="modal.model.description"
+							  rows="3"
+							  class="form-control"
+							  id="descriptionInput"
+							  placeholder="Description"
+							  ng-maxlength="3000"></textarea>
+				</div>
+				<div class="error col-sm-9 col-sm-offset-3" ng-if="form.model.description.$dirty && form.model.description.$invalid">
+					<small class="error" ng-show="form.model.description.$error.maxlength">Project description can't be longer than 3000 characters.</small>
+				</div>
+			</div>
+
+			<!-- Owner -->
+			<div class="form-group">
+				<label for="ownerInput" class="col-sm-3 control-label">Owner</label>
+				
+				<div class="col-sm-5">
+					<select name="owner"
+							ng-model="modal.model.owner"
+							class="form-control"
+							id="ownerInput"
+							ng-options="user as (user.firstName + ' ' + user.lastName) for user in modal.assignableUsers track by user.id"
+							required=""></select>
+				</div>
+				<div class="error col-sm-9 col-sm-offset-3" ng-if="form.model.owner.$dirty && form.model.owner.$invalid">
+					<small class="error" ng-show="form.model.owner.$error.required">An Owner is required.</small>
+				</div>
+			</div>
+
+			<!-- Status -->
+			<div class="form-group">
+				<label for="statusInput" class="col-sm-3 control-label">Status</label>
+
+				<div class="col-sm-5">
+					<select name="status"
+							ng-model="modal.model.status"
+							class="form-control"
+							id="statusInput"
+							ng-options="key as status for (key, status) in modal.model.statusList"></select>
+				</div>
+			</div>
+
+			<!-- Start -->
+			<div class="form-group">
+				<label for="startDateInput" class="col-sm-3 control-label">Start Date</label>
+
+				<div class="col-sm-5 input-group">
+					<input name="startDate"
+						   ng-model="modal.model.startDate"
+						   pp-convert-date="dd.MM.yyyy"
+						   class="form-control"
+						   id="startDateInput"
+						   datepicker-popup="dd.MM.yyyy"
+						   min="'1900-01-01'"
+						   max="modal.model.endDate"
+						   disabled="disabled"
+						   ng-blur="form.datePickerOpened = false"
+						   is-open="modal.datepicker.startDate">
+					<span class="input-group-btn">
+						<button class="btn btn-default" ng-click="openDatePicker($event, 'startDate')">
+							<i class="glyphicon glyphicon-calendar"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+
+			<!-- End -->
+			<div class="form-group">
+				<label for="endDateInput" class="col-sm-3 control-label">End Date</label>
+				<div class="col-sm-5 input-group">
+					<input name="endDate"
+						   ng-model="modal.model.endDate"
+						   pp-convert-date="dd.MM.yyyy"
+						   class="form-control"
+						   id="endDateInput"
+						   datepicker-popup="dd.MM.yyyy"
+						   min="modal.model.startDate"
+						   max="'2100-01-01'"
+						   disabled="disabled"
+						   is-open="modal.datepicker.endDate">
+					<span class="input-group-btn">
+						<button class="btn btn-default" ng-click="openDatePicker($event, 'endDate')">
+							<i class="glyphicon glyphicon-calendar"></i>
+						</button>
+					</span>
+				</div>
+			</div>
+
+			<!-- Duration -->
+			<div class="form-group">
+				<label for="durationInput" class="col-sm-3 control-label">Duration</label>
+
+				<div class="col-sm-5 input-group">
+					<input name="duration"
+						   ng-model="modal.model.duration"
+						   pp-model=""
+						   pp-convert-time=""
+						   type="text"
+						   class="form-control text-right"
+						   id="durationInput"
+						   placeholder="Duration">
+					<span class="input-group-addon">hours</span>
+				</div>
+			</div>
+
+			<!-- Effort -->
+			<div class="form-group">
+				<label for="effortInput" class="col-sm-3 control-label">Effort</label>
+
+				<div class="col-sm-5 input-group">
+					<input name="effort"
+						   ng-model="modal.model.effort"
+						   pp-model=""
+						   pp-convert-time=""
+						   type="text"
+						   class="form-control text-right"
+						   id="effortInput"
+						   placeholder="Effort">
+					<span class="input-group-addon">hours</span>
+				</div>
+			</div>
+
+			<!-- Progress -->
+			<div class="form-group">
+				<label for="progressInput" class="col-sm-3 control-label">Progress</label>
+
+				<div class="col-sm-5 input-group">
+					<input name="progress"
+						   ng-model="modal.model.progress"
+						   pp-model=""
+						   pp-convert-percent=""
+						   type="number"
+						   class="form-control text-right"
+						   id="progressInput"
+						   placeholder="Progress">
+					<span class="input-group-addon">%</span>
+				</div>
+			</div>
+
+		</form>
+	</div>
+	<div class="modal-body" ng-controller="LogCtrl" ng-if="modal.model.id" ng-init="idObject = modal.model.id" ng-include="'/views/changelog.tpl.html'"></div>
+	<div class="modal-footer">
+		<div ng-loading="projectModal.saveProject" class="text-center">
+				<img src="images/load_indicator.gif" alt="" style="padding:5px 0px 15px;" />
+		</div>
+		<button type="button" class="btn btn-default" ng-click="close()">Abbrechen</button>
+		<button type="button" class="btn btn-primary" ng-click="save()">Speichern und Schließen</button>
+		<p class="error text-left" ng-show="error">{{ error }}</p>
+	</div>
+</div>
