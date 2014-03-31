@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+	<table-filter match-catalog="redmine" match-name="issues" />
+	<table-filter match-catalog="redmine" match-name="enumerations" />
+	<table-filter match-catalog="redmine" match-name="time_entries" />
+	<table-filter match-catalog="redmine" match-name="users" />
+	<table-filter match-catalog="redmine" match-name="issue_relations" />
+	<table-filter match-name="attachments" match-catalog="redmine"></table-filter>
+	<table-filter match-name="auth_sources" match-catalog="redmine"></table-filter>
+	<table-filter match-name="boards" match-catalog="redmine"></table-filter>
+	<table-filter match-name="changes" match-catalog="redmine"></table-filter>
+	<table-filter match-name="changeset_parents"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="changesets" match-catalog="redmine"></table-filter>
+	<table-filter match-name="changesets_issues"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="comments" match-catalog="redmine"></table-filter>
+	<table-filter match-name="custom_fields" match-catalog="redmine"></table-filter>
+	<table-filter match-name="custom_fields_projects"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="custom_fields_trackers"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="custom_values" match-catalog="redmine"></table-filter>
+	<table-filter match-name="deliverables" match-catalog="redmine"></table-filter>
+	<table-filter match-name="documents" match-catalog="redmine"></table-filter>
+	<table-filter match-name="enabled_modules"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="enumerations" match-catalog="redmine"></table-filter>
+	<table-filter match-name="groups_users" match-catalog="redmine"></table-filter>
+	<table-filter match-name="issue_categories"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="issue_relations"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="issue_statuses" match-catalog="redmine"></table-filter>
+	<table-filter match-name="issues" match-catalog="redmine"></table-filter>
+	<table-filter match-name="journal_details"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="journals" match-catalog="redmine"></table-filter>
+	<table-filter match-name="member_roles" match-catalog="redmine"></table-filter>
+	<table-filter match-name="members" match-catalog="redmine"></table-filter>
+	<table-filter match-name="messages" match-catalog="redmine"></table-filter>
+	<table-filter match-name="news" match-catalog="redmine"></table-filter>
+	<table-filter match-name="open_id_authentication_associations"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="open_id_authentication_nonces"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="projects" match-catalog="redmine"></table-filter>
+	<table-filter match-name="projects_trackers"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="queries" match-catalog="redmine"></table-filter>
+	<table-filter match-name="rates" match-catalog="redmine"></table-filter>
+	<table-filter match-name="repositories" match-catalog="redmine"></table-filter>
+	<table-filter match-name="roles" match-catalog="redmine"></table-filter>
+	<table-filter match-name="schedule_closed_entries"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="schedule_defaults"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="schedule_entries"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="scheduled_issues"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="schema_migrations"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="settings" match-catalog="redmine"></table-filter>
+	<table-filter match-name="time_entries" match-catalog="redmine"></table-filter>
+	<table-filter match-name="tokens" match-catalog="redmine"></table-filter>
+	<table-filter match-name="trackers" match-catalog="redmine"></table-filter>
+	<table-filter match-name="user_preferences"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="users" match-catalog="redmine"></table-filter>
+	<table-filter match-name="versions" match-catalog="redmine"></table-filter>
+	<table-filter match-name="watchers" match-catalog="redmine"></table-filter>
+	<table-filter match-name="wiki_content_versions"
+		match-catalog="redmine">
+	</table-filter>
+	<table-filter match-name="wiki_contents" match-catalog="redmine"></table-filter>
+	<table-filter match-name="wiki_pages" match-catalog="redmine"></table-filter>
+	<table-filter match-name="wiki_redirects" match-catalog="redmine"></table-filter>
+	<table-filter match-name="wikis" match-catalog="redmine"></table-filter>
+	<table-filter match-name="workflows" match-catalog="redmine"></table-filter>
+</hibernate-reverse-engineering>
