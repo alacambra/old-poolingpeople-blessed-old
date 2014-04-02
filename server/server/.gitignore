@@ -1,9 +1,0 @@
-target/
-.classpath
-.project
-.settings
-.metadata
-bin/
-visualee
-webapplication/neo4j/
-logs/
