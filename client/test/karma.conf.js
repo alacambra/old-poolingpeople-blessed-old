@@ -28,6 +28,7 @@ module.exports = function(config) {
       'app/scripts/services/load_status.js',
       'app/scripts/services/session.js',
       'app/scripts/services/base64.js',
+      'app/scripts/services/caching.js',
 
       'app/scripts/directives/directives.js',
 
@@ -53,7 +54,7 @@ module.exports = function(config) {
     basePath: '../',
     frameworks: ['jasmine'],
     reporters: ['progress'],
-    browsers: ['Firefox'],
+    browsers: ['PhantomJS'],
     autoWatch: true,
     singleRun: false,
     colors: true

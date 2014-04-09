@@ -1,5 +1,10 @@
-describe ("Jasmine running", function() {
-	it ("Jasmine running", function() {
-		expect(true).toBe(true); 
-	})
-}) 
+(function () {
+    'use strict';
+
+    describe("Jasmine running", function () {
+        it("Jasmine running", function () {
+            expect(true).toBe(true);
+        })
+    })
+
+}());

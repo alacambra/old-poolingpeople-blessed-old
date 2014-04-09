@@ -1,31 +1,35 @@
-describe ("HomeCtrl", function() {
+(function () {
+    'use strict';
 
-    beforeEach(module("poolingpeopleApp"));
+    describe("HomeCtrl", function () {
 
-    var $scope, $rootScope, controllerLoader, DataProvider;
+        beforeEach(module("poolingpeopleApp"));
 
-    beforeEach(inject(function($injector) {
+        var $scope, $rootScope, controllerLoader, DataProvider;
 
-        $rootScope = $injector.get('$rootScope');
-        $controller = $injector.get('$controller');
-        DataProvider = $injector.get('DataProvider');
-        $scope = $rootScope.$new();
+        beforeEach(inject(function ($injector) {
 
-        controllerLoader = function() {
-            return $controller('HomeCtrl', {
-                '$scope': $scope
-            });
-        };
-    }));
+            $rootScope = $injector.get('$rootScope');
+            $controller = $injector.get('$controller');
+            DataProvider = $injector.get('DataProvider');
+            $scope = $rootScope.$new();
 
-    it ("testing injection", function() {
-        var controller = controllerLoader();
-        expect($scope).toBeDefined();
+            controllerLoader = function () {
+                return $controller('HomeCtrl', {
+                    '$scope': $scope
+                });
+            };
+        }));
+
+        it("testing injection", function () {
+            var controller = controllerLoader();
+            expect($scope).toBeDefined();
+        });
+
+        it("site title", function () {
+            var controller = controllerLoader();
+            expect($scope.title).toContain("poolingpeople");
+        });
+
     });
-
-    it ("site title", function() {
-        var controller = controllerLoader();
-        expect($scope.title).toContain("poolingpeople");
-    });
-
-});
+}());
