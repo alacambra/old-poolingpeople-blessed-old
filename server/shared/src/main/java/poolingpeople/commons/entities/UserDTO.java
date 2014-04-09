@@ -1,15 +1,13 @@
-package poolingpeople.webapplication.business.user.boundary;
+package poolingpeople.commons.entities;
 
 import java.util.List;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 import org.codehaus.jackson.annotate.JsonIgnore;
 
-import poolingpeople.commons.entities.ChangeLog;
-import poolingpeople.commons.entities.Comment;
-import poolingpeople.commons.entities.IgnoreAttribute;
-import poolingpeople.commons.entities.Task;
-import poolingpeople.commons.entities.User;
-import poolingpeople.webapplication.business.utils.validation.EmailValidation;
+import poolingpeople.commons.utils.validation.EmailValidation;
 
 public class UserDTO implements User {
 
@@ -35,6 +33,7 @@ public class UserDTO implements User {
 		this.email = email;
 	}
 
+	@Size(min=3)
 	public String getFirstName() {
 		return firstName;
 	}
@@ -43,6 +42,7 @@ public class UserDTO implements User {
 		this.firstName = firstName;
 	}
 
+	@Size(min=3)
 	public String getLastName() {
 		return lastName;
 	}
@@ -51,6 +51,7 @@ public class UserDTO implements User {
 		this.lastName = lastName;
 	}
 
+	@Size(min=3)
 	public String getPassword() {
 		return password;
 	}
