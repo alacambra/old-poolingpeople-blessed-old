@@ -30,10 +30,6 @@ public class CatchWebExceptionInterceptor {
 	public Object catchRootException(InvocationContext context) {
 		try {
 			return context.proceed();
-		}  catch (MissingParameterException MissingParameterException) {
-			throw new WebApplicationException(MissingParameterException, Response
-					.status(Status.BAD_REQUEST)
-					.entity(MissingParameterException.getMessage()).build());
 		} catch (RootApplicationException e) {
 			throw getSpecificDomainException(e);
 		} catch (JsonGenerationException | JsonParseException generationException) {
