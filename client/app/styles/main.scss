@@ -62,3 +62,9 @@ body {
 a {
     outline: none !important;
 }
+
+.custom-link {
+    text-decoration: none !important;
+    outline: none;
+    cursor: pointer !important;
+}
