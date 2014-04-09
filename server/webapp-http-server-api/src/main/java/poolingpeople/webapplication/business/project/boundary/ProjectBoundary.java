@@ -28,6 +28,7 @@ import poolingpeople.persistence.neo4j.Neo4jTransaction;
 import poolingpeople.webapplication.business.boundary.AbstractBoundary;
 import poolingpeople.webapplication.business.boundary.AuthValidator;
 import poolingpeople.webapplication.business.boundary.CatchWebAppException;
+import poolingpeople.webapplication.business.boundary.IdWrapper;
 import poolingpeople.webapplication.business.boundary.JsonViews;
 
 @Path("projects")
@@ -82,7 +83,7 @@ public class ProjectBoundary extends AbstractBoundary{
 		Project dtoProject = mapper.readValue(json, ProjectDTO.class);
 		Project project = entityFactory.createProject(dtoProject);
 		
-		return Response.ok().entity(mapper.writerWithView(JsonViews.FullProject.class).writeValueAsString(project)).build();
+		return Response.ok().entity(mapper.writeValueAsString(new IdWrapper(project.getId()))).build();
 	}
 
 	@PUT
@@ -95,7 +96,7 @@ public class ProjectBoundary extends AbstractBoundary{
 		Project persistedProject = entityFactory.getProjectById(uuid);
 		persistedProject.synchronizeWith(dtoProject);
 		String serializedProject = mapper.writerWithView(JsonViews.FullProject.class).writeValueAsString(persistedProject);
-		return Response.ok().entity(serializedProject).build();
+		return Response.noContent().build();
 	}
 
 	@DELETE
