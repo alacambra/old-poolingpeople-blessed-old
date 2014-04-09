@@ -20,6 +20,7 @@ import org.neo4j.tooling.GlobalGraphOperations;
 import poolingpeople.commons.cdihelper.CDIInstanceProvider;
 import poolingpeople.commons.helper.Pager;
 import poolingpeople.commons.helper.PagerImpl;
+import poolingpeople.commons.utils.validation.EmailValidation;
 import poolingpeople.persistence.neo4j.Neo4jEntityFactory;
 import poolingpeople.persistence.neo4j.NeoManager;
 import poolingpeople.persistence.neo4j.TransactionInterceptor;
@@ -39,7 +40,6 @@ import poolingpeople.webapplication.business.utils.helpers.LoggedUserContainer;
 import poolingpeople.webapplication.business.utils.helpers.RestObjectsHelper;
 import poolingpeople.webapplication.business.utils.helpers.RestObjectsHelper.EffortWithTaskContainer;
 import poolingpeople.webapplication.business.utils.helpers.ValidatorProducer;
-import poolingpeople.webapplication.business.utils.validation.EmailValidation;
 
 @RunWith(CdiRunner.class)
 @AdditionalClasses({

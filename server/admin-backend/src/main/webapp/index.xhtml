@@ -7,5 +7,25 @@
 </h:head>
 <h:body>
 	<h:outputLabel>Administrator Backend</h:outputLabel>
+	<h:form>
+		<h:panelGrid columns="2">
+			<h:outputLabel value="First Name"/>
+			<h:inputText value="#{userModel.userDTO.firstName}"/>
+			
+			<h:outputLabel value="Last Name"/>
+			<h:inputText value="#{userModel.userDTO.lastName}"/>
+			
+			<h:outputLabel value="Birthdate"/>
+			<h:inputText value="#{userModel.userDTO.birthDate}"/>
+			
+			<h:outputLabel value="Email"/>
+			<h:inputText value="#{userModel.userDTO.email}"/>
+			
+			<h:outputLabel value="Password"/>
+			<h:inputText value="#{userModel.userDTO.password}"/>
+			
+		</h:panelGrid>
+		<h:commandButton value="Create User" action="#{userModel.createUser}" />
+	</h:form>
 </h:body>
 </html>

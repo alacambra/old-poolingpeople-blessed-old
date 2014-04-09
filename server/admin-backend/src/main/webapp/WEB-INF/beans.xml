@@ -3,4 +3,9 @@
        xsi:schemaLocation="
       http://java.sun.com/xml/ns/javaee 
       http://java.sun.com/xml/ns/javaee/beans_1_0.xsd">
+      
+      <interceptors>
+      	<class>poolingpeople.persistence.neo4j.TransactionInterceptor</class>
+      </interceptors>
+      
 </beans>

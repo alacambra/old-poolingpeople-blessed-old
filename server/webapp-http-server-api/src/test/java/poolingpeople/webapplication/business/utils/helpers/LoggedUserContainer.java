@@ -7,11 +7,11 @@ import org.neo4j.graphdb.Transaction;
 
 import poolingpeople.commons.entities.EntityFactory;
 import poolingpeople.commons.entities.User;
+import poolingpeople.commons.entities.UserDTO;
 import poolingpeople.persistence.neo4j.InstanceProvider;
 import poolingpeople.persistence.neo4j.Neo4jEntityFactory;
 import poolingpeople.persistence.neo4j.entities.PersistedUser;
 import poolingpeople.webapplication.business.boundary.ILoggedUserContainer;
-import poolingpeople.webapplication.business.user.boundary.UserDTO;
 
 @Alternative
 public class LoggedUserContainer implements ILoggedUserContainer {
