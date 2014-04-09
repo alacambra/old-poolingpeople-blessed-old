@@ -50,7 +50,7 @@
                     } else {
                         if (_.isNull($scope.modal.task.id)) {
                             DataProvider.createTask($scope.modal.task).then(function (response) {
-                                var newTask = _.extend($scope.modal.task, response);
+                                var newTask = _.extend($scope.modal.task, response, {creator: SessionService.userData()});
                                 DataProvider.assignTaskToUser(response.id, $scope.modal.task.assignee.id).then(function (response) {
                                     $modalInstance.close(newTask);
                                 }).finally(function (response) {

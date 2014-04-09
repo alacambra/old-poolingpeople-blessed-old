@@ -30,6 +30,14 @@
                     "email": "felix.schreiber@ion2s.com",
                     "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb"
                 },
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+                },
+
                 "observed": true,
                 "parentId": null,
                 "subtaskCount": 0,
@@ -62,6 +70,13 @@
                     "id": "40012c66-3750-4b6b-8efa-37f758a06a5e"
                 },
                 "assignee": null,
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+                },
                 "observed": true,
                 "parentId": null,
                 "subtaskCount": 0,
@@ -78,6 +93,13 @@
             }
         ],
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
@@ -115,8 +137,16 @@
             "birthDate": null,
             "id": "1560ff35-4954-4034-8f36-93c9cdfd2163"
         },
+
         "observed": true,
         "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "subtaskCount": 0,
         "subtasks": [],
         "effort": 1,
@@ -148,6 +178,13 @@
         },
         "assignee": null,
         "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "parentId": null,
         "subtaskCount": 0,
         "subtasks": [],
@@ -169,6 +206,13 @@
         "description": "Man vergisst ofte den Tracker sinngemäß zu setzen bei de4r Anlage eines Ticket. Nachträglich kann man den nocht mehr ändern :-(",
         "project": null,
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
@@ -202,6 +246,13 @@
         },
         "assignee": null,
         "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "parentId": null,
         "subtaskCount": 0,
         "subtasks": [],
@@ -239,8 +290,16 @@
             "birthDate": null,
             "id": "ee47b4e9-9a6f-48c0-8c01-50a9728a4f16"
         },
+
         "observed": true,
         "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "subtaskCount": 0,
         "subtasks": [],
         "effort": 4,
@@ -271,6 +330,13 @@
             "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41"
         },
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
@@ -303,6 +369,13 @@
             "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41"
         },
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
@@ -341,7 +414,15 @@
             "email": "felix.schreiber@ion2s.com",
             "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb"
         },
+
         "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "parentId": null,
         "subtaskCount": 0,
         "subtasks": [],
@@ -373,6 +454,13 @@
             "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e2"
         },
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
@@ -405,6 +493,13 @@
             "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e2"
         },
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
@@ -437,6 +532,13 @@
             "id": "ed8fcf22-bebf-4cc8-bb12-f770ace07713"
         },
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": true,
         "parentId": null,
         "subtaskCount": 0,
@@ -475,6 +577,13 @@
             "birthDate": null,
             "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
         },
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
@@ -507,6 +616,13 @@
             "id": "864eefe3-255d-4aa5-b3e5-b827d975a64c"
         },
         "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+        },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
