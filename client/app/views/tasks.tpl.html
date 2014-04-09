@@ -5,7 +5,7 @@
             <th>
                 <!-- Aktion -->
             </th>
-            <th colspan="3">
+            <th colspan="2">
                 <a href="javascript:void(0);"
                    ng-click="sorting = (sorting === 'title') ? '-title' : 'title'" ng-init="sorting = 'title'">
                     <nobr>Titel <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'title', 'glyphicon-arrow-up': sorting === '-title' }">
@@ -48,6 +48,7 @@
                     <nobr>Fortschritt <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'progress', 'glyphicon-arrow-up': sorting === '-progress' }"></span></nobr>
                 </a>
             </th>
+            <th></th>
         </tr>
         </thead>
         <tbody>
@@ -94,13 +95,6 @@
                 <div class="editable" ng-if="editingField(task, 'title')">
                     <input style="position: relative;" type="text" ng-model="task.title" pp-model-pristine="blurField(task, 'title')" pp-model="update(task); blurField(task, 'title')" /> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
                 </div>
-            </td>
-
-            <!-- Description -->
-            <td ng-click="checkItem(task, $event)">
-                <span>
-                    <button type="button" class="btn btn-xs btn-default" ng-click="edit(task)">Bearbeiten</button>
-                </span>
             </td>
 
             <td ng-click="checkItem(task, $event)">
@@ -207,6 +201,12 @@
                 </div>
             </td>
 
+            <td ng-click="checkItem(task, $event)">
+                <span>
+                    <a href="" ng-click="edit(task)"><span class="glyphicon glyphicon-search"></span></a>
+                </span>
+            </td>
+
         </tr>
 
 
@@ -229,13 +229,6 @@
                     <input style="position: relative;" type="text" ng-model="subtask.title" 
                             pp-model-pristine="blurField(subtask, 'title')" pp-model="update(subtask); blurField(subtask, 'title')" /> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
                 </div>
-            </td>
-
-            <!-- Description -->
-            <td ng-click="checkItem(subtask, $event)">
-                <span>
-                    <button type="button" class="btn btn-xs btn-default" ng-click="edit(subtask)">Bearbeiten</button>
-                </span>
             </td>
 
             <td ng-click="checkItem(subtask, $event)">
@@ -340,6 +333,12 @@
                     <input style="position: relative; width: 40px;" type="text" ng-model="subtask.progress"
                             pp-model-pristine="blurField(subtask, 'progress')" pp-model="update(subtask); blurField(subtask, 'progress')" />
                 </div>
+            </td>
+
+            <td ng-click="checkItem(subtask, $event)">
+                <span>
+                    <a href="" ng-click="edit(subtask)"><span class="glyphicon glyphicon-search"></span></a>
+                </span>
             </td>
         </tr>
         </tbody>
