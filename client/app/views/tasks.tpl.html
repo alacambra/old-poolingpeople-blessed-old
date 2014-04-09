@@ -70,10 +70,13 @@
                             <a href="javascript:void(0);" ng-click="editSelected()">Task bearbeiten</a>
                         </li>
                         <li class="text-center">
-                            <a href="javascript:void(0);" ng-click="duplicateSelected()">Task duplizieren</a>
+                            <a href="javascript:void(0);" ng-click="toggleRememberSelected()">Task merken / nicht merken</a>
                         </li>
                         <li class="text-center">
                             <a href="javascript:void(0);" ng-click="subtaskInSelected()">Neue Subtask</a>
+                        </li>
+                        <li class="text-center">
+                            <a href="javascript:void(0);" ng-click="duplicateSelected()">Task duplizieren</a>
                         </li>
                         <li class="text-center">
                             <a href="javascript:void(0);" ng-click="deleteSelected()">Löschen</a>
@@ -93,6 +96,7 @@
                     <a href="" ng-click="editField(task, 'title')">
                         <span class="glyphicon" ng-if="task.tasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !task.hideTasks, 'glyphicon-chevron-down': task.hideTasks }"></span>
                         <span class="editable">{{ task.title }}</span> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
+                        <span class="glyphicon glyphicon-pushpin" ng-if="task.observed"></span>
                     </a>
                 </div>
                 <div class="editable" ng-if="editingField(task, 'title')">
@@ -226,6 +230,7 @@
                     <a href="" ng-click="editField(subtask, 'title')">
                         <span class="glyphicon" ng-if="subtask.subtasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !subtask.hidesubtasks, 'glyphicon-chevron-down': subtask.hidesubtasks }"></span>
                         <span class="editable">{{ subtask.title }}</span> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
+                        <span class="glyphicon glyphicon-pushpin" ng-if="subtask.observed"></span>
                     </a>
                 </div>
                 <div class="editable" ng-if="editingField(subtask, 'title')">

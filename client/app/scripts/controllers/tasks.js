@@ -77,17 +77,21 @@
                         openTaskModal({
                             title: 'Neue Aufgabe',
                             task: ModelsService.getTask({
-                                title: item.title, 
-                                description: item.description, 
+                                title: item.title,
+                                status: "NEW",
+                                description: item.description,
                                 assignee: SessionService.userData(),
                                 startDate: moment().valueOf(),
                                 duration: item.duration
                             }),
-                            askIfDefault: (function() { 
+                            askIfDefault: (function () {
                                 var defaults = {};
-                                if (item.title !== "") defaults["title"] = "";
-                                if (item.description !== "") defaults["description"] = "";
-                                if (item.duration !== 0) defaults["duration"] = 0;
+                                if (item.title !== "")
+                                    defaults["title"] = "";
+                                if (item.description !== "")
+                                    defaults["description"] = "";
+                                if (item.duration !== 0)
+                                    defaults["duration"] = 0;
                                 return defaults;
                             }())
                         }).result.then(function (data) {
@@ -151,6 +155,13 @@
                         });
                     });
                 };
+                
+                $scope.toggleRemember = function (items) {
+                    doAction(items, function (item, index) {
+                        item.observed = !item.observed;
+                        DataProvider.updateTask(item.id, item);
+                    });
+                };
 
                 $scope.assignUserToTask = function (task) {
                     LoadStatusService.setStatus("tasks.taskList.task." + task.id, LoadStatusService.RESOLVING);
@@ -166,6 +177,10 @@
                 $scope.deleteSelected = function () {
                     $scope.delete($scope.getSelectedItems());
                 };
+                
+                $scope.toggleRememberSelected = function () {
+                    $scope.toggleRemember($scope.getSelectedItems());
+                }
 
                 $scope.subtaskInSelected = function () {
                     $scope.createSubtask($scope.getSelectedItems());

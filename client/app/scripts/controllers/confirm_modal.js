@@ -1,22 +1,22 @@
 (function () {
-	'use strict';
+    'use strict';
 
-	angular.module('poolingpeopleApp')
+    angular.module('poolingpeopleApp')
 
-		.controller('ConfirmModalCtrl', ['$scope', '$modalInstance', 'message', 'LoadStatusService',
-			function ($scope, $modalInstance, message, LoadStatusService) {
+        .controller('ConfirmModalCtrl', ['$scope', '$modalInstance', 'message', 'LoadStatusService',
+            function ($scope, $modalInstance, message, LoadStatusService) {
 
-				$scope.modal = {
-					message: message
-				};
+                $scope.modal = {
+                    message: message
+                };
 
-				$scope.dismiss = function () {
-					$modalInstance.dismiss('cancel');
-				};
+                $scope.dismiss = function () {
+                    $modalInstance.dismiss('cancel');
+                };
 
-				$scope.confirm = function () {
-					$modalInstance.close();
-				};
+                $scope.confirm = function () {
+                    $modalInstance.close();
+                };
 
-			}]);
+            }]);
 }());
