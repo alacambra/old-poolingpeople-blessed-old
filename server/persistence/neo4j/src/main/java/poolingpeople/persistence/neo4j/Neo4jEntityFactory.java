@@ -6,6 +6,7 @@ import java.util.Set;
 
 import javax.ejb.Singleton;
 import javax.inject.Inject;
+import javax.ws.rs.BadRequestException;
 
 import org.neo4j.graphdb.Node;
 
@@ -19,6 +20,8 @@ import poolingpeople.commons.entities.Project;
 import poolingpeople.commons.entities.Subject;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.User;
+import poolingpeople.commons.exceptions.MissingParameterException;
+import poolingpeople.commons.exceptions.RootApplicationException;
 import poolingpeople.commons.helper.Pager;
 import poolingpeople.persistence.neo4j.entities.AbstractPersistedModel;
 import poolingpeople.persistence.neo4j.entities.PersistedChangeLog;
@@ -175,6 +178,9 @@ public class Neo4jEntityFactory implements EntityFactory {
 
 	@Override
 	public User createUser(User user) {
+		if (user.getEmail() == null || user.getPassword() == null) {
+			throw new MissingParameterException();
+		}
 		return instanceProvider.getInstanceForClass(PersistedUser.class).createUserWithCredentials(user.getEmail(), user.getPassword(), user);
 	}
 

@@ -93,7 +93,7 @@ public class UserBoundary {
 		User user = entityFactory.getUserById(uuid);
 		user.synchronizeWith(dtoUser);
 		String r = mapper.writeValueAsString(user);
-		return Response.ok().entity(r).build();
+		return Response.noContent().build();
 	}
 
 	@DELETE

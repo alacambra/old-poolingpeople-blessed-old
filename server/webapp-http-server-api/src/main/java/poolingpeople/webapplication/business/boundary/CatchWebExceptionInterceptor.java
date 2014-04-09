@@ -14,6 +14,7 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 
+import poolingpeople.commons.exceptions.MissingParameterException;
 import poolingpeople.commons.exceptions.RootApplicationException;
 import poolingpeople.webapplication.business.utils.configuration.boundary.Configurable;
 
@@ -40,9 +41,9 @@ public class CatchWebExceptionInterceptor {
 					.entity(jsonMappingException.getMessage()).build());
 		} catch (IOException ioException) {
 			throw new WebApplicationException(ioException, Response
-					.status(Status.INTERNAL_SERVER_ERROR)
+					.status(Status.BAD_REQUEST)
 					.entity(ioException.getMessage()).build());
-		} catch (WebApplicationException e) {
+		}catch (WebApplicationException e) {
 			throw e;
 		} catch (Exception e) {
 			RootApplicationException rootApplicationException = tryToFindRootApplicationException(e);

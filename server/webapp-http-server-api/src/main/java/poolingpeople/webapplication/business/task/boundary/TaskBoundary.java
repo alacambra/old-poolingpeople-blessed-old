@@ -110,7 +110,7 @@ public class TaskBoundary extends AbstractBoundary{
 		updateTaskEvent.fire(updateTaskData);
 		
 		String r = mapper.writerWithView(JsonViews.FullTask.class).writeValueAsString(task);
-		return Response.ok().entity(r).build();
+		return Response.noContent().build();
 	}
 
 	@DELETE
@@ -136,8 +136,7 @@ public class TaskBoundary extends AbstractBoundary{
 		task.setAssignee(loggedUserContainer.getUser());
 		parentTask.addSubtask(task);
 
-		String r = mapper.writerWithView(JsonViews.FullTask.class).writeValueAsString(task);
-		return Response.ok().entity(r).build();
+		return Response.ok().entity(mapper.writeValueAsString(new IdWrapper(task.getId()))).build();
 
 	}
 
