@@ -22,4 +22,7 @@
     <servlet-name>Faces Servlet</servlet-name>
     <url-pattern>*.xhtml</url-pattern>
   </servlet-mapping>
+  <web:welcome-file-list>
+  	<web:welcome-file>index.xhtml</web:welcome-file>
+  </web:welcome-file-list>
 </web-app>

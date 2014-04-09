@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    	               "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+	<title><ui:insert name="title">Default title</ui:insert></title>
+</h:head>
+<h:body>
+	<h:link value="Create a book" outcome="New_Book.xhtml"></h:link>
+	<h1><ui:insert name="title">Default title</ui:insert></h1>
+	<hr/>
+	<h:messages id="errors" infoStyle="color:blue" warnStyle="color:orange" errorStyle="color:red"/>
+	<ui:insert name="content">Default content</ui:insert>
+	<hr/>
+	<h:outputText value="JSF example app" style="font-style: italic"></h:outputText>
+</h:body>
+</html>
