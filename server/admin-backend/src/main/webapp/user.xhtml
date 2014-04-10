@@ -24,7 +24,9 @@
 				<h:inputText value="#{userModel.user.password}" />
 
 			</h:panelGrid>
-			<h:commandButton value="Create User" action="#{userModel.createUser}" />
+			<h:commandButton value="Create User" action="#{userModel.createUser}">
+				<f:ajax execute="@form" render=":userList :errors"/>
+			</h:commandButton>
 		</h:form>
 
 		<hr />
@@ -37,6 +39,27 @@
 					<h:outputText value="Firstname" />
 				</f:facet>
 				<h:outputText value="#{user.firstName}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Lastname" />
+				</f:facet>
+				<h:outputText value="#{user.lastName}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Birthdate" />
+				</f:facet>
+				<h:outputText value="#{user.birthDate}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Email" />
+				</f:facet>
+				<h:outputText value="#{user.email}"></h:outputText>
 			</h:column>
 
 		</h:dataTable>

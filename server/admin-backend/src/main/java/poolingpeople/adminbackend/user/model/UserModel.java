@@ -1,22 +1,25 @@
 package poolingpeople.adminbackend.user.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.enterprise.inject.Model;
 import javax.inject.Inject;
 
-import poolingpeople.adminbackend.user.service.EntityFactoryService;
+import poolingpeople.commons.entities.EntityFactory;
+import poolingpeople.commons.entities.User;
 import poolingpeople.commons.entities.UserDTO;
+import poolingpeople.persistence.neo4j.Neo4jTransaction;
 
 @Model
+@Neo4jTransaction
 public class UserModel {
 
+	private @Inject EntityFactory entityFactory;
 	private UserDTO user = new UserDTO();
-	private @Inject
-	EntityFactoryService entityFactoryService;
 
 	public void createUser() {
-		entityFactoryService.createUser(user);
+		entityFactory.createUser(user);
 	}
 
 	public UserDTO getUser() {
@@ -28,6 +31,18 @@ public class UserModel {
 	}
 
 	public List<UserDTO> getAllUser() {
-		return entityFactoryService.getAllUser();
+		List<UserDTO> users = new ArrayList<>();
+		
+		for (final User user : entityFactory.getAllUsers()) {
+			users.add(new UserDTO() {
+				{
+					setFirstName(user.getFirstName());
+					setLastName(user.getLastName());
+					setEmail(user.getEmail());
+					setBirthDate(user.getBirthDate());
+				}
+			});
+		}
+		return users;
 	}
 }
