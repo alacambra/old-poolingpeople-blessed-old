@@ -22,8 +22,8 @@ public class UserModel {
 	private UserDTO user = new UserDTO();
 
 	public void createUser() {
-		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_INFO,"User created", ""));
 		entityFactory.createUser(user);
+		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_INFO,"User created", ""));
 	}
 
 	public UserDTO getUser() {
@@ -65,6 +65,15 @@ public class UserModel {
 	}
 
 	public void updateUser() {
+		synchronizeWithPersistedUser();
+		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_INFO,"User updated", ""));
+	}
 
+	private void synchronizeWithPersistedUser() {
+		User userById = entityFactory.getUserById(user.getId());
+		userById.setFirstName(user.getFirstName());
+		userById.setLastName(user.getLastName());
+		userById.setPassword(user.getPassword());
+		userById.setBirthDate(user.getBirthDate());
 	}
 }
