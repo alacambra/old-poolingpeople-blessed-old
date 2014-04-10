@@ -45,7 +45,7 @@ public class UserModel {
 					setLastName(user.getLastName());
 					setEmail(user.getEmail());
 					setBirthDate(user.getBirthDate());
-					setActivation(getActivation());
+					setActivation(user.getActivation());
 				}
 			});
 		}

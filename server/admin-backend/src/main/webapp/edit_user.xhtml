@@ -23,6 +23,9 @@
 
 				<h:outputLabel value="Password" />
 				<h:inputText value="#{userModel.user.password}" />
+				
+				<h:outputLabel value="Is Activated"/>
+				<h:selectBooleanCheckbox value="#{userModel.user.activation}"/>
 
 			</h:panelGrid>
 			<h:commandButton value="Update User" action="#{userModel.updateUser}"/>

@@ -119,6 +119,6 @@ public class UserDTO implements User {
 
 	@Override
 	public void setActivation(boolean activation) {
-		activation = activation;
+		this.activation = activation;
 	}
 }
