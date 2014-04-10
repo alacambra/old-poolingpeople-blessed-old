@@ -169,18 +169,13 @@ public class Neo4jEntityFactory implements EntityFactory {
 	@Override
 	public List<User> getAllUsers() {
 
-		ArrayList<User> persistedObjects = manager.getPersistedObjects(
+		return manager.getPersistedObjects(
 				manager.getNodes(PersistedUser.NODE_TYPE.name(), instanceProvider.getInstanceForClass(Pager.class).getStart(),
 						instanceProvider.getInstanceForClass(Pager.class).getSize()), 
 						new ArrayList<User>(), 
 						PersistedUser.class,
 						User.class);
-		for (Iterator iterator = persistedObjects.iterator(); iterator
-				.hasNext();) {
-			User user = (User) iterator.next();
-			if(! user.isActivated() ) persistedObjects.remove(user);
-		}
-		return persistedObjects;
+		
 	}
 
 	@Override
