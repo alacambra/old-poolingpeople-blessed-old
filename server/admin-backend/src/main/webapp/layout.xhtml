@@ -6,12 +6,13 @@
 	<title><ui:insert name="title">Default title</ui:insert></title>
 </h:head>
 <h:body>
-	<h:link value="Create a book" outcome="New_Book.xhtml"></h:link>
+	<h:link value="Home " outcome="index.xhtml"/>
+	<h:link value="User " outcome="user.xhtml"/>
+	<h:link value="Services " outcome="services.xhtml"/>
 	<h1><ui:insert name="title">Default title</ui:insert></h1>
-	<hr/>
 	<h:messages id="errors" infoStyle="color:blue" warnStyle="color:orange" errorStyle="color:red"/>
 	<ui:insert name="content">Default content</ui:insert>
 	<hr/>
-	<h:outputText value="JSF example app" style="font-style: italic"></h:outputText>
+	<h:outputText value="Admin Backend" style="font-style: italic"></h:outputText>
 </h:body>
 </html>

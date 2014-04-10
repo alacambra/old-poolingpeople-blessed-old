@@ -7,7 +7,6 @@ import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 
 import poolingpeople.commons.entities.EntityFactory;
-import poolingpeople.commons.entities.User;
 import poolingpeople.commons.entities.UserDTO;
 import poolingpeople.persistence.neo4j.Neo4jTransaction;
 

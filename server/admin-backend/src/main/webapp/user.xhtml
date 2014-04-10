@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    	               "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="layout.xhtml"> 
+	<ui:define name="title">User</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="First Name" />
+				<h:inputText value="#{userModel.user.firstName}" />
+
+				<h:outputLabel value="Last Name" />
+				<h:inputText value="#{userModel.user.lastName}" />
+
+				<h:outputLabel value="Birthdate" />
+				<h:inputText value="#{userModel.user.birthDate}" />
+
+				<h:outputLabel value="Email" />
+				<h:inputText value="#{userModel.user.email}" />
+
+				<h:outputLabel value="Password" />
+				<h:inputText value="#{userModel.user.password}" />
+
+			</h:panelGrid>
+			<h:commandButton value="Create User" action="#{userModel.createUser}" />
+		</h:form>
+
+		<hr />
+
+		<h1>Userlist</h1>
+		<h:dataTable id="userList" value="#{userModel.getAllUser()}"
+			var="user" border="1">
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Firstname" />
+				</f:facet>
+				<h:outputText value="#{user.firstName}"></h:outputText>
+			</h:column>
+
+		</h:dataTable>
+
+	</ui:define>
+</ui:composition>
+</html>
