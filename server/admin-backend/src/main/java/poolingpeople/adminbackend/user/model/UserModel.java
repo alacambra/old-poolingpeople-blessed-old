@@ -60,6 +60,7 @@ public class UserModel {
 				setEmail(userById.getEmail());
 				setFirstName(userById.getFirstName());
 				setLastName(userById.getLastName());
+				setActivation(userById.isActivated());
 			}
 		};
 	}
@@ -75,5 +76,6 @@ public class UserModel {
 		userById.setLastName(user.getLastName());
 		userById.setPassword(user.getPassword());
 		userById.setBirthDate(user.getBirthDate());
+		userById.setActivation(user.isActivated());
 	}
 }
