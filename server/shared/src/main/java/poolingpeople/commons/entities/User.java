@@ -24,6 +24,9 @@ public interface User extends PoolingpeopleEntity, Synchronizable, Subject {
 
 	List<Task> getTasks();
 
+	boolean isActivated();
+	
+	void setActivation(boolean activation);
 }
 
 
