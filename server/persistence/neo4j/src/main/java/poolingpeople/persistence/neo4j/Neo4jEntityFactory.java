@@ -1,6 +1,7 @@
 package poolingpeople.persistence.neo4j;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Set;
 
@@ -168,12 +169,18 @@ public class Neo4jEntityFactory implements EntityFactory {
 	@Override
 	public List<User> getAllUsers() {
 
-		return manager.getPersistedObjects(
+		ArrayList<User> persistedObjects = manager.getPersistedObjects(
 				manager.getNodes(PersistedUser.NODE_TYPE.name(), instanceProvider.getInstanceForClass(Pager.class).getStart(),
 						instanceProvider.getInstanceForClass(Pager.class).getSize()), 
 						new ArrayList<User>(), 
 						PersistedUser.class,
 						User.class);
+		for (Iterator iterator = persistedObjects.iterator(); iterator
+				.hasNext();) {
+			User user = (User) iterator.next();
+			if(! user.isActivated() ) persistedObjects.remove(user);
+		}
+		return persistedObjects;
 	}
 
 	@Override
