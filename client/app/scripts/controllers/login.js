@@ -43,8 +43,8 @@
 			};
 
 			$scope.logOut = function() {
-				SessionService.logOut();
-				$rootScope.$state.go("home");
+                            SessionService.logOut();
+                            $rootScope.$state.go("home");
 			}
 
 			$scope.userData = SessionService.userData;

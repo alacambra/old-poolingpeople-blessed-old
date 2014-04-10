@@ -50,7 +50,7 @@
                             navbar: false,
                             needAuth: true,
                             taskFilter: "alle"
-                        },{
+                        }, {
                             url: '/mine',
                             name: 'mine',
                             viewName: 'mine',
@@ -60,7 +60,7 @@
                             navbar: false,
                             needAuth: true,
                             taskFilter: "mine"
-                        },{
+                        }, {
                             url: '/others',
                             name: 'others',
                             viewName: 'others',
@@ -70,7 +70,7 @@
                             navbar: false,
                             needAuth: true,
                             taskFilter: "other"
-                        },{
+                        }, {
                             url: '/observed',
                             name: 'observed',
                             viewName: 'observed',
@@ -96,10 +96,16 @@
 
             }])
 
-        .run(['$rootScope', '$state', '$stateParams', 'SessionService',
-            function ($rootScope, $state, $stateParams, SessionService) {
-                
-                var updateBreadcrum = function() {
+        .run(['$rootScope', '$state', '$stateParams', '$cookieStore', 'SessionService',
+            function ($rootScope, $state, $stateParams, $cookieStore, SessionService) {
+
+                var saveLastState = function (newState) {
+                    $cookieStore.put('lastState', newState.name);
+                };
+
+                var firstTime = true;
+
+                var updateBreadcrum = function () {
                     var ancestors = $state.current.name;
                     var ancestorsArray = [];
                     while (ancestors !== "") {
@@ -116,16 +122,26 @@
                 $rootScope.$state = $state;
                 $rootScope.$stateParams = $stateParams;
                 $rootScope.breadcrum = updateBreadcrum();
-                
+
                 $rootScope.$on('$locationChangeSuccess', function () {
                     $rootScope.breadcrum = updateBreadcrum();
                 });
-                
+
                 $rootScope.$on('$viewContentLoaded', function () {
                     $rootScope.breadcrum = updateBreadcrum();
+                    if (firstTime) {
+                        firstTime = false;
+                        if (!_.isUndefined($cookieStore.get('lastState')) && $state.current.name === "home") {
+                            $state.go($cookieStore.get('lastState'))
+                        }
+                    } else {
+                        saveLastState($state.current);
+                    }
+
                 });
-                    
+
                 $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
+
                     if (toState.needAuth && !SessionService.loggedIn()) {
                         event.preventDefault();
                         $rootScope.$broadcast("requiredAuth", toState, toParams, fromState, fromParams);
