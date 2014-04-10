@@ -17,7 +17,7 @@ public class UserDTO implements User {
 	private String lastName;
 	private String password;
 	private Long birthDate;
-	private boolean isActive;
+	private boolean activation;
 
 	@IgnoreAttribute
 	@Override
@@ -111,13 +111,14 @@ public class UserDTO implements User {
 		
 	}
 
+	
 	@Override
-	public boolean isActivated() {
-		return isActive;
+	public boolean getActivation() {
+		return activation;
 	}
 
 	@Override
 	public void setActivation(boolean activation) {
-		isActive = activation;
+		activation = activation;
 	}
 }

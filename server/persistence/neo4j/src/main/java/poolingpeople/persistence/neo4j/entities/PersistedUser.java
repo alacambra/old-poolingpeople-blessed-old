@@ -139,7 +139,7 @@ public class PersistedUser extends AbstractPersistedModel<PersistedUser> impleme
 	}
 
 	@Override
-	public boolean isActivated() {
+	public boolean getActivation() {
 		String isActivated = getStringProperty(NodePropertyName.IS_ACTIVATED);
 		return  (isActivated== null) ? false : Boolean.valueOf(isActivated);
 	}

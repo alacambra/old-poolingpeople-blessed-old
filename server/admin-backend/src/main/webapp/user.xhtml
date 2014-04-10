@@ -66,6 +66,13 @@
 				<h:button value="Edit" outcome="edit_user.xhtml?id=#{user.id}"/>
 			</h:column>
 
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Active" />
+				</f:facet>
+				<h:selectBooleanCheckbox value="#{user.activation}"/>
+			</h:column>
+		
 		</h:dataTable>
 
 	</ui:define>

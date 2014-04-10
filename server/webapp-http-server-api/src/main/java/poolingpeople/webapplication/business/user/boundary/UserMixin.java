@@ -119,11 +119,11 @@ public class UserMixin implements User{
 
 	@JsonIgnore
 	@Override
-	public boolean isActivated() {
+	public boolean getActivation() {
 		// TODO Auto-generated method stub
 		return false;
 	}
-
+	
 	@Override
 	public void setActivation(boolean activation) {
 		// TODO Auto-generated method stub
@@ -131,68 +131,3 @@ public class UserMixin implements User{
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
