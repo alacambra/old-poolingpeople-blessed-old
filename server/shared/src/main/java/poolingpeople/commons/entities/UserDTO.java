@@ -17,6 +17,7 @@ public class UserDTO implements User {
 	private String lastName;
 	private String password;
 	private Long birthDate;
+	private boolean isActive;
 
 	@IgnoreAttribute
 	@Override
@@ -108,5 +109,15 @@ public class UserDTO implements User {
 	public void writeComment(Comment comment) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean isActivated() {
+		return isActive;
+	}
+
+	@Override
+	public void setActivation(boolean activation) {
+		isActive = activation;
 	}
 }
