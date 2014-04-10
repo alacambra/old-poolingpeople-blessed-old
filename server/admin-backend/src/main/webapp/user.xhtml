@@ -61,6 +61,10 @@
 				</f:facet>
 				<h:outputText value="#{user.email}"></h:outputText>
 			</h:column>
+			
+			<h:column>
+				<h:button value="Edit" outcome="edit_user.xhtml?id=#{user.id}"/>
+			</h:column>
 
 		</h:dataTable>
 

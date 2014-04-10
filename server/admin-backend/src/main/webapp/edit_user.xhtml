@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    	               "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="layout.xhtml"> 
+<f:metadata>
+	<f:viewParam name="id" value="#{userModel.user.id}"/>
+	<f:viewAction action="#{userModel.getUserById}"/>
+</f:metadata>
+	<ui:define name="title">Edit User</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="First Name" />
+				<h:inputText value="#{userModel.user.firstName}" />
+
+				<h:outputLabel value="Last Name" />
+				<h:inputText value="#{userModel.user.lastName}" />
+
+				<h:outputLabel value="Birthdate" />
+				<h:inputText value="#{userModel.user.birthDate}" />
+
+				<h:outputLabel value="Email" />
+				<h:inputText value="#{userModel.user.email}" />
+
+				<h:outputLabel value="Password" />
+				<h:inputText value="#{userModel.user.password}" />
+
+			</h:panelGrid>
+			<h:commandButton value="Update User" action="#{userModel.updateUser}"/>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>
