@@ -8,11 +8,12 @@
 
                 $scope.modal = {
                     title: options.title,
-                    task: options.task ? angular.copy(options.task) : ModelsService.getTask({assignee: SessionService.userData(), status: "NEW"}),
+                    task: options.task ? angular.copy(options.task) : ModelsService.getTask({assignee: SessionService.userData(), status: "NEW", services: []}),
                     parentTask: options.parentTask ? options.parentTask : null,
                     assignableUsers: [],
                     disabled: options.disabled,
-                    askIfDefault: options.askIfDefault ? options.askIfDefault : {}
+                    askIfDefault: options.askIfDefault ? options.askIfDefault : {},
+                    servicesAvailable: ["CSS/HTML Umsetzung", "Grafik Design", "Javascript Umsetzung"]
                 };
 
                 $scope.form = {
@@ -110,6 +111,22 @@
 
                     $scope.modal.datepicker = {};
                     $scope.modal.datepicker[datepicker] = true;
+                };
+                
+                $scope.refreshServices = function() {
+                    $scope.modal.servicesAvailable = _.difference($scope.modal.servicesAvailable, $scope.modal.task.services);
+                };
+                
+                $scope.addService = function() {
+                    $scope.modal.task.services.push($scope.modal.service);
+                    $scope.modal.servicesAvailable = _.without($scope.modal.servicesAvailable, $scope.modal.service);
+                    $scope.modal.service = "";
+                    
+                };
+                
+                $scope.deleteService = function (service) {
+                    $scope.modal.task.services = _.without($scope.modal.task.services, service);
+                    $scope.modal.servicesAvailable.push(service);
                 };
 
             }]);

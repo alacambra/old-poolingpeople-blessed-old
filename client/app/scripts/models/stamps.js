@@ -80,6 +80,7 @@
                 title: null,
                 creator: null,
                 observed: false,
+                services: [],
                 description: null,
                 status: null,
                 priority: 'NORMAL',

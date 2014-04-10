@@ -86,7 +86,8 @@
                                 description: item.description,
                                 assignee: SessionService.userData(),
                                 startDate: moment().valueOf(),
-                                duration: item.duration
+                                duration: item.duration,
+                                services: item.services
                             }),
                             askIfDefault: (function () {
                                 var defaults = {};
@@ -96,6 +97,8 @@
                                     defaults["description"] = "";
                                 if (item.duration !== 0)
                                     defaults["duration"] = 0;
+                                if (!_.isEqual(item.services, []))
+                                    defaults["services"] = [];
                                 return defaults;
                             }())
                         }).result.then(function (data) {

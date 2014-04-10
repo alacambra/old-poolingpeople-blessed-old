@@ -2,7 +2,7 @@
     <div class="modal-header" style="position: relative">
         <button type="button" class="close" ng-click="close()">&times;</button>
         <h4 class="modal-title">{{ modal.title}}</h4>
-        <span ng-if="modal.task.creator" class="created-by">Created by {{ modal.task.creator.firstName }} {{ modal.task.creator.lastName }}</span>
+        <span ng-if="modal.task.creator" class="created-by">Created by {{ modal.task.creator.firstName}} {{ modal.task.creator.lastName}}</span>
     </div>
     <div class="modal-body">
         <form name="form.task" class="form-horizontal" role="form" novalidate="">
@@ -81,6 +81,32 @@
                 </div>
                 <div class="error col-sm-9 col-sm-offset-3" ng-if="form.task.assignee.$dirty && form.task.assignee.$invalid">
                     <small class="error" ng-show="form.task.assignee.$error.required">An Assignee is required.</small>
+                </div>
+            </div>
+            
+            <!-- Services -->
+            <div class="form-group">
+                <label for="servicesInput" class="col-sm-3 control-label">Services</label>
+                <div class="col-sm-5" ng-if="modal.askIfDefault.services === undefined">
+                    <select name="services"
+                            ng-model="modal.service"
+                            class="form-control"
+                            id="servicesInput"
+                            ng-options="service for service in modal.servicesAvailable | orderBy:'toString()'"
+                            ng-change="addService()"
+                            ng-disabled="!modal.servicesAvailable.length > 0"></select>
+                </div>
+                <div class="col-sm-9" ng-if="modal.askIfDefault.services !== undefined">
+                    <b>Übernehmen</b> 
+                    <div class="btn-group btn-group-sm" style="margin-left: 10px">
+                        <button type="button" class="btn btn-default" ng-click="setDefault('services', true); refreshServices()">Ja</button>
+                        <button type="button" class="btn btn-default" ng-click="setDefault('services', false)">Nein</button>
+                    </div>
+                </div>
+                <div class="col-sm-5 col-md-offset-3" ng-if="modal.task.services.length > 0 && modal.askIfDefault.services === undefined"">
+                    <ul class="list-unstyled" style="padding-top: 10px">
+                        <li ng-repeat="service in modal.task.services"><a href="" ng-click="deleteService(service)"><span class="glyphicon glyphicon-remove"></span> {{service}}</a></li>
+                    </ul>
                 </div>
             </div>
 
