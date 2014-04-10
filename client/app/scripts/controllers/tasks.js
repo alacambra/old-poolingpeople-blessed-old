@@ -2,8 +2,12 @@
     'use strict';
 
     angular.module('poolingpeopleApp')
-        .controller('TasksCtrl', ['$scope', '$modal', '$log', 'DataProvider', 'SessionService', 'ModelsService', 'LoadStatusService', '$window', '$filter',
-            function ($scope, $modal, $log, DataProvider, SessionService, ModelsService, LoadStatusService, $window, $filter) {
+        .controller('TasksCtrl', ['$scope', '$modal', '$log', '$state', 'DataProvider', 'SessionService', 'ModelsService', 'LoadStatusService', '$window', '$filter',
+            function ($scope, $modal, $log, $state, DataProvider, SessionService, ModelsService, LoadStatusService, $window, $filter) {
+
+                $scope.taskListFilter = {
+                    title: $state.current.taskFilter
+                };
 
                 $scope.showSubtasks = {};
 
@@ -155,7 +159,7 @@
                         });
                     });
                 };
-                
+
                 $scope.toggleRemember = function (items) {
                     doAction(items, function (item, index) {
                         item.observed = !item.observed;
@@ -177,7 +181,7 @@
                 $scope.deleteSelected = function () {
                     $scope.delete($scope.getSelectedItems());
                 };
-                
+
                 $scope.toggleRememberSelected = function () {
                     $scope.toggleRemember($scope.getSelectedItems());
                 }
@@ -198,7 +202,8 @@
                     $scope.bookEffort($scope.getSelectedItems());
                 };
 
-                $scope.editField = function (item, field) {
+                $scope.editField = function (item, field, closeOthers) {
+                    if (closeOthers) $scope.editingObjects = {};
                     $scope.editingObjects[item.id + "." + field] = item;
                 };
 
@@ -248,6 +253,7 @@
 
                 $scope.today = function (task, key) {
                     task[key] = $filter('dateToNumber')(new Date());
+                    $scope.blurDatepickers();
                     $scope.update(task);
                 };
 
@@ -283,6 +289,14 @@
                         action(toDoChanges[i], i);
                     }
                 }, init = (function () {
+
+                    $scope.$on('$locationChangeSuccess', function () {
+                        $scope.taskListFilter = {
+                            title: (function () {
+                                return $state.current.taskFilter;
+                            }())
+                        };
+                    });
 
                     loadTasks();
                     loadUsers();

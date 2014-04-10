@@ -1,354 +1,356 @@
+<ol class="breadcrumb">
+    <li class="capitalize" ng-if="breadcrum.length > 1" ng-repeat="location in breadcrum" ng-show="!$last"><a ui-sref="{{location.route}}">{{location.name}}</a></li>
+    <li class="active capitalize">{{breadcrum[breadcrum.length - 1].name}}</li>
+</ol>
 <div>
     <table class="table table-hover">
         <thead>
-        <tr>
-            <th>
-                <!-- Aktion -->
-            </th>
-            <th colspan="2">
-                <a href="javascript:void(0);"
-                   ng-click="sorting = (sorting === 'title') ? '-title' : 'title'" ng-init="sorting = 'title'">
-                    <nobr>Titel <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'title', 'glyphicon-arrow-up': sorting === '-title' }">
+            <tr>
+                <th>
+                    <!-- Aktion -->
+                </th>
+                <th colspan="2">
+                    <a href="javascript:void(0);"
+                       ng-click="sorting = (sorting === 'title') ? '-title' : 'title'" ng-init="sorting = 'title'">
+                        <nobr>Titel <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'title', 'glyphicon-arrow-up': sorting === '-title' }">
                         </nobr>
-                    </span>
-                </a>
-            </th>
-            <th>
-                <a href="javascript:void(0);" ng-click="sorting = (sorting === 'assignee.firstName') ? '-assignee.firstName' : 'assignee.firstName'">
-                    <nobr>Zugewiesen <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'assignee.firstName', 'glyphicon-arrow-up': sorting === '-assignee.firstName' }"></span></nobr>
-                </a>
-            </th>
-            <th>
-                <a href="javascript:void(0);" ng-click="sorting = (sorting === 'status') ? '-status' : 'status'">
-                    <nobr>Status <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'status', 'glyphicon-arrow-up': sorting === '-status' }"></span></nobr>
-                </a>
-            </th>
-            <th>
-                <a href="javascript:void(0);" ng-click="sorting = (sorting === 'startDate') ? '-startDate' : 'startDate'">
-                    <nobr>Start <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'startDate', 'glyphicon-arrow-up': sorting === '-startDate' }"></span></nobr>
-                </a>
-            </th>
-            <th>
-                <a href="javascript:void(0);" ng-click="sorting = (sorting === 'endDate') ? '-endDate' : 'endDate'">
-                    <nobr>Ende <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'endDate', 'glyphicon-arrow-up': sorting === '-endDate' }"></span></nobr>
-                </a>
-            </th>
-            <th>
-                <a href="javascript:void(0);" ng-click="sorting = (sorting === 'duration') ? '-duration' : 'duration'">
-                    <nobr>Aufwand<br />geschätzt <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'duration', 'glyphicon-arrow-up': sorting === '-duration' }"></span></nobr>
-                </a>
-            </th>
-            <th>
-                <a href="javascript:void(0);" ng-click="sorting = (sorting === 'effort') ? '-effort' : 'effort'">
-                    <nobr>Aufgewendet<br />Zeit <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'effort', 'glyphicon-arrow-up': sorting === '-effort' }"></span></nobr>
-                </a>
-            </th>
-            <th>
-                <a href="javascript:void(0);" ng-click="sorting = (sorting === 'progress') ? '-progress' : 'progress'">
-                    <nobr>Fortschritt <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'progress', 'glyphicon-arrow-up': sorting === '-progress' }"></span></nobr>
-                </a>
-            </th>
-            <th></th>
-        </tr>
+                        </span>
+                    </a>
+                </th>
+                <th>
+                    <a href="javascript:void(0);" ng-click="sorting = (sorting === 'assignee.firstName') ? '-assignee.firstName' : 'assignee.firstName'">
+                        <nobr>Zugewiesen <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'assignee.firstName', 'glyphicon-arrow-up': sorting === '-assignee.firstName' }"></span></nobr>
+                    </a>
+                </th>
+                <th>
+                    <a href="javascript:void(0);" ng-click="sorting = (sorting === 'status') ? '-status' : 'status'">
+                        <nobr>Status <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'status', 'glyphicon-arrow-up': sorting === '-status' }"></span></nobr>
+                    </a>
+                </th>
+                <th>
+                    <a href="javascript:void(0);" ng-click="sorting = (sorting === 'startDate') ? '-startDate' : 'startDate'">
+                        <nobr>Start <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'startDate', 'glyphicon-arrow-up': sorting === '-startDate' }"></span></nobr>
+                    </a>
+                </th>
+                <th>
+                    <a href="javascript:void(0);" ng-click="sorting = (sorting === 'endDate') ? '-endDate' : 'endDate'">
+                        <nobr>Ende <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'endDate', 'glyphicon-arrow-up': sorting === '-endDate' }"></span></nobr>
+                    </a>
+                </th>
+                <th>
+                    <a href="javascript:void(0);" ng-click="sorting = (sorting === 'duration') ? '-duration' : 'duration'">
+                        <nobr>Aufwand<br />geschätzt <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'duration', 'glyphicon-arrow-up': sorting === '-duration' }"></span></nobr>
+                    </a>
+                </th>
+                <th>
+                    <a href="javascript:void(0);" ng-click="sorting = (sorting === 'effort') ? '-effort' : 'effort'">
+                        <nobr>Aufgewendet<br />Zeit <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'effort', 'glyphicon-arrow-up': sorting === '-effort' }"></span></nobr>
+                    </a>
+                </th>
+                <th>
+                    <a href="javascript:void(0);" ng-click="sorting = (sorting === 'progress') ? '-progress' : 'progress'">
+                        <nobr>Fortschritt <span class="glyphicon" ng-class="{ 'glyphicon-arrow-down': sorting === 'progress', 'glyphicon-arrow-up': sorting === '-progress' }"></span></nobr>
+                    </a>
+                </th>
+                <th></th>
+            </tr>
         </thead>
         <tbody>
-        <tr ng-loading="tasks.taskList">
-            <td class="text-center no-hover" colspan="12">
-                <img src="images/load_indicator.gif" alt="" style="padding:50px" />
-            </td>
-        </tr>
-        <tr ng-loading="!tasks.taskList">
-            <td colspan="12" class="no-hover">
-                <button ng-if="!getSelectedItems().length" class="btn btn-default btn-block" ng-click="create()"><b>Neue Aufgabe</b></button>
-                <div class="dropdown" ng-if="getSelectedItems().length">
-                    <button href="javascript:void(0);" class="dropdown-toggle btn btn-default btn-block" ng-disabled="disableActions()"><b>Aktion auswählen</b></button>
-                    <ul class="dropdown-menu btn-block">
-                        <li class="text-center">
-                            <a href="javascript:void(0);" ng-click="bookSelected()">Effort buchen</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="javascript:void(0);" ng-click="editSelected()">Task bearbeiten</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="javascript:void(0);" ng-click="toggleRememberSelected()">Task merken / nicht merken</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="javascript:void(0);" ng-click="subtaskInSelected()">Neue Subtask</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="javascript:void(0);" ng-click="duplicateSelected()">Task duplizieren</a>
-                        </li>
-                        <li class="text-center">
-                            <a href="javascript:void(0);" ng-click="deleteSelected()">Löschen</a>
-                        </li>
-                    </ul>
-                </div>
-            </td>
-        </tr>
-        <tr ng-class="{'warning': isChecked(task), 'success': task.priority == 'LOW', 'danger': task.priority == 'HIGH'}" ng-repeat-start="task in taskList | orderBy:sorting | startFrom: pagination.currentPage*pagination.itemsPerPage | limitTo:pagination.itemsPerPage">
-
-            <td width="30" ng-click="checkItem(task, $event, true)">
-                <span ng-class="{'checkbox checkbox-checked': isChecked(task), 'checkbox checkbox-unchecked': !isChecked(task)}"></span>
-            </td>
-
-            <td ng-click="checkItem(task, $event)" colspan="2">
-                <div class="editable" ng-if="!editingField(task, 'title')">
-                    <a href="" ng-click="editField(task, 'title')">
-                        <span class="glyphicon" ng-if="task.tasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !task.hideTasks, 'glyphicon-chevron-down': task.hideTasks }"></span>
-                        <span class="editable">{{ task.title }}</span> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
-                        <span class="glyphicon glyphicon-pushpin" ng-if="task.observed"></span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(task, 'title')">
-                    <input style="position: relative;" type="text" ng-model="task.title" pp-model-pristine="blurField(task, 'title')" pp-model="update(task); blurField(task, 'title')" /> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
-                </div>
-            </td>
-
-            <td ng-click="checkItem(task, $event)">
-                <div class="editable" ng-if="!editingField(task, 'assignee')">
-                    <a href="" ng-click="editField(task, 'assignee')">
-                        <span class="editable">{{ task.getAssignee().getPrettyName() }}</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(task, 'assignee')">
-                    <select name="assignee"
-                            ng-model="task.assignee"
-                            pp-model-pristine="blurField(task, 'assignee')" 
-                            pp-model="update(task); blurField(task, 'assignee')"
-                            class="form-control"
-                            id="assigneeInput"
-                            ng-options="user as user.getPrettyName() for user in assignableUsers track by user.id"></select>
-                </div>
-            </td>
-
-            <td ng-click="checkItem(task, $event)">
-                <div class="editable" ng-if="!editingField(task, 'status')">
-                    <a href="" ng-click="editField(task, 'status')">
-                        <span class="editable">{{ task.getPrettyStatus() }}</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(task, 'status')">
-                    <select name="status"
-                            ng-model="task.status"
-                            pp-model-pristine="blurField(task, 'status')" 
-                            pp-model="update(task); blurField(task, 'status')"
-                            class="form-control"
-                            id="statusInput"
-                            ng-options="key as status for (key, status) in task.getStatusList()"></select>
-                </div>
-            </td>
-
-            <td ng-click="checkItem(task, $event)">
-                <span ng-if="!editingField(task, 'startDate')">
-                    <a href="" ng-click=" blurDatepickers(); editField(task, 'startDate')">
-                        <span class="editable">{{ (task.startDate | date: 'dd.MM.yyyy') || '---------------' }}</span>
-                    </a>
-                </span>
-                <div class="editable" ng-if="editingField(task, 'startDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;">
-                    <datepicker ng-model="task.startDate"
-                           format="dd.MM.yyyy"
-                           show-weeks="false"
-                           pp-convert-date="dd.MM.yyyy"
-                           ng-change="blurField(task, 'startDate'); update(task)"
-                           ng-click-out="blurDatepickers(); blurField(task, 'startDate')"></datepicker>
-                    <div class="text-center">
-                        <a href="" ng-click="today(task, 'startDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+            <tr ng-loading="tasks.taskList">
+                <td class="text-center no-hover" colspan="12">
+                    <img src="images/load_indicator.gif" alt="" style="padding:50px" />
+                </td>
+            </tr>
+            <tr ng-loading="!tasks.taskList">
+                <td colspan="12" class="no-hover">
+                    <button ng-if="!getSelectedItems().length" class="btn btn-default btn-block" ng-click="create()"><b>Neue Aufgabe</b></button>
+                    <div class="dropdown" ng-if="getSelectedItems().length">
+                        <button href="javascript:void(0);" class="dropdown-toggle btn btn-default btn-block" ng-disabled="disableActions()"><b>Aktion auswählen</b></button>
+                        <ul class="dropdown-menu btn-block">
+                            <li class="text-center">
+                                <a href="javascript:void(0);" ng-click="bookSelected()">Effort buchen</a>
+                            </li>
+                            <li class="text-center">
+                                <a href="javascript:void(0);" ng-click="editSelected()">Task bearbeiten</a>
+                            </li>
+                            <li class="text-center">
+                                <a href="javascript:void(0);" ng-click="toggleRememberSelected()">Task merken / nicht merken</a>
+                            </li>
+                            <li class="text-center">
+                                <a href="javascript:void(0);" ng-click="subtaskInSelected()">Neue Subtask</a>
+                            </li>
+                            <li class="text-center">
+                                <a href="javascript:void(0);" ng-click="duplicateSelected()">Task duplizieren</a>
+                            </li>
+                            <li class="text-center">
+                                <a href="javascript:void(0);" ng-click="deleteSelected()">Löschen</a>
+                            </li>
+                        </ul>
                     </div>
-               </div>    
-            </td>
+                </td>
+            </tr>
+            <tr ng-class="{'warning': isChecked(task), 'success': task.priority == 'LOW', 'danger': task.priority == 'HIGH'}" ng-repeat-start="task in taskList | orderBy:sorting | startFrom: pagination.currentPage*pagination.itemsPerPage | limitTo:pagination.itemsPerPage">
 
-            <td ng-click="checkItem(task, $event)">
-                <span ng-if="!editingField(task, 'endDate')">
-                    <a href="" ng-click="blurDatepickers(); editField(task, 'endDate')">
-                        <span class="editable">{{ (task.endDate | date: 'dd.MM.yyyy') || '---------------' }}</span>
-                    </a>
-                </span>
-                <div class="editable" ng-if="editingField(task, 'endDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;">
-                    <datepicker ng-model="task.endDate"
-                           format="dd.MM.yyyy"
-                           show-weeks="false"
-                           pp-convert-date="dd.MM.yyyy"
-                           ng-change="blurField(task, 'endDate'); update(task)"
-                           ng-click-out="blurDatepickers(); blurField(task, 'endDate')"></datepicker>
-                    <div class="text-center">
-                        <a href="" ng-click="today(task, 'endDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+                <td width="30" ng-click="checkItem(task, $event, true)">
+                    <span ng-class="{'checkbox checkbox-checked': isChecked(task), 'checkbox checkbox-unchecked': !isChecked(task)}"></span>
+                </td>
+
+                <td ng-click="checkItem(task, $event)" colspan="2">
+                    <div class="editable" ng-if="!editingField(task, 'title')">
+                        <a href="" ng-click="editField(task, 'title', true)">
+                            <span class="glyphicon" ng-if="task.tasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !task.hideTasks, 'glyphicon-chevron-down': task.hideTasks }"></span>
+                            <span class="editable">{{ task.title}}</span> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
+                            <span class="glyphicon glyphicon-pushpin" ng-if="task.observed"></span>
+                        </a>
                     </div>
-               </div>   
-            </td>
-
-            <td ng-click="checkItem(task, $event)">
-                <div class="editable" ng-if="!editingField(task, 'duration')">
-                    <a href="" ng-click="editField(task, 'duration')">
-                        <span class="editable">{{ task.duration | minutesToHours | number:2 }}h</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(task, 'duration')">
-                    <input style="position: relative; width: 40px;" type="text" ng-model="task.duration" pp-convert-time=""
-                            pp-model-pristine="blurField(task, 'duration')"  pp-model="update(task); blurField(task, 'duration')" /> 
-                </div>
-            </td>
-
-            <td ng-click="checkItem(task, $event)">
-                <div class="editable">
-                    <a href="" ng-click="bookEffort(task)">
-                        <span class="editable">{{ task.effort | number:2 }}h</span>
-                    </a>
-                </div>
-            </td>
-
-            <td ng-click="checkItem(task, $event)">
-                <div class="editable" ng-if="!editingField(task, 'progress')">
-                    <a href="" ng-click="editField(task, 'progress')">
-                        <span class="editable">{{ task.progress | number:2 }}%</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(task, 'progress')">
-                    <input style="position: relative; width: 40px;" type="text" ng-model="task.progress" 
-                            pp-model-pristine="blurField(task, 'progress')" pp-model="update(task); blurField(task, 'progress')" />
-                </div>
-            </td>
-
-            <td ng-click="checkItem(task, $event)">
-                <span>
-                    <a href="" ng-click="edit(task)"><span class="glyphicon glyphicon-search"></span></a>
-                </span>
-            </td>
-
-        </tr>
-
-
-
-        <tr style="background-color: #FBFBFB;" ng-class="{'warning': isChecked(subtask), 'success': subtask.priority == 'LOW', 'danger': subtask.priority == 'HIGH'}"  ng-repeat="subtask in task.subtasks | orderBy:sorting" ng-repeat-end ng-if="showSubtasks[task.id]">
-            
-            <td ng-click="checkItem(subtask, $event, true)"></td>
-            <td width="30" ng-click="checkItem(subtask, $event, true)">
-                <span ng-class="{'checkbox checkbox-checked': isChecked(subtask), 'checkbox checkbox-unchecked': !isChecked(subtask)}"></span>
-            </td>
-
-            <td ng-click="checkItem(subtask, $event)">
-                <div class="editable" ng-if="!editingField(subtask, 'title')">
-                    <a href="" ng-click="editField(subtask, 'title')">
-                        <span class="glyphicon" ng-if="subtask.subtasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !subtask.hidesubtasks, 'glyphicon-chevron-down': subtask.hidesubtasks }"></span>
-                        <span class="editable">{{ subtask.title }}</span> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
-                        <span class="glyphicon glyphicon-pushpin" ng-if="subtask.observed"></span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(subtask, 'title')">
-                    <input style="position: relative;" type="text" ng-model="subtask.title" 
-                            pp-model-pristine="blurField(subtask, 'title')" pp-model="update(subtask); blurField(subtask, 'title')" /> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
-                </div>
-            </td>
-
-            <td ng-click="checkItem(subtask, $event)">
-                <div class="editable" ng-if="!editingField(subtask, 'assignee')">
-                    <a href="" ng-click="editField(subtask, 'assignee')">
-                        <span class="editable">{{ subtask.getAssignee().getPrettyName() }}</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(subtask, 'assignee')">
-                    <select name="assignee"
-                            ng-model="subtask.assignee"
-                            pp-model-pristine="blurField(subtask, 'assignee')"
-                            pp-model="update(subtask); blurField(subtask, 'assignee')"
-                            class="form-control"
-                            id="assigneeInput"
-                            ng-options="user as user.getPrettyName() for user in assignableUsers track by user.id"></select>
-                </div>
-            </td>
-
-            <td ng-click="checkItem(subtask, $event)">
-                <div class="editable" ng-if="!editingField(subtask, 'status')">
-                    <a href="" ng-click="editField(subtask, 'status')">
-                        <span class="editable">{{ subtask.getPrettyStatus() }}</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(subtask, 'status')">
-                    <select name="status"
-                            ng-model="subtask.status"
-                            pp-model-pristine="blurField(subtask, 'status')"
-                            pp-model="update(subtask); blurField(subtask, 'status')"
-                            class="form-control"
-                            id="statusInput"
-                            ng-options="key as status for (key, status) in subtask.getStatusList()"></select>
-                </div>
-            </td>
-
-            <td ng-click="checkItem(subtask, $event)">
-                <span ng-if="!editingField(subtask, 'startDate')">
-                    <a href="" ng-click=" blurDatepickers(); editField(subtask, 'startDate')">
-                        <span class="editable">{{ (subtask.startDate | date: 'dd.MM.yyyy') || '---------------' }}</span>
-                    </a>
-                </span>
-                <div class="editable" ng-if="editingField(subtask, 'startDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;">
-                    <datepicker ng-model="subtask.startDate"
-                           format="dd.MM.yyyy"
-                           show-weeks="false"
-                           pp-convert-date="dd.MM.yyyy"
-                           ng-change="blurField(subtask, 'startDate'); update(subtask)"
-                           ng-click-out="blurDatepickers()"></datepicker>
-                    <div class="text-center">
-                        <a href="" ng-click="today(subtask, 'startDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+                    <div class="editable" ng-if="editingField(task, 'title')">
+                        <input style="position: relative;" type="text" ng-model="task.title" pp-model-pristine="blurField(task, 'title')" pp-model="update(task); blurField(task, 'title')" /> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
                     </div>
-               </div>    
-            </td>
+                </td>
 
-            <td ng-click="checkItem(subtask, $event)">
-                <span ng-if="!editingField(subtask, 'endDate')">
-                    <a href="" ng-click="blurDatepickers(); editField(subtask, 'endDate')">
-                        <span class="editable">{{ (subtask.endDate | date: 'dd.MM.yyyy') || '---------------' }}</span>
-                    </a>
-                </span>
-                <div class="editable" ng-if="editingField(subtask, 'endDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;">
-                    <datepicker ng-model="subtask.endDate"
-                           format="dd.MM.yyyy"
-                           show-weeks="false"
-                           pp-convert-date="dd.MM.yyyy"
-                           ng-change="blurField(subtask, 'endDate'); update(subtask)"
-                           ng-click-out="blurDatepickers()"></datepicker>
-                    <div class="text-center">
-                        <a href="" ng-click="today(subtask, 'endDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+                <td ng-click="checkItem(task, $event)">
+                    <div class="editable" ng-if="!editingField(task, 'assignee')">
+                        <a href="" ng-click="editField(task, 'assignee', true)">
+                            <span class="editable">{{ task.getAssignee().getPrettyName()}}</span>
+                        </a>
                     </div>
-               </div>   
-            </td>
+                    <div class="editable" ng-if="editingField(task, 'assignee')">
+                        <select name="assignee"
+                                ng-model="task.assignee"
+                                ng-change="update(task); blurField(task, 'assignee')"
+                                ng-click-out="blurField(task, 'assignee')"
+                                class="form-control"
+                                id="assigneeInput"
+                                ng-options="user as user.getPrettyName() for user in assignableUsers track by user.id"></select>
+                    </div>
+                </td>
 
-            <td ng-click="checkItem(subtask, $event)">
-                <div class="editable" ng-if="!editingField(subtask, 'duration')">
-                    <a href="" ng-click="editField(subtask, 'duration')">
-                        <span class="editable">{{ subtask.duration | minutesToHours | number:2 }}h</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(subtask, 'duration')">
-                    <input style="position: relative; width: 40px;" type="text" ng-model="subtask.duration" pp-convert-time=""
-                            pp-model-pristine="blurField(subtask, 'duration')" pp-model="update(subtask); blurField(subtask, 'duration')" /> 
-                </div>
-            </td>
+                <td ng-click="checkItem(task, $event)">
+                    <div class="editable" ng-if="!editingField(task, 'status')">
+                        <a href="" ng-click="editField(task, 'status', true)">
+                            <span class="editable">{{ task.getPrettyStatus()}}</span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(task, 'status')">
+                        <select name="status"
+                                ng-model="task.status"
+                                ng-change="update(task); blurField(task, 'status')"
+                                ng-click-out="blurField(task, 'status')"
+                                class="form-control"
+                                id="statusInput"
+                                ng-options="key as status for (key, status) in task.getStatusList()"></select>
+                    </div>
+                </td>
 
-            <td ng-click="checkItem(subtask, $event)">
-                <div class="editable">
-                    <a href="" ng-click="bookEffort(subtask)">
-                        <span class="editable">{{ subtask.effort | number:2 }}h</span>
-                    </a>
-                </div>
-            </td>
+                <td ng-click="checkItem(task, $event)">
+                    <span ng-if="!editingField(task, 'startDate')">
+                        <a href="" ng-click=" blurDatepickers(); editField(task, 'startDate', true)">
+                            <span class="editable">{{ (task.startDate | date: 'dd.MM.yyyy') || '---------------'}}</span>
+                        </a>
+                    </span>
+                    <div class="editable" ng-if="editingField(task, 'startDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;" ng-click-out="blurDatepickers(); blurField(task, 'startDate')">
+                        <datepicker ng-model="task.startDate"
+                                    format="dd.MM.yyyy"
+                                    show-weeks="false"
+                                    pp-convert-date="dd.MM.yyyy"
+                                    ng-change="blurField(task, 'startDate'); update(task)"></datepicker>
+                        <div class="text-center">
+                            <a href="" ng-click="today(task, 'startDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+                        </div>
+                    </div>    
+                </td>
 
-            <td ng-click="checkItem(subtask, $event)">
-                <div class="editable" ng-if="!editingField(subtask, 'progress')">
-                    <a href="" ng-click="editField(subtask, 'progress')">
-                        <span class="editable">{{ subtask.progress | number:2 }}%</span>
-                    </a>
-                </div>
-                <div class="editable" ng-if="editingField(subtask, 'progress')">
-                    <input style="position: relative; width: 40px;" type="text" ng-model="subtask.progress"
-                            pp-model-pristine="blurField(subtask, 'progress')" pp-model="update(subtask); blurField(subtask, 'progress')" />
-                </div>
-            </td>
+                <td ng-click="checkItem(task, $event)">
+                    <span ng-if="!editingField(task, 'endDate')">
+                        <a href="" ng-click="blurDatepickers(); editField(task, 'endDate', true)">
+                            <span class="editable">{{ (task.endDate | date: 'dd.MM.yyyy') || '---------------'}}</span>
+                        </a>
+                    </span>
+                    <div class="editable" ng-if="editingField(task, 'endDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;" ng-click-out="blurDatepickers(); blurField(task, 'endDate')">
+                        <datepicker ng-model="task.endDate"
+                                    format="dd.MM.yyyy"
+                                    show-weeks="false"
+                                    pp-convert-date="dd.MM.yyyy"
+                                    ng-change="blurField(task, 'endDate'); update(task)"></datepicker>
+                        <div class="text-center">
+                            <a href="" ng-click="today(task, 'endDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+                        </div>
+                    </div>   
+                </td>
 
-            <td ng-click="checkItem(subtask, $event)">
-                <span>
-                    <a href="" ng-click="edit(subtask)"><span class="glyphicon glyphicon-search"></span></a>
-                </span>
-            </td>
-        </tr>
+                <td ng-click="checkItem(task, $event)">
+                    <div class="editable" ng-if="!editingField(task, 'duration')">
+                        <a href="" ng-click="editField(task, 'duration', true)">
+                            <span class="editable">{{ task.duration | minutesToHours | number:2 }}h</span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(task, 'duration')">
+                        <input style="position: relative; width: 40px;" type="text" ng-model="task.duration" pp-convert-time=""
+                               pp-model-pristine="blurField(task, 'duration')"  pp-model="update(task); blurField(task, 'duration')" /> 
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(task, $event)">
+                    <div class="editable">
+                        <a href="" ng-click="bookEffort(task)">
+                            <span class="editable">{{ task.effort | number:2 }}h</span>
+                        </a>
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(task, $event)">
+                    <div class="editable" ng-if="!editingField(task, 'progress')">
+                        <a href="" ng-click="editField(task, 'progress', true)">
+                            <span class="editable">{{ task.progress | number:2 }}%</span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(task, 'progress')">
+                        <input style="position: relative; width: 40px;" type="text" ng-model="task.progress" 
+                               pp-model-pristine="blurField(task, 'progress')" pp-model="update(task); blurField(task, 'progress')" />
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(task, $event)">
+                    <span>
+                        <a href="" ng-click="edit(task)"><span class="glyphicon glyphicon-search"></span></a>
+                    </span>
+                </td>
+
+            </tr>
+
+
+
+            <tr style="background-color: #FBFBFB;" ng-class="{'warning': isChecked(subtask), 'success': subtask.priority == 'LOW', 'danger': subtask.priority == 'HIGH'}"  ng-repeat="subtask in task.subtasks| orderBy:sorting" ng-repeat-end ng-if="showSubtasks[task.id]">
+
+                <td ng-click="checkItem(subtask, $event, true)"></td>
+                <td width="30" ng-click="checkItem(subtask, $event, true)">
+                    <span ng-class="{'checkbox checkbox-checked': isChecked(subtask), 'checkbox checkbox-unchecked': !isChecked(subtask)}"></span>
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <div class="editable" ng-if="!editingField(subtask, 'title')">
+                        <a href="" ng-click="editField(subtask, 'title', true)">
+                            <span class="glyphicon" ng-if="subtask.subtasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !subtask.hidesubtasks, 'glyphicon-chevron-down': subtask.hidesubtasks }"></span>
+                            <span class="editable">{{ subtask.title}}</span> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
+                            <span class="glyphicon glyphicon-pushpin" ng-if="subtask.observed"></span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(subtask, 'title')">
+                        <input style="position: relative;" type="text" ng-model="subtask.title" 
+                               pp-model-pristine="blurField(subtask, 'title')" pp-model="update(subtask); blurField(subtask, 'title')" /> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <div class="editable" ng-if="!editingField(subtask, 'assignee')">
+                        <a href="" ng-click="editField(subtask, 'assignee', true)">
+                            <span class="editable">{{ subtask.getAssignee().getPrettyName()}}</span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(subtask, 'assignee')">
+                        <select name="assignee"
+                                ng-model="subtask.assignee"
+                                ng-change="update(subtask); blurField(subtask, 'assignee')"
+                                ng-click-out="blurField(subtask, 'assignee')"
+                                class="form-control"
+                                id="assigneeInput"
+                                ng-options="user as user.getPrettyName() for user in assignableUsers track by user.id"></select>
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <div class="editable" ng-if="!editingField(subtask, 'status')">
+                        <a href="" ng-click="editField(subtask, 'status', true)">
+                            <span class="editable">{{ subtask.getPrettyStatus()}}</span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(subtask, 'status')">
+                        <select name="status"
+                                ng-model="subtask.status"
+                                ng-change="update(subtask); blurField(subtask, 'status')"
+                                ng-click-out="blurField(subtask, 'status')"
+                                class="form-control"
+                                id="statusInput"
+                                ng-options="key as status for (key, status) in subtask.getStatusList()"></select>
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <span ng-if="!editingField(subtask, 'startDate')">
+                        <a href="" ng-click=" blurDatepickers(); editField(subtask, 'startDate', true)">
+                            <span class="editable">{{ (subtask.startDate | date: 'dd.MM.yyyy') || '---------------'}}</span>
+                        </a>
+                    </span>
+                    <div class="editable" ng-if="editingField(subtask, 'startDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;">
+                        <datepicker ng-model="subtask.startDate"
+                                    format="dd.MM.yyyy"
+                                    show-weeks="false"
+                                    pp-convert-date="dd.MM.yyyy"
+                                    ng-change="blurField(subtask, 'startDate'); update(subtask)"
+                                    ng-click-out="blurDatepickers()"></datepicker>
+                        <div class="text-center">
+                            <a href="" ng-click="today(subtask, 'startDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+                        </div>
+                    </div>    
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <span ng-if="!editingField(subtask, 'endDate')">
+                        <a href="" ng-click="blurDatepickers(); editField(subtask, 'endDate', true)">
+                            <span class="editable">{{ (subtask.endDate | date: 'dd.MM.yyyy') || '---------------'}}</span>
+                        </a>
+                    </span>
+                    <div class="editable" ng-if="editingField(subtask, 'endDate')" style="position: absolute; background: white; padding:5px; border: 1px solid rgb(150,150,150); border-radius: 3px;">
+                        <datepicker ng-model="subtask.endDate"
+                                    format="dd.MM.yyyy"
+                                    show-weeks="false"
+                                    pp-convert-date="dd.MM.yyyy"
+                                    ng-change="blurField(subtask, 'endDate'); update(subtask)"
+                                    ng-click-out="blurDatepickers()"></datepicker>
+                        <div class="text-center">
+                            <a href="" ng-click="today(subtask, 'endDate')" class="btn btn-info" style="margin: 5px;">Today</a>
+                        </div>
+                    </div>   
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <div class="editable" ng-if="!editingField(subtask, 'duration')">
+                        <a href="" ng-click="editField(subtask, 'duration', true)">
+                            <span class="editable">{{ subtask.duration | minutesToHours | number:2 }}h</span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(subtask, 'duration')">
+                        <input style="position: relative; width: 40px;" type="text" ng-model="subtask.duration" pp-convert-time=""
+                               pp-model-pristine="blurField(subtask, 'duration')" pp-model="update(subtask); blurField(subtask, 'duration')" /> 
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <div class="editable">
+                        <a href="" ng-click="bookEffort(subtask)">
+                            <span class="editable">{{ subtask.effort | number:2 }}h</span>
+                        </a>
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <div class="editable" ng-if="!editingField(subtask, 'progress')">
+                        <a href="" ng-click="editField(subtask, 'progress', true)">
+                            <span class="editable">{{ subtask.progress | number:2 }}%</span>
+                        </a>
+                    </div>
+                    <div class="editable" ng-if="editingField(subtask, 'progress')">
+                        <input style="position: relative; width: 40px;" type="text" ng-model="subtask.progress"
+                               pp-model-pristine="blurField(subtask, 'progress')" pp-model="update(subtask); blurField(subtask, 'progress')" />
+                    </div>
+                </td>
+
+                <td ng-click="checkItem(subtask, $event)">
+                    <span>
+                        <a href="" ng-click="edit(subtask)"><span class="glyphicon glyphicon-search"></span></a>
+                    </span>
+                </td>
+            </tr>
         </tbody>
     </table>
     <div class="editable" ng-if="pagination.totalPages() > 0">
@@ -356,10 +358,10 @@
             <li ng-class="{disabled: pagination.currentPage == 0}">
                 <a href ng-click="pagination.prevPage()">« Prev</a>
             </li>
-            <li ng-repeat="i in [] | range:(pagination.totalPages() + 1)"
+            <li ng-repeat="i in []| range:(pagination.totalPages() + 1)"
                 ng-class="{active: i == pagination.currentPage}"
                 ng-click="pagination.setPage()">
-                <a href="" ng-click="pagination.gotoPage(i)" ng-if="pagination.showPaginationIndex(i)">{{ i + 1 }}</a>
+                <a href="" ng-click="pagination.gotoPage(i)" ng-if="pagination.showPaginationIndex(i)">{{ i + 1}}</a>
             </li>
             <li ng-class="{disabled: pagination.currentPage == pagination.totalPages() }">
                 <a href ng-click="pagination.nextPage()">Next »</a>
