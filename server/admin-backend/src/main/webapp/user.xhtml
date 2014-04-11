@@ -21,7 +21,10 @@
 				<h:inputText value="#{userModel.user.email}" />
 
 				<h:outputLabel value="Password" />
-				<h:inputText value="#{userModel.user.password}" />
+				<h:inputSecret value="#{userModel.user.password}" />
+
+				<h:outputLabel value="Activivation status" />
+				<h:selectBooleanCheckbox value="#{userModel.user.activation}" />				
 
 			</h:panelGrid>
 			<h:commandButton value="Create User" action="#{userModel.createUser}">

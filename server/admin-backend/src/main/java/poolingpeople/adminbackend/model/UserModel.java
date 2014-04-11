@@ -74,7 +74,6 @@ public class UserModel {
 		User userById = entityFactory.getUserById(user.getId());
 		userById.setFirstName(user.getFirstName());
 		userById.setLastName(user.getLastName());
-		userById.setPassword(user.getPassword());
 		userById.setBirthDate(user.getBirthDate());
 		userById.setActivation(user.getActivation());
 	}
