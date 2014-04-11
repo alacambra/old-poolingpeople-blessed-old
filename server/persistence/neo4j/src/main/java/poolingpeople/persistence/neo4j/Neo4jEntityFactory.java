@@ -18,6 +18,7 @@ import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.EntityFactory;
 import poolingpeople.commons.entities.PoolingpeopleEntity;
 import poolingpeople.commons.entities.Project;
+import poolingpeople.commons.entities.Service;
 import poolingpeople.commons.entities.Subject;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.User;
@@ -31,6 +32,7 @@ import poolingpeople.persistence.neo4j.entities.PersistedClassResolver;
 import poolingpeople.persistence.neo4j.entities.PersistedComment;
 import poolingpeople.persistence.neo4j.entities.PersistedEffort;
 import poolingpeople.persistence.neo4j.entities.PersistedProject;
+import poolingpeople.persistence.neo4j.entities.PersistedService;
 import poolingpeople.persistence.neo4j.entities.PersistedTask;
 import poolingpeople.persistence.neo4j.entities.PersistedUser;
 import poolingpeople.persistence.neo4j.exceptions.NodeNotFoundException;
@@ -42,11 +44,6 @@ public class Neo4jEntityFactory implements EntityFactory {
 	@Inject
 	private NeoManager manager;
 
-	/**
-	 * TODO : replaced the declared instance sources with the InstanceProvider
-	 * 
-	 */
-	
 	@Inject
 	InstanceProvider instanceProvider;
 
@@ -260,5 +257,25 @@ public class Neo4jEntityFactory implements EntityFactory {
 	@Override
 	public ChangeLogAttributeUpdate createChangeLogAttributeUpdate() {
 		return instanceProvider.getInstanceForClass(PersistedChangeLogAttributeUpdateAction.class);
+	}
+
+	@Override
+	public Service createService(Service service) {
+		return instanceProvider.getInstanceForClass(PersistedService.class).createNodeFromDtoModel(PoolingpeopleObjectType.SERVICE, service);
+	}
+
+	@Override
+	public List<Service> getAllServices() {
+		return manager.getPersistedObjects(
+				manager.getNodes(PersistedService.NODE_TYPE.name(), instanceProvider.getInstanceForClass(Pager.class).getStart(),
+						instanceProvider.getInstanceForClass(Pager.class).getSize()), 
+						new ArrayList<Service>(), 
+						PersistedService.class,
+						Service.class);
+	}
+
+	@Override
+	public Service getServiceById(String id) {
+		return instanceProvider.getInstanceForClass(PersistedService.class).loadExistingNodeById(id, PoolingpeopleObjectType.SERVICE);
 	}
 }
