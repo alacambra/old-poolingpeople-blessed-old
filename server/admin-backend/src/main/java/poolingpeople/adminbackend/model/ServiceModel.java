@@ -66,5 +66,17 @@ public class ServiceModel {
 			}
 		};
 	}
+	
+	public void updateService() {
+		synchronizeWithPersistedService();
+		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_INFO,"Service updated", ""));
+	}
+
+	private void synchronizeWithPersistedService() {
+		Service serviceById = entityFactory.getServiceById(service.getId());
+		serviceById.setActiveStatus(service.getActiveStatus());
+		serviceById.setDescription(service.getDescription());
+		serviceById.setTitle(service.getTitle());
+	}
 
 }

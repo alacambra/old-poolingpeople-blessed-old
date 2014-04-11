@@ -46,7 +46,14 @@
 				<f:facet name="header">
 					<h:outputText value="Active" />
 				</f:facet>
-				<h:selectBooleanCheckbox value="#{user.activeStatus}"/>
+				<h:selectBooleanCheckbox value="#{service.activeStatus}"/>
+			</h:column>
+	
+	<h:column>
+			<f:facet name="header">
+				<h:outputText value="Edit"/>
+			</f:facet>
+				<h:button value="Edit" outcome="edit_service.xhtml?id=#{service.id}"/>
 			</h:column>
 	
 		</h:dataTable>
