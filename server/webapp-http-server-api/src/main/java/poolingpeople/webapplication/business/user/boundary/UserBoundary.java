@@ -1,6 +1,8 @@
 package poolingpeople.webapplication.business.user.boundary;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 import javax.ejb.Stateless;
@@ -67,7 +69,16 @@ public class UserBoundary {
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getAllUsers() throws JsonGenerationException,
 	JsonMappingException, IOException {
-		String r = mapper.writeValueAsString(entityFactory.getAllUsers());
+		List<User> allUsers = entityFactory.getAllUsers();
+		List<User> activatedUser = new ArrayList<>();
+		
+		for (User user : allUsers) {
+			if(user.getActivation()) {
+				activatedUser.add(user);
+			}
+		}
+		
+		String r = mapper.writeValueAsString(activatedUser);
 		return Response.ok().entity(r).build();
 	}
 
