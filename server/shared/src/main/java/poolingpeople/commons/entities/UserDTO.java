@@ -52,7 +52,7 @@ public class UserDTO implements User {
 		this.lastName = lastName;
 	}
 
-	@Size(min=3)
+//	@Size(min=3)
 	public String getPassword() {
 		return password;
 	}
