@@ -53,7 +53,7 @@ public interface EntityFactory {
 
 	ChangeLogAttributeUpdate createChangeLogAttributeUpdate();
 
-	void createService(Service service);
+	Service createService(Service service);
 
 	List<Service> getAllServices();
 
