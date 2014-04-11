@@ -52,4 +52,10 @@ public interface EntityFactory {
 	ChangeLog createChangeLog();
 
 	ChangeLogAttributeUpdate createChangeLogAttributeUpdate();
+
+	void createService(Service service);
+
+	List<Service> getAllServices();
+
+	Service getServiceById(String id);
 }
