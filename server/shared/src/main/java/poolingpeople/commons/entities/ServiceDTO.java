@@ -60,7 +60,6 @@ public class ServiceDTO implements Service {
 		this.description=description;
 	}
 
-	@Size(min=10)
 	@Override
 	public String getDescription() {
 		return description;
