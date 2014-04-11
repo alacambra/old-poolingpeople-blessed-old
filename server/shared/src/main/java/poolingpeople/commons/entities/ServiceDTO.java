@@ -17,6 +17,10 @@ public class ServiceDTO implements Service {
 	public String getId() {
 		return id;
 	}
+	
+	public void setId(String id) {
+		this.id = id;
+	}
 
 	@Override
 	public List<ChangeLog> getChangeLogList() {
