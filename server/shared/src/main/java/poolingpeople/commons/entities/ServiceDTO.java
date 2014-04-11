@@ -3,6 +3,8 @@ package poolingpeople.commons.entities;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.validation.constraints.Size;
+
 public class ServiceDTO implements Service {
 
 	private String id;
@@ -47,6 +49,7 @@ public class ServiceDTO implements Service {
 		this.title= title;
 	}
 
+	@Size(min=3)
 	@Override
 	public String getTitle() {
 		return title;
@@ -57,6 +60,7 @@ public class ServiceDTO implements Service {
 		this.description=description;
 	}
 
+	@Size(min=10)
 	@Override
 	public String getDescription() {
 		return description;
