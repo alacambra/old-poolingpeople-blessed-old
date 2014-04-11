@@ -17,8 +17,7 @@ import poolingpeople.persistence.neo4j.Neo4jTransaction;
 @Neo4jTransaction
 public class UserModel {
 
-	private @Inject
-	EntityFactory entityFactory;
+	private @Inject	EntityFactory entityFactory;
 	private UserDTO user = new UserDTO();
 
 	public void createUser() {
