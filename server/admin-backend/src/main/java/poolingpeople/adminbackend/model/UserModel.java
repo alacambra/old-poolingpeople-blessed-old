@@ -1,4 +1,4 @@
-package poolingpeople.adminbackend.user.model;
+package poolingpeople.adminbackend.model;
 
 import java.util.ArrayList;
 import java.util.List;
