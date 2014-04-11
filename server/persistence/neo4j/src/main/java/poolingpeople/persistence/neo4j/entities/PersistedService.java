@@ -13,7 +13,7 @@ import poolingpeople.persistence.neo4j.Relations;
 
 @Neo4jProfiler
 public class PersistedService extends AbstractPersistedModel<PersistedService> implements Service{
-	public static final PoolingpeopleObjectType NDOE_TYPE = PoolingpeopleObjectType.SERVICE;
+	public static final PoolingpeopleObjectType NODE_TYPE = PoolingpeopleObjectType.SERVICE;
 
 	@Override
 	public List<ChangeLog> getChangeLogList() {
