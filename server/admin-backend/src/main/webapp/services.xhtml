@@ -4,41 +4,51 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:f="http://java.sun.com/jsf/core">
 <ui:composition template="layout.xhtml"> 
-	<ui:define name="title">Services</ui:define>
+	<ui:define name="title">Create Services</ui:define>
 	<ui:define name="content">
 		<h:form>
 			<h:panelGrid columns="2">
-				<h:outputLabel value="First Name" />
-				<h:inputText value="#{userModel.user.firstName}" />
+				<h:outputLabel value="Title" />
+				<h:inputText value="#{serviceModel.service.title}" />
 
-				<h:outputLabel value="Last Name" />
-				<h:inputText value="#{userModel.user.lastName}" />
+				<h:outputLabel value="Description" />
+				<h:inputTextarea value="#{serviceModel.service.description}" />
 
-				<h:outputLabel value="Birthdate" />
-				<h:inputText value="#{userModel.user.birthDate}" />
-
-				<h:outputLabel value="Email" />
-				<h:inputText value="#{userModel.user.email}" />
-
-				<h:outputLabel value="Password" />
-				<h:inputText value="#{userModel.user.password}" />
+				<h:outputLabel value="Active status" />
+				<h:selectBooleanCheckbox value="#{serviceModel.service.activeStatus}" />
 
 			</h:panelGrid>
-			<h:commandButton value="Create User" action="#{userModel.createUser}" />
+			<h:commandButton value="Create Service" action="#{serviceModel.createService}" >
+					<f:ajax execute="@form" render=":serviceList :errors"/>
+			</h:commandButton>
 		</h:form>
 
 		<hr />
 
-		<h1>Userlist</h1>
-		<h:dataTable id="userList" value="#{userModel.getAllUser()}"
-			var="user" border="1">
+		<h1>Servicelist</h1>
+		<h:dataTable id="serviceList" value="#{serviceModel.getAllServices()}"
+			var="service" border="1">
 			<h:column>
 				<f:facet name="header">
-					<h:outputText value="Firstname" />
+					<h:outputText value="Title" />
 				</f:facet>
-				<h:outputText value="#{user.firstName}"></h:outputText>
+				<h:outputText value="#{service.title}"></h:outputText>
 			</h:column>
-
+	
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Description" />
+				</f:facet>
+				<h:outputText value="#{service.description}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Active" />
+				</f:facet>
+				<h:selectBooleanCheckbox value="#{user.activeStatus}"/>
+			</h:column>
+	
 		</h:dataTable>
 
 	</ui:define>
