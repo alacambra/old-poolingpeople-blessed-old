@@ -19,14 +19,17 @@
 				<h:inputText value="#{userModel.user.lastName}" />
 
 				<h:outputLabel value="Birthdate" />
-				<h:inputText value="#{userModel.user.birthDate}" />
+				<h:inputText value="#{userModel.user.birthDate}" converter="dateConverter"/>
 
 				<h:outputLabel value="Is Activated"/>
 				<h:selectBooleanCheckbox value="#{userModel.user.activation}"/>
 
 			</h:panelGrid>
-			<h:commandButton value="Update User" action="#{userModel.updateUser}"/>
+			<h:commandButton value="Update User" action="#{userModel.updateUser}" >
+				<f:ajax execute="@form" render=":errors"/>
+			</h:commandButton>
 		</h:form>
 	</ui:define>
+	<h:messages  />
 </ui:composition>
 </html>

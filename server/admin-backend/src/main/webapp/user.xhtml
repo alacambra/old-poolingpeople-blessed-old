@@ -15,7 +15,7 @@
 				<h:inputText value="#{userModel.user.lastName}" />
 
 				<h:outputLabel value="Birthdate" />
-				<h:inputText value="#{userModel.user.birthDate}" />
+				<h:inputText value="#{userModel.user.birthDate}" converter="dateConverter" />
 
 				<h:outputLabel value="Email" />
 				<h:inputText value="#{userModel.user.email}" />
@@ -55,7 +55,7 @@
 				<f:facet name="header">
 					<h:outputText value="Birthdate" />
 				</f:facet>
-				<h:outputText value="#{user.birthDate}"></h:outputText>
+				<h:outputText value="#{user.birthDate}" converter="dateConverter"></h:outputText>
 			</h:column>
 			
 			<h:column>
