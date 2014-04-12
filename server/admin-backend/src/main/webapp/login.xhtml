@@ -1,0 +1,20 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    	               "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="layout.xhtml">
+	<ui:define name="title">Login</ui:define>
+	<ui:define name="content">
+		<h:form id="loginForm">
+					<h:outputText value="Username" />
+					<h:inputText id="username" value="#{authManager.uname}"></h:inputText>
+					<h:outputText value="Password" />
+					<h:inputSecret id="password" value="#{authManager.password}"
+						feedback="false"></h:inputSecret>
+					<h:commandButton action="#{authManager.loginProject}" value="Login"
+						update="loginForm" ajax="true"></h:commandButton>
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

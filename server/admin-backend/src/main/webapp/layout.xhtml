@@ -6,13 +6,16 @@
 	<title><ui:insert name="title">Default title</ui:insert></title>
 </h:head>
 <h:body>
+<h:form>
 	<h:link value="Home " outcome="index.xhtml"/>
 	<h:link value="User " outcome="user.xhtml"/>
 	<h:link value="Services " outcome="services.xhtml"/>
+	<h:commandLink value="Logout" action="#{authManager.logout}" rendered="#{authManager.loggedIn}" />
 	<h1><ui:insert name="title">Default title</ui:insert></h1>
 	<h:messages id="errors" infoStyle="color:blue" warnStyle="color:orange" errorStyle="color:red"/>
 	<ui:insert name="content">Default content</ui:insert>
 	<hr/>
 	<h:outputText value="Admin Backend" style="font-style: italic"></h:outputText>
+	</h:form>
 </h:body>
 </html>
