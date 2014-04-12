@@ -22,7 +22,7 @@ public class UserModel {
 
 	public void createUser() {
 		entityFactory.createUser(user);
-		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_INFO,"User created", ""));
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,"User created", ""));
 	}
 
 	public UserDTO getUser() {
@@ -36,7 +36,8 @@ public class UserModel {
 	public List<UserDTO> getAllUser() {
 		List<UserDTO> users = new ArrayList<>();
 
-		for (final User user : entityFactory.getAllUsers()) {
+		int	pageSize = 50;
+		for (final User user : entityFactory.getAllUsers(pageSize)) {
 			users.add(new UserDTO() {
 				{
 					setId(user.getId());
@@ -67,7 +68,7 @@ public class UserModel {
 
 	public void updateUser() {
 		synchronizeWithPersistedUser();
-		FacesContext.getCurrentInstance().addMessage(null,new FacesMessage(FacesMessage.SEVERITY_INFO,"User updated", ""));
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage(FacesMessage.SEVERITY_INFO,"User updated", ""));
 	}
 
 	private void synchronizeWithPersistedUser() {

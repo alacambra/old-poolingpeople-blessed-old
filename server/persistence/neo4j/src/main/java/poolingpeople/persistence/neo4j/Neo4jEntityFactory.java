@@ -278,4 +278,24 @@ public class Neo4jEntityFactory implements EntityFactory {
 	public Service getServiceById(String id) {
 		return instanceProvider.getInstanceForClass(PersistedService.class).loadExistingNodeById(id, PoolingpeopleObjectType.SERVICE);
 	}
+
+	@Override
+	public List<User> getAllUsers(int pageSize) {
+		return manager.getPersistedObjects(
+				manager.getNodes(PersistedUser.NODE_TYPE.name(), instanceProvider.getInstanceForClass(Pager.class).getStart(),
+						pageSize), 
+						new ArrayList<User>(), 
+						PersistedUser.class,
+						User.class);
+	}
+
+	@Override
+	public List<Service> getAllServices(int pageSize) {
+		return manager.getPersistedObjects(
+				manager.getNodes(PersistedService.NODE_TYPE.name(), instanceProvider.getInstanceForClass(Pager.class).getStart(),
+						pageSize), 
+						new ArrayList<Service>(), 
+						PersistedService.class,
+						Service.class);
+	}
 }

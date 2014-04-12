@@ -58,4 +58,8 @@ public interface EntityFactory {
 	List<Service> getAllServices();
 
 	Service getServiceById(String id);
+
+	List<User> getAllUsers(int pageSize);
+
+	List<Service> getAllServices(int pageSize);
 }

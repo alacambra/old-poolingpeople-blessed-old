@@ -40,7 +40,8 @@ public class ServiceModel {
 	public List<ServiceDTO> getAllServices() {
 		List<ServiceDTO> services = new ArrayList<>();
 
-		for (final Service service : entityFactory.getAllServices()) {
+		int	pageSize = 50;
+		for (final Service service : entityFactory.getAllServices(pageSize)) {
 			services.add(new ServiceDTO() {
 				{
 					setId(service.getId());
