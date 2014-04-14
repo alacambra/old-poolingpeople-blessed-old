@@ -6,6 +6,7 @@ import javax.enterprise.context.SessionScoped;
 import javax.faces.application.FacesMessage;
 import javax.faces.context.FacesContext;
 import javax.inject.Named;
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 @SessionScoped
@@ -42,7 +43,7 @@ public class AuthManager implements Serializable {
 	    }
 	 
 	    public String loginProject() {
-	        boolean result = (uname.equals("admin") && password.equals("1234"));
+		boolean result = (uname.equals("admin") && password.equals("1234"));
 	        if (result) {
 	            // get Http Session and store username
 	            HttpSession session = Util.getSession();
@@ -72,4 +73,31 @@ public class AuthManager implements Serializable {
 	      session.invalidate();
 	      return "login.xhtml";
 	   }
+		
+	static class Util {
+
+			public static HttpSession getSession() {
+				return (HttpSession) FacesContext.getCurrentInstance().getExternalContext()
+						.getSession(false);
+			}
+
+			public static HttpServletRequest getRequest() {
+				return (HttpServletRequest) FacesContext.getCurrentInstance().getExternalContext()
+						.getRequest();
+			}
+
+			public static String getUserName() {
+				HttpSession session = (HttpSession) FacesContext.getCurrentInstance().getExternalContext()
+						.getSession(false);
+				return session.getAttribute("username").toString();
+			}
+
+			public static String getUserId() {
+				HttpSession session = getSession();
+				if (session != null)
+					return (String) session.getAttribute("userid");
+				else
+					return null;
+			}
+		}
 }
