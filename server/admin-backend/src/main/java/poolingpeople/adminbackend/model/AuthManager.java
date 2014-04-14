@@ -52,7 +52,7 @@ public class AuthManager implements Serializable {
 	        } else {
 	            FacesContext.getCurrentInstance().addMessage(
 	                    null,
-	                    new FacesMessage(FacesMessage.SEVERITY_WARN,
+	                    new FacesMessage(FacesMessage.SEVERITY_ERROR,
 	                    "Invalid Login!",
 	                    "Please Try Again!"));
 	 
