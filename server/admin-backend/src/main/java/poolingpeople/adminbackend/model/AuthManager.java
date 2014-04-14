@@ -14,17 +14,8 @@ import javax.servlet.http.HttpSession;
 public class AuthManager implements Serializable {
 	private static final long serialVersionUID = 6100698340283697186L;
 	private String password;
-
-	private String message, uname;
+	private String userName;
 	private boolean loggedIn;
-
-	public String getMessage() {
-		return message;
-	}
-
-	public void setMessage(String message) {
-		this.message = message;
-	}
 
 	public String getPassword() {
 		return password;
@@ -34,20 +25,18 @@ public class AuthManager implements Serializable {
 		this.password = password;
 	}
 
-	public String getUname() {
-		return uname;
+	public String getuserName() {
+		return userName;
 	}
 
-	public void setUname(String uname) {
-		this.uname = uname;
+	public void setuserName(String userName) {
+		this.userName = userName;
 	}
 
-	public String loginProject() {
-		boolean result = (uname.equals("admin") && password.equals("1234"));
-		if (result) {
-			// get Http Session and store username
+	public String login() {
+		if (isLoginValid()) {
 			HttpSession session = Util.getSession();
-			session.setAttribute("username", uname);
+			session.setAttribute("username", userName);
 			loggedIn = true;
 			return "index.xhtml";
 		} else {
@@ -55,12 +44,12 @@ public class AuthManager implements Serializable {
 					null,
 					new FacesMessage(FacesMessage.SEVERITY_ERROR,
 							"Invalid Login!", "Please Try Again!"));
-
-			// invalidate session, and redirect to other pages
-
-			// message = "Invalid Login. Please Try Again!";
 			return "login.xhtml";
 		}
+	}
+
+	private boolean isLoginValid() {
+		return userName.equals("admin") && password.equals("1234");
 	}
 
 	public boolean isLoggedIn() {
@@ -74,7 +63,6 @@ public class AuthManager implements Serializable {
 	}
 
 	static class Util {
-
 		public static HttpSession getSession() {
 			return (HttpSession) FacesContext.getCurrentInstance()
 					.getExternalContext().getSession(false);

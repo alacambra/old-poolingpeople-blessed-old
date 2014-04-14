@@ -12,7 +12,7 @@
 					<h:outputText value="Password" />
 					<h:inputSecret id="password" value="#{authManager.password}"
 						feedback="false"></h:inputSecret>
-					<h:commandButton action="#{authManager.loginProject}" value="Login"
+					<h:commandButton action="#{authManager.login}" value="Login"
 						update="loginForm" ajax="true"></h:commandButton>
 		</h:form>
 	</ui:define>
