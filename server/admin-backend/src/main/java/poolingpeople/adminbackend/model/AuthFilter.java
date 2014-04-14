@@ -13,40 +13,75 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(filterName = "AuthFilter", urlPatterns = {"*.xhtml"})
+@WebFilter(filterName = "AuthFilter", urlPatterns = { "*.xhtml" })
 public class AuthFilter implements Filter {
-     
-    public AuthFilter() {
-    }
- 
-    @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
-         
-    }
- 
-    @Override
-    public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-         try {
- 
-            // check whether session variable is set
-            HttpServletRequest req = (HttpServletRequest) request;
-            HttpServletResponse res = (HttpServletResponse) response;
-            HttpSession ses = req.getSession(false);
-            //  allow user to proccede if url is login.xhtml or user logged in or user is accessing any page in //public folder
-            String reqURI = req.getRequestURI();
-            if ( reqURI.indexOf("/login.xhtml") >= 0 || (ses != null && ses.getAttribute("username") != null)
-                                       || reqURI.indexOf("/public/") >= 0 || reqURI.contains("javax.faces.resource") )
-                   chain.doFilter(request, response);
-            else   // user didn't log in but asking for a page that is not allowed so take user to login page
-                   res.sendRedirect(req.getContextPath() + "/login.xhtml");  // Anonymous user. Redirect to login page
-      }
-     catch(Throwable t) {
-         System.out.println( t.getMessage());
-     }
-    } //doFilter
- 
-    @Override
-    public void destroy() {
-         
-    }
+
+	private HttpServletRequest httpRequest;
+	private HttpServletResponse httpResponse;
+	private HttpSession httpSession;
+	private FilterChain filterChain;
+
+	public AuthFilter() {
+	}
+
+	@Override
+	public void init(FilterConfig filterConfig) throws ServletException {
+	}
+
+	@Override
+	public void doFilter(ServletRequest request, ServletResponse response,
+			FilterChain filterChain) throws IOException, ServletException {
+		try {
+			gatherHttpRequestResponseObjects(request, response, filterChain);
+			processRequest();
+		} catch (Throwable t) {
+			System.err.println(t);
+		}
+	}
+
+	private void processRequest() throws IOException, ServletException {
+		String requestURI = httpRequest.getRequestURI();
+		if (isAccessingIndex(requestURI) || hasSession(httpSession)
+				|| isAccessingPublicFolder(requestURI)
+				|| isAccessingFacesResources(requestURI)) {
+			filterChain.doFilter(httpRequest, httpResponse);
+		} else {
+			redirectToIndex(httpRequest, httpResponse);
+		}
+	}
+
+	private void gatherHttpRequestResponseObjects(ServletRequest request,
+			ServletResponse response, FilterChain filterChain) {
+		httpRequest = (HttpServletRequest) request;
+		httpResponse = (HttpServletResponse) response;
+		httpSession = httpRequest.getSession(false);
+		this.filterChain = filterChain;
+	}
+
+	private void redirectToIndex(HttpServletRequest httpRequest,
+			HttpServletResponse httpResponse) throws IOException {
+		httpResponse
+				.sendRedirect(httpRequest.getContextPath() + "/login.xhtml");
+	}
+
+	private boolean isAccessingFacesResources(String reqURI) {
+		return reqURI.contains("javax.faces.resource");
+	}
+
+	private boolean isAccessingPublicFolder(String reqURI) {
+		return reqURI.indexOf("/public/") >= 0;
+	}
+
+	private boolean hasSession(HttpSession httpSession) {
+		return httpSession != null
+				&& httpSession.getAttribute("username") != null;
+	}
+
+	private boolean isAccessingIndex(String reqURI) {
+		return reqURI.indexOf("/login.xhtml") >= 0;
+	}
+
+	@Override
+	public void destroy() {
+	}
 }
