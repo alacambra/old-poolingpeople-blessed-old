@@ -5,7 +5,10 @@
         "endDate": -99999999999999,
         "title": "AReview Grobkonzept",
         "description": "Bitte Dok gegen lesen und kommentieren (090923_konzept_usabilitytest_maßnahmen.doc)\r\n\\\\Projects\\share\\PROJECTS\\00_Aufträge ohne Projektnummer\\2009-09-23 KDG Usability Optimierung",
-        "services": ["CSS/HTML Umsetzung", "Grafik Design"],
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
         "subtasks": [
             {
                 "duration": 0,
@@ -22,27 +25,30 @@
                     "taskCount": 0,
                     "effortIsDefault": false,
                     "durationIsDefault": true,
-                    "id": "9f197726-8d39-4259-a33f-07ecbe7150fa"
+                    "id": "9f197726-8d39-4259-a33f-07ecbe7150fa3289"
                 },
                 "assignee": {
                     "lastName": null,
                     "birthDate": null,
                     "firstName": "Felix",
                     "email": "felix.schreiber@ion2s.com",
-                    "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb"
+                    "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb2690"
                 },
                 "creator": {
                     "email": "dev@ion2s.com",
                     "firstName": "Redmine",
                     "lastName": null,
                     "birthDate": null,
-                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242348"
                 },
-
                 "observed": true,
                 "parentId": null,
                 "subtaskCount": 0,
-                "services": ["CSS/HTML Umsetzung", "Grafik Design", "Javascript Umsetzung"],
+                "services": [
+                    "CSS/HTML Umsetzung",
+                    "Grafik Design",
+                    "Javascript Umsetzung"
+                ],
                 "subtasks": [],
                 "effort": 1,
                 "progressIsDefault": true,
@@ -52,7 +58,7 @@
                 "progress": 0,
                 "status": "COMPLETED",
                 "priority": "NORMAL",
-                "id": "93761d3e8176-4703-ab5c-fcaf3520-b9ca"
+                "id": "93761d3e8176-4703-ab5c-fcaf3520-b9ca833"
             },
             {
                 "duration": 0,
@@ -69,7 +75,7 @@
                     "durationIsDefault": true,
                     "effortIsDefault": false,
                     "taskCount": 832,
-                    "id": "40012c66-3750-4b6b-8efa-37f758a06a5e"
+                    "id": "40012c66-3750-4b6b-8efa-37f758a06a5e3667"
                 },
                 "assignee": null,
                 "creator": {
@@ -77,7 +83,7 @@
                     "firstName": "Redmine",
                     "lastName": null,
                     "birthDate": null,
-                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242711"
                 },
                 "observed": true,
                 "parentId": null,
@@ -92,7 +98,7 @@
                 "progress": 0,
                 "status": "COMPLETED",
                 "priority": "NORMAL",
-                "id": "ad936c11f7e7-495c-a953-8891dd07-9b90"
+                "id": "ad936c11f7e7-495c-a953-8891dd07-9b903288"
             }
         ],
         "assignee": null,
@@ -101,7 +107,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241676"
         },
         "observed": false,
         "parentId": null,
@@ -114,7 +120,7 @@
         "progress": 0.52,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "5584d38b-b797-41dc-97e1-76206eedf82f"
+        "id": "5584d38b-b797-41dc-97e1-76206eedf82f3452"
     },
     {
         "duration": 0,
@@ -131,16 +137,15 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 26,
-            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41"
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41429"
         },
         "assignee": {
             "email": "a@a.com",
             "firstName": "DefaultUser",
             "lastName": null,
             "birthDate": null,
-            "id": "1560ff35-4954-4034-8f36-93c9cdfd2163"
+            "id": "1560ff35-4954-4034-8f36-93c9cdfd21631637"
         },
-
         "observed": true,
         "parentId": null,
         "creator": {
@@ -148,7 +153,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241400"
         },
         "subtaskCount": 0,
         "services": [],
@@ -161,7 +166,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "fcaf3502-ab5c-4703-b9ca-93766c3e87e6"
+        "id": "fcaf3502-ab5c-4703-b9ca-93766c3e87e6521"
     },
     {
         "duration": 0,
@@ -178,7 +183,7 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 832,
-            "id": "40012c66-3750-4b6b-8efa-37f758a06a5e"
+            "id": "40012c66-3750-4b6b-8efa-37f758a06a5e2796"
         },
         "assignee": null,
         "observed": false,
@@ -187,11 +192,13 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324835"
         },
         "parentId": null,
         "subtaskCount": 0,
-        "services": ["CSS/HTML Umsetzung"],
+        "services": [
+            "CSS/HTML Umsetzung"
+        ],
         "subtasks": [],
         "effort": 2,
         "progressIsDefault": true,
@@ -201,7 +208,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "8891d0d7-a953-495c-9b90-ad931d11f177"
+        "id": "8891d0d7-a953-495c-9b90-ad931d11f1772852"
     },
     {
         "duration": 0,
@@ -216,7 +223,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241945"
         },
         "observed": false,
         "parentId": null,
@@ -231,7 +238,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "6303ec9a-1e62-44b2-a4b5-1b1b9aff6454"
+        "id": "6303ec9a-1e62-44b2-a4b5-1b1b9aff6454654"
     },
     {
         "duration": 0,
@@ -248,7 +255,7 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 217,
-            "id": "6ffb210c-89e8-4485-996a-d07d8876005e"
+            "id": "6ffb210c-89e8-4485-996a-d07d8876005e1680"
         },
         "assignee": null,
         "observed": false,
@@ -257,7 +264,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324174"
         },
         "parentId": null,
         "subtaskCount": 0,
@@ -271,7 +278,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "73ff0032-d2cc-4006-8d07-c77969ca45cc"
+        "id": "73ff0032-d2cc-4006-8d07-c77969ca45cc1649"
     },
     {
         "duration": 0,
@@ -288,16 +295,15 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 26,
-            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41"
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a4127"
         },
         "assignee": {
             "email": "1392719960207@s.com",
             "firstName": "",
             "lastName": null,
             "birthDate": null,
-            "id": "ee47b4e9-9a6f-48c0-8c01-50a9728a4f16"
+            "id": "ee47b4e9-9a6f-48c0-8c01-50a9728a4f16351"
         },
-
         "observed": true,
         "parentId": null,
         "creator": {
@@ -305,10 +311,13 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243977"
         },
         "subtaskCount": 0,
-        "services": ["CSS/HTML Umsetzung", "Grafik Design"],
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
         "subtasks": [],
         "effort": 4,
         "progressIsDefault": true,
@@ -318,7 +327,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "546256a6-d1bd-4879-9949-7075171f9098"
+        "id": "546256a6-d1bd-4879-9949-7075171f90981798"
     },
     {
         "duration": 0,
@@ -335,7 +344,7 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 26,
-            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41"
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a412072"
         },
         "assignee": null,
         "creator": {
@@ -343,7 +352,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324945"
         },
         "observed": false,
         "parentId": null,
@@ -358,7 +367,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "d3facda2-a8f5-4521-a543-3d32b138a972"
+        "id": "d3facda2-a8f5-4521-a543-3d32b138a9723219"
     },
     {
         "duration": 0,
@@ -375,7 +384,7 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 26,
-            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41"
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a41578"
         },
         "assignee": null,
         "creator": {
@@ -383,12 +392,16 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241326"
         },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
-        "services": ["CSS/HTML Umsetzung", "Grafik Design", "Javascript Umsetzung"],
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
         "subtasks": [],
         "effort": 0,
         "progressIsDefault": true,
@@ -398,7 +411,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "HIGH",
-        "id": "f285d476-2461-4085-8e86-40200c4f5be4"
+        "id": "f285d476-2461-4085-8e86-40200c4f5be416"
     },
     {
         "duration": 3600,
@@ -407,31 +420,30 @@
         "title": "CSS",
         "description": "- Überflüssige und alte CSS Definitionen entfernen",
         "project": {
-          "title": "141_Likereal",
-          "progressIsDefault": false,
-          "startDateIsDefault": false,
-          "endDateIsDefault": false,
-          "statusIsDefault": true,
-          "durationIsDefault": false,
-          "effortIsDefault": false,
-          "taskCount": 4,
-          "id": "647866a2-a522-4fcd-8c58-7740b9c50327"
+            "title": "141_Likereal",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 4,
+            "id": "647866a2-a522-4fcd-8c58-7740b9c503271181"
         },
         "assignee": {
             "lastName": null,
             "birthDate": null,
             "firstName": "Felix",
             "email": "felix.schreiber@ion2s.com",
-            "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb"
+            "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb1116"
         },
-
         "observed": false,
         "creator": {
             "email": "dev@ion2s.com",
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243972"
         },
         "parentId": null,
         "subtaskCount": 0,
@@ -445,7 +457,7 @@
         "progress": 0,
         "status": "ARCHIVED",
         "priority": "NORMAL",
-        "id": "61139e31-9546-438f-8feb-a382af211282"
+        "id": "61139e31-9546-438f-8feb-a382af2112823965"
     },
     {
         "duration": 0,
@@ -462,7 +474,7 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 8,
-            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e2"
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e22716"
         },
         "assignee": null,
         "creator": {
@@ -470,7 +482,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243890"
         },
         "observed": false,
         "parentId": null,
@@ -485,7 +497,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "c1505b3a-7874-49f4-8e43-a9abe0104a59"
+        "id": "c1505b3a-7874-49f4-8e43-a9abe0104a59456"
     },
     {
         "duration": 0,
@@ -502,7 +514,7 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 8,
-            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e2"
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e21075"
         },
         "assignee": null,
         "creator": {
@@ -510,7 +522,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324476"
         },
         "observed": false,
         "parentId": null,
@@ -525,7 +537,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "c5cca217-3fe3-4a63-b5af-8889a48fbe91"
+        "id": "c5cca217-3fe3-4a63-b5af-8889a48fbe91273"
     },
     {
         "duration": 0,
@@ -542,7 +554,7 @@
             "durationIsDefault": false,
             "effortIsDefault": false,
             "taskCount": 15,
-            "id": "ed8fcf22-bebf-4cc8-bb12-f770ace07713"
+            "id": "ed8fcf22-bebf-4cc8-bb12-f770ace07713182"
         },
         "assignee": null,
         "creator": {
@@ -550,7 +562,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324577"
         },
         "observed": true,
         "parentId": null,
@@ -565,7 +577,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "230c7899-1ce9-4146-939b-759d7e680ac8"
+        "id": "230c7899-1ce9-4146-939b-759d7e680ac8942"
     },
     {
         "duration": 0,
@@ -582,26 +594,30 @@
             "durationIsDefault": false,
             "effortIsDefault": false,
             "taskCount": 9,
-            "id": "754715af-e6c8-49d0-9dad-fce90d9c5ac1"
+            "id": "754715af-e6c8-49d0-9dad-fce90d9c5ac13734"
         },
         "assignee": {
             "email": "dev@ion2s.com",
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241830"
         },
         "creator": {
             "email": "dev@ion2s.com",
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243315"
         },
         "observed": false,
         "parentId": null,
         "subtaskCount": 0,
-        "services": ["CSS/HTML Umsetzung", "Grafik Design", "Javascript Umsetzung"],
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
         "subtasks": [],
         "effort": 3,
         "progressIsDefault": true,
@@ -611,7 +627,7 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "LOW",
-        "id": "eed640ac-952d-4c6c-bafd-9989606e131f"
+        "id": "eed640ac-952d-4c6c-bafd-9989606e131f2769"
     },
     {
         "duration": 0,
@@ -628,7 +644,7 @@
             "durationIsDefault": true,
             "effortIsDefault": false,
             "taskCount": 16,
-            "id": "864eefe3-255d-4aa5-b3e5-b827d975a64c"
+            "id": "864eefe3-255d-4aa5-b3e5-b827d975a64c1740"
         },
         "assignee": null,
         "creator": {
@@ -636,7 +652,7 @@
             "firstName": "Redmine",
             "lastName": null,
             "birthDate": null,
-            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324"
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243494"
         },
         "observed": false,
         "parentId": null,
@@ -651,6 +667,3356 @@
         "progress": 0,
         "status": "COMPLETED",
         "priority": "NORMAL",
-        "id": "b2161eff-7b1d-4841-a143-71cca6cd8c0c"
+        "id": "b2161eff-7b1d-4841-a143-71cca6cd8c0c2443"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254731900000,
+        "endDate": -99999999999999,
+        "title": "AReview Grobkonzept",
+        "description": "Bitte Dok gegen lesen und kommentieren (090923_konzept_usabilitytest_maßnahmen.doc)\r\n\\\\Projects\\share\\PROJECTS\\00_Aufträge ohne Projektnummer\\2009-09-23 KDG Usability Optimierung",
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [
+            {
+                "duration": 0,
+                "startDate": 0,
+                "endDate": 1,
+                "title": "St1 Installation Plugin \"Whining\"",
+                "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+                "project": {
+                    "title": "e_2009_139_kdgRetainer0409 - OM",
+                    "progressIsDefault": true,
+                    "endDateIsDefault": true,
+                    "startDateIsDefault": true,
+                    "statusIsDefault": true,
+                    "taskCount": 0,
+                    "effortIsDefault": false,
+                    "durationIsDefault": true,
+                    "id": "9f197726-8d39-42539-a33f-07ecbe7150fa2396"
+                },
+                "assignee": {
+                    "lastName": null,
+                    "birthDate": null,
+                    "firstName": "Felix",
+                    "email": "felix.schreiber@ion2s.com",
+                    "id": "e8dcba4b-6e86-4a9c-a957-ae271df62cddb1572"
+                },
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c34432ec3243939"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [
+                    "CSS/HTML Umsetzung",
+                    "Grafik Design",
+                    "Javascript Umsetzung"
+                ],
+                "subtasks": [],
+                "effort": 1,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "93761d3e48176-4703-ab5c-fcaf3520-b9ca30"
+            },
+            {
+                "duration": 0,
+                "startDate": 1254739843000,
+                "endDate": -99999999999999,
+                "title": "St 2 Shops Update",
+                "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+                "project": {
+                    "title": "DE_P002 - Allg. Maintenance",
+                    "progressIsDefault": false,
+                    "startDateIsDefault": false,
+                    "endDateIsDefault": false,
+                    "statusIsDefault": true,
+                    "durationIsDefault": true,
+                    "effortIsDefault": false,
+                    "taskCount": 832,
+                    "id": "40012c66-35750-4b6b-8efa-37f758a06a5e2796"
+                },
+                "assignee": null,
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-0685a-4c8a-bb00-35c4432ec324984"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [],
+                "subtasks": [],
+                "effort": 2,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "ad936c11f7e77-495c-a953-8891dd07-9b902121"
+            }
+        ],
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-48c8a-bb00-35c4432ec3242518"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0.52,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "5584d38b-b797-41dc9-97e1-76206eedf82f883"
+    },
+    {
+        "duration": 0,
+        "startDate": 0,
+        "endDate": 1,
+        "title": "Installation Plugin \"Whining\"",
+        "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4fa12-8ff7-f623b9f86a4198"
+        },
+        "assignee": {
+            "email": "a@a.com",
+            "firstName": "DefaultUser",
+            "lastName": null,
+            "birthDate": null,
+            "id": "1560ff35-4954-4034-81f36-93c9cdfd21632504"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4cf8a-bb00-35c4432ec324697"
+        },
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "fcaf3502-ab5c-4703-cb9ca-93766c3e87e63332"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739843000,
+        "endDate": -99999999999999,
+        "title": "Shops Update",
+        "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+        "project": {
+            "title": "DE_P002 - Allg. Maintenance",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 832,
+            "id": "40012cc66-3750-4b6b-8efa-37f758a06a5e3890"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3c242803"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 2,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "8891ed0d7-a953-495c-9b90-ad93e1d11f177213"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739942000,
+        "endDate": -99999999999999,
+        "title": "Nachträglich den Tracker ändern",
+        "description": "Man vergisst ofte den Tracker sinngemäß zu setzen bei de4r Anlage eines Ticket. Nachträglich kann man den nocht mehr ändern :-(",
+        "project": null,
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c44ac32ec3241415"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "6303ec9a-1e62-44b2-a4b5-1b1aeb9aff64541285"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254743218000,
+        "endDate": -99999999999999,
+        "title": "Lust TV planen",
+        "description": "* Tickets erstellen und Material anfordern",
+        "project": {
+            "title": "DE_P003 - Sender",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 217,
+            "id": "6ffb210c-89e8-4485-9ad96a-d07d8876005e2408"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bbcc00-35c4432ec3242532"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "73ff0032-d2cc-4006-8d07-c7712969ca45cc2977"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738197000,
+        "endDate": -99999999999999,
+        "title": "Installation 2. Redmine-Version",
+        "description": "Installation einer zweiten Redmine-Version zum Austesten verschiedener Plugins, bevor diese in der laufenden Version installiert werden.",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f6223b9f86a413176"
+        },
+        "assignee": {
+            "email": "1392719960207@s.com",
+            "firstName": "",
+            "lastName": null,
+            "birthDate": null,
+            "id": "ee47b4e9-9a6f-48c0-8c01-501239728a4f1692"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c123ec3243921"
+        },
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "546256a6-d1bd-4879-1119-7075171f90981732"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738738000,
+        "endDate": -99999999999999,
+        "title": "Installation verschiedener Plugins",
+        "description": "Nachfolgende Plugins bitte zunächst in zweiter Redmine Version installieren:\r\n\r\n* Charts Plugin\r\n* Developer Rates Plugin\r\n* Effort Estimate Plugin\r\n* ezSummary Plugin\r\n* Graphs Plugin\r\n* Issue Group Plugin\r\n* Projects Tree View Plugin\r\n* Question Plugin\r\n* Schedules Plugin\r\n* Stuff to do Plugin\r\n* Subtasks Plugin\r\n* To do Lists Plugin\r\n* Workload Plugin\r\n\r\nErst nach erfolgter Abstimmung mit Michael und/ oder Kerstin in laufender Redmine Version installieren! ",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f62222f86a411516"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c44344424494"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "d3facda2-a8f5-4521-a543-3d32b13548421164"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738904000,
+        "endDate": -99999999999999,
+        "title": "Installation Theme Basecamp",
+        "description": "Installation der Theme \"Basecamp\" in beiden Redmine Versionen",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f62234234a41871"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-3acacacc3243231"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "HIGH",
+        "id": "f285d476-2461-4085-8e86-4020afafafe4434"
+    },
+    {
+        "duration": 3600,
+        "startDate": 1254819476000,
+        "endDate": 1274819476000,
+        "title": "CSS",
+        "description": "- Überflüssige und alte CSS Definitionen entfernen",
+        "project": {
+            "title": "141_Likereal",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 4,
+            "id": "647866a2-a522-4fcd-8c58-77aeae9c503273622"
+        },
+        "assignee": {
+            "lastName": null,
+            "birthDate": null,
+            "firstName": "Felix",
+            "email": "felix.schreiber@ion2s.com",
+            "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddeeab3275"
+        },
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4dadadd43754"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "ARCHIVED",
+        "priority": "NORMAL",
+        "id": "61139e31-9546-438f-8feb-a382dede12822312"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819660000,
+        "endDate": -99999999999999,
+        "title": "JS Includes optimieren",
+        "description": "Bibliotheken zusammenfassen zu einer Datei (copy and paste) bzw. von Google laden (laut Konzept)",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d3adadb8f99e23611"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35dedeec3242641"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c1505b3a-7874-49f4-8e43-a9abdbdb4a593851"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819825000,
+        "endDate": -99999999999999,
+        "title": "Imagegrößen ergänzen",
+        "description": "* Images immer mit den Attributen width und height versehen\r\n* Regelmäßig prüfen\r\n* Report an Dawid",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afbab99e22596"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432baba43282"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c5cca217-3fe3-4a63-b5af-888adb8fbe912452"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254820391000,
+        "endDate": -99999999999999,
+        "title": "ale Datenhaltung",
+        "description": "- Technische Recherche dezentrale Datenhaltung o.ä.: möglichst geringe und kalkulierbare Serverauslastung \r\n- Ziel: Dokument mit Übersicht der Möglichkeiten, ggf. Schaubild",
+        "project": {
+            "title": "143_artsnothers_AMEX",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 15,
+            "id": "ed8fcf22-bebf-adbadbc8-bb12-f770ace077133701"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712adbadb-085a-4c8a-bb00-35c4432ec324885"
+        },
+        "observed": true,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "adbdabd3-1ce9-4146-939b-759d7e680ac83759"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819042000,
+        "endDate": -99999999999999,
+        "title": "Tracking ergänzen",
+        "description": "folgende Variable auf dem Bestellformular vom \"Digitalen Empfang\" einbinden:\ns.products=\";KA Digitaler Empfang;0;0\"\n\nfolgende Variablen auf der Bestätigungsseite vom \"Digitalen Empfang\" einbinden:\ndas event \"purchase\"\ns.purchaseID mit einer systemisch generierten eineindeutigen ID\ns.products=\";KA Digitaler Empfang;1;2.90\"\ns.eVar12 (VPKN aus JVM-Kampagnencontroller Cookie)\ns.eVar13 (Kampagnen-ID \"source\" aus JVM-Kampagnencontroller Cookie)\n\nIn die Templates werden bereits die PHP-Variablen analog zum MiniBP (MBP) geschrieben. \nDie Variablen müssen nur noch im PHP-Controller gesetzt werden.\n\ngggggggggggg",
+        "project": {
+            "title": "DE_P032 - Digitaler Empfang",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 9,
+            "id": "754715af-e6c8-49c44c-9dad-fce90d9c5ac1931"
+        },
+        "assignee": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-c3c300-35c4432ec3242308"
+        },
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb7b7-35c4432ec3241042"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "LOW",
+        "id": "eed640ac-952d-4c6c-bafd-9989606e16b31f3727"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254821201000,
+        "endDate": -99999999999999,
+        "title": "Testing NL-Formulare",
+        "description": "- Benachrichtigung durch emarsys abwarten, dass Anpassungen abgeschlossen sind\r\n- Newsletter Testversand mit Frau Jahn abstimmen\r\n- Newsletter Testversand durchführen\r\n- Testing in allen Browsern durchführen\r\n- Feedback an KDG ",
+        "project": {
+            "title": "DE_P027 - Newsletter",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 16,
+            "id": "864eefe3-255d-4aa5-b3e5-b827d9543b75a64c2015"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a3216-bb00-35c4432ec3243894"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 9,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "b2161eff-7b1d-4841-a143-7b8381cca6cd8c0c2581"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254731900000,
+        "endDate": -99999999999999,
+        "title": "AReview Grobkonzept",
+        "description": "Bitte Dok gegen lesen und kommentieren (090923_konzept_usabilitytest_maßnahmen.doc)\r\n\\\\Projects\\share\\PROJECTS\\00_Aufträge ohne Projektnummer\\2009-09-23 KDG Usability Optimierung",
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [
+            {
+                "duration": 0,
+                "startDate": 0,
+                "endDate": 1,
+                "title": "St1 Installation Plugin \"Whining\"",
+                "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+                "project": {
+                    "title": "e_2009_139_kdgRetainer0409 - OM",
+                    "progressIsDefault": true,
+                    "endDateIsDefault": true,
+                    "startDateIsDefault": true,
+                    "statusIsDefault": true,
+                    "taskCount": 0,
+                    "effortIsDefault": false,
+                    "durationIsDefault": true,
+                    "id": "9f197726-8d39-4259-a33f-07ecbe7150fa1562"
+                },
+                "assignee": {
+                    "lastName": null,
+                    "birthDate": null,
+                    "firstName": "Felix",
+                    "email": "felix.schreiber@ion2s.com",
+                    "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb837"
+                },
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242221"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [
+                    "CSS/HTML Umsetzung",
+                    "Grafik Design",
+                    "Javascript Umsetzung"
+                ],
+                "subtasks": [],
+                "effort": 1,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "93761d3e8176-4703-ab5c-fcaf3520-b9ca3816"
+            },
+            {
+                "duration": 0,
+                "startDate": 1254739843000,
+                "endDate": -99999999999999,
+                "title": "St 2 Shops Update",
+                "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+                "project": {
+                    "title": "DE_P002 - Allg. Maintenance",
+                    "progressIsDefault": false,
+                    "startDateIsDefault": false,
+                    "endDateIsDefault": false,
+                    "statusIsDefault": true,
+                    "durationIsDefault": true,
+                    "effortIsDefault": false,
+                    "taskCount": 832,
+                    "id": "40012c66-3750-4b6b-8efa-37f758a06a5e3705"
+                },
+                "assignee": null,
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243371"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [],
+                "subtasks": [],
+                "effort": 2,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "ad936c11f7e7-495c-a953-8891dd07-9b902707"
+            }
+        ],
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242154"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0.52,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "5584d38b-b797-41dc-97e1-76206eedf82f154"
+    },
+    {
+        "duration": 0,
+        "startDate": 0,
+        "endDate": 1,
+        "title": "Installation Plugin \"Whining\"",
+        "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a411556"
+        },
+        "assignee": {
+            "email": "a@a.com",
+            "firstName": "DefaultUser",
+            "lastName": null,
+            "birthDate": null,
+            "id": "1560ff35-4954-4034-8f36-93c9cdfd21632664"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241523"
+        },
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "fcaf3502-ab5c-4703-b9ca-93766c3e87e63849"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739843000,
+        "endDate": -99999999999999,
+        "title": "Shops Update",
+        "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+        "project": {
+            "title": "DE_P002 - Allg. Maintenance",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 832,
+            "id": "40012c66-3750-4b6b-8efa-37f758a06a5e1667"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242193"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 2,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "8891d0d7-a953-495c-9b90-ad931d11f1772054"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739942000,
+        "endDate": -99999999999999,
+        "title": "Nachträglich den Tracker ändern",
+        "description": "Man vergisst ofte den Tracker sinngemäß zu setzen bei de4r Anlage eines Ticket. Nachträglich kann man den nocht mehr ändern :-(",
+        "project": null,
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec32476"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "6303ec9a-1e62-44b2-a4b5-1b1b9aff64542610"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254743218000,
+        "endDate": -99999999999999,
+        "title": "Lust TV planen",
+        "description": "* Tickets erstellen und Material anfordern",
+        "project": {
+            "title": "DE_P003 - Sender",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 217,
+            "id": "6ffb210c-89e8-4485-996a-d07d8876005e1987"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324975"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "73ff0032-d2cc-4006-8d07-c77969ca45cc3227"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738197000,
+        "endDate": -99999999999999,
+        "title": "Installation 2. Redmine-Version",
+        "description": "Installation einer zweiten Redmine-Version zum Austesten verschiedener Plugins, bevor diese in der laufenden Version installiert werden.",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a412478"
+        },
+        "assignee": {
+            "email": "1392719960207@s.com",
+            "firstName": "",
+            "lastName": null,
+            "birthDate": null,
+            "id": "ee47b4e9-9a6f-48c0-8c01-50a9728a4f163733"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec32465"
+        },
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "546256a6-d1bd-4879-9949-7075171f90982829"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738738000,
+        "endDate": -99999999999999,
+        "title": "Installation verschiedener Plugins",
+        "description": "Nachfolgende Plugins bitte zunächst in zweiter Redmine Version installieren:\r\n\r\n* Charts Plugin\r\n* Developer Rates Plugin\r\n* Effort Estimate Plugin\r\n* ezSummary Plugin\r\n* Graphs Plugin\r\n* Issue Group Plugin\r\n* Projects Tree View Plugin\r\n* Question Plugin\r\n* Schedules Plugin\r\n* Stuff to do Plugin\r\n* Subtasks Plugin\r\n* To do Lists Plugin\r\n* Workload Plugin\r\n\r\nErst nach erfolgter Abstimmung mit Michael und/ oder Kerstin in laufender Redmine Version installieren! ",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a413946"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243780"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "d3facda2-a8f5-4521-a543-3d32b138a9722096"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738904000,
+        "endDate": -99999999999999,
+        "title": "Installation Theme Basecamp",
+        "description": "Installation der Theme \"Basecamp\" in beiden Redmine Versionen",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a413195"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243902"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "HIGH",
+        "id": "f285d476-2461-4085-8e86-40200c4f5be41432"
+    },
+    {
+        "duration": 3600,
+        "startDate": 1254819476000,
+        "endDate": 1274819476000,
+        "title": "CSS",
+        "description": "- Überflüssige und alte CSS Definitionen entfernen",
+        "project": {
+            "title": "141_Likereal",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 4,
+            "id": "647866a2-a522-4fcd-8c58-7740b9c503272357"
+        },
+        "assignee": {
+            "lastName": null,
+            "birthDate": null,
+            "firstName": "Felix",
+            "email": "felix.schreiber@ion2s.com",
+            "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb945"
+        },
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242253"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "ARCHIVED",
+        "priority": "NORMAL",
+        "id": "61139e31-9546-438f-8feb-a382af2112821445"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819660000,
+        "endDate": -99999999999999,
+        "title": "JS Includes optimieren",
+        "description": "Bibliotheken zusammenfassen zu einer Datei (copy and paste) bzw. von Google laden (laut Konzept)",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e21641"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242243"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c1505b3a-7874-49f4-8e43-a9abe0104a59927"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819825000,
+        "endDate": -99999999999999,
+        "title": "Imagegrößen ergänzen",
+        "description": "* Images immer mit den Attributen width und height versehen\r\n* Regelmäßig prüfen\r\n* Report an Dawid",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e2239"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec32429"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c5cca217-3fe3-4a63-b5af-8889a48fbe91802"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254820391000,
+        "endDate": -99999999999999,
+        "title": "ale Datenhaltung",
+        "description": "- Technische Recherche dezentrale Datenhaltung o.ä.: möglichst geringe und kalkulierbare Serverauslastung \r\n- Ziel: Dokument mit Übersicht der Möglichkeiten, ggf. Schaubild",
+        "project": {
+            "title": "143_artsnothers_AMEX",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 15,
+            "id": "ed8fcf22-bebf-4cc8-bb12-f770ace077132825"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242842"
+        },
+        "observed": true,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "230c7899-1ce9-4146-939b-759d7e680ac8331"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819042000,
+        "endDate": -99999999999999,
+        "title": "Tracking ergänzen",
+        "description": "folgende Variable auf dem Bestellformular vom \"Digitalen Empfang\" einbinden:\ns.products=\";KA Digitaler Empfang;0;0\"\n\nfolgende Variablen auf der Bestätigungsseite vom \"Digitalen Empfang\" einbinden:\ndas event \"purchase\"\ns.purchaseID mit einer systemisch generierten eineindeutigen ID\ns.products=\";KA Digitaler Empfang;1;2.90\"\ns.eVar12 (VPKN aus JVM-Kampagnencontroller Cookie)\ns.eVar13 (Kampagnen-ID \"source\" aus JVM-Kampagnencontroller Cookie)\n\nIn die Templates werden bereits die PHP-Variablen analog zum MiniBP (MBP) geschrieben. \nDie Variablen müssen nur noch im PHP-Controller gesetzt werden.\n\ngggggggggggg",
+        "project": {
+            "title": "DE_P032 - Digitaler Empfang",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 9,
+            "id": "754715af-e6c8-49d0-9dad-fce90d9c5ac12560"
+        },
+        "assignee": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241874"
+        },
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242716"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "LOW",
+        "id": "eed640ac-952d-4c6c-bafd-9989606e131f229"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254821201000,
+        "endDate": -99999999999999,
+        "title": "Testing NL-Formulare",
+        "description": "- Benachrichtigung durch emarsys abwarten, dass Anpassungen abgeschlossen sind\r\n- Newsletter Testversand mit Frau Jahn abstimmen\r\n- Newsletter Testversand durchführen\r\n- Testing in allen Browsern durchführen\r\n- Feedback an KDG ",
+        "project": {
+            "title": "DE_P027 - Newsletter",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 16,
+            "id": "864eefe3-255d-4aa5-b3e5-b827d975a64c1346"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243284"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 9,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "b2161eff-7b1d-4841-a143-71cca6cd8c0c1421"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254731900000,
+        "endDate": -99999999999999,
+        "title": "AReview Grobkonzept",
+        "description": "Bitte Dok gegen lesen und kommentieren (090923_konzept_usabilitytest_maßnahmen.doc)\r\n\\\\Projects\\share\\PROJECTS\\00_Aufträge ohne Projektnummer\\2009-09-23 KDG Usability Optimierung",
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [
+            {
+                "duration": 0,
+                "startDate": 0,
+                "endDate": 1,
+                "title": "St1 Installation Plugin \"Whining\"",
+                "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+                "project": {
+                    "title": "e_2009_139_kdgRetainer0409 - OM",
+                    "progressIsDefault": true,
+                    "endDateIsDefault": true,
+                    "startDateIsDefault": true,
+                    "statusIsDefault": true,
+                    "taskCount": 0,
+                    "effortIsDefault": false,
+                    "durationIsDefault": true,
+                    "id": "9f197726-8d39-42539-a33f-07ecbe7150fa2974"
+                },
+                "assignee": {
+                    "lastName": null,
+                    "birthDate": null,
+                    "firstName": "Felix",
+                    "email": "felix.schreiber@ion2s.com",
+                    "id": "e8dcba4b-6e86-4a9c-a957-ae271df62cddb1989"
+                },
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c34432ec3243741"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [
+                    "CSS/HTML Umsetzung",
+                    "Grafik Design",
+                    "Javascript Umsetzung"
+                ],
+                "subtasks": [],
+                "effort": 1,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "93761d3e48176-4703-ab5c-fcaf3520-b9ca1415"
+            },
+            {
+                "duration": 0,
+                "startDate": 1254739843000,
+                "endDate": -99999999999999,
+                "title": "St 2 Shops Update",
+                "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+                "project": {
+                    "title": "DE_P002 - Allg. Maintenance",
+                    "progressIsDefault": false,
+                    "startDateIsDefault": false,
+                    "endDateIsDefault": false,
+                    "statusIsDefault": true,
+                    "durationIsDefault": true,
+                    "effortIsDefault": false,
+                    "taskCount": 832,
+                    "id": "40012c66-35750-4b6b-8efa-37f758a06a5e3909"
+                },
+                "assignee": null,
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-0685a-4c8a-bb00-35c4432ec324968"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [],
+                "subtasks": [],
+                "effort": 2,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "ad936c11f7e77-495c-a953-8891dd07-9b902511"
+            }
+        ],
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-48c8a-bb00-35c4432ec3241349"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0.52,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "5584d38b-b797-41dc9-97e1-76206eedf82f2132"
+    },
+    {
+        "duration": 0,
+        "startDate": 0,
+        "endDate": 1,
+        "title": "Installation Plugin \"Whining\"",
+        "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4fa12-8ff7-f623b9f86a412108"
+        },
+        "assignee": {
+            "email": "a@a.com",
+            "firstName": "DefaultUser",
+            "lastName": null,
+            "birthDate": null,
+            "id": "1560ff35-4954-4034-81f36-93c9cdfd21632290"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4cf8a-bb00-35c4432ec3242848"
+        },
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "fcaf3502-ab5c-4703-cb9ca-93766c3e87e63314"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739843000,
+        "endDate": -99999999999999,
+        "title": "Shops Update",
+        "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+        "project": {
+            "title": "DE_P002 - Allg. Maintenance",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 832,
+            "id": "40012cc66-3750-4b6b-8efa-37f758a06a5e1705"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3c241103"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 2,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "8891ed0d7-a953-495c-9b90-ad93e1d11f1771034"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739942000,
+        "endDate": -99999999999999,
+        "title": "Nachträglich den Tracker ändern",
+        "description": "Man vergisst ofte den Tracker sinngemäß zu setzen bei de4r Anlage eines Ticket. Nachträglich kann man den nocht mehr ändern :-(",
+        "project": null,
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c44ac32ec324947"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "6303ec9a-1e62-44b2-a4b5-1b1aeb9aff6454114"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254743218000,
+        "endDate": -99999999999999,
+        "title": "Lust TV planen",
+        "description": "* Tickets erstellen und Material anfordern",
+        "project": {
+            "title": "DE_P003 - Sender",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 217,
+            "id": "6ffb210c-89e8-4485-9ad96a-d07d8876005e1711"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bbcc00-35c4432ec3241947"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "73ff0032-d2cc-4006-8d07-c7712969ca45cc1276"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738197000,
+        "endDate": -99999999999999,
+        "title": "Installation 2. Redmine-Version",
+        "description": "Installation einer zweiten Redmine-Version zum Austesten verschiedener Plugins, bevor diese in der laufenden Version installiert werden.",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f6223b9f86a41989"
+        },
+        "assignee": {
+            "email": "1392719960207@s.com",
+            "firstName": "",
+            "lastName": null,
+            "birthDate": null,
+            "id": "ee47b4e9-9a6f-48c0-8c01-501239728a4f16679"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c123ec324534"
+        },
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "546256a6-d1bd-4879-1119-7075171f90983671"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738738000,
+        "endDate": -99999999999999,
+        "title": "Installation verschiedener Plugins",
+        "description": "Nachfolgende Plugins bitte zunächst in zweiter Redmine Version installieren:\r\n\r\n* Charts Plugin\r\n* Developer Rates Plugin\r\n* Effort Estimate Plugin\r\n* ezSummary Plugin\r\n* Graphs Plugin\r\n* Issue Group Plugin\r\n* Projects Tree View Plugin\r\n* Question Plugin\r\n* Schedules Plugin\r\n* Stuff to do Plugin\r\n* Subtasks Plugin\r\n* To do Lists Plugin\r\n* Workload Plugin\r\n\r\nErst nach erfolgter Abstimmung mit Michael und/ oder Kerstin in laufender Redmine Version installieren! ",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f62222f86a411231"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c443444241656"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "d3facda2-a8f5-4521-a543-3d32b13548423026"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738904000,
+        "endDate": -99999999999999,
+        "title": "Installation Theme Basecamp",
+        "description": "Installation der Theme \"Basecamp\" in beiden Redmine Versionen",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f62234234a413389"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-3acacacc3242137"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "HIGH",
+        "id": "f285d476-2461-4085-8e86-4020afafafe42374"
+    },
+    {
+        "duration": 3600,
+        "startDate": 1254819476000,
+        "endDate": 1274819476000,
+        "title": "CSS",
+        "description": "- Überflüssige und alte CSS Definitionen entfernen",
+        "project": {
+            "title": "141_Likereal",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 4,
+            "id": "647866a2-a522-4fcd-8c58-77aeae9c503273289"
+        },
+        "assignee": {
+            "lastName": null,
+            "birthDate": null,
+            "firstName": "Felix",
+            "email": "felix.schreiber@ion2s.com",
+            "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddeeab3500"
+        },
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4dadadd41333"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "ARCHIVED",
+        "priority": "NORMAL",
+        "id": "61139e31-9546-438f-8feb-a382dede1282518"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819660000,
+        "endDate": -99999999999999,
+        "title": "JS Includes optimieren",
+        "description": "Bibliotheken zusammenfassen zu einer Datei (copy and paste) bzw. von Google laden (laut Konzept)",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d3adadb8f99e2142"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35dedeec3243134"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c1505b3a-7874-49f4-8e43-a9abdbdb4a593784"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819825000,
+        "endDate": -99999999999999,
+        "title": "Imagegrößen ergänzen",
+        "description": "* Images immer mit den Attributen width und height versehen\r\n* Regelmäßig prüfen\r\n* Report an Dawid",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afbab99e21840"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432baba43624"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c5cca217-3fe3-4a63-b5af-888adb8fbe912280"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254820391000,
+        "endDate": -99999999999999,
+        "title": "ale Datenhaltung",
+        "description": "- Technische Recherche dezentrale Datenhaltung o.ä.: möglichst geringe und kalkulierbare Serverauslastung \r\n- Ziel: Dokument mit Übersicht der Möglichkeiten, ggf. Schaubild",
+        "project": {
+            "title": "143_artsnothers_AMEX",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 15,
+            "id": "ed8fcf22-bebf-adbadbc8-bb12-f770ace077132490"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712adbadb-085a-4c8a-bb00-35c4432ec3242744"
+        },
+        "observed": true,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "adbdabd3-1ce9-4146-939b-759d7e680ac82866"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819042000,
+        "endDate": -99999999999999,
+        "title": "Tracking ergänzen",
+        "description": "folgende Variable auf dem Bestellformular vom \"Digitalen Empfang\" einbinden:\ns.products=\";KA Digitaler Empfang;0;0\"\n\nfolgende Variablen auf der Bestätigungsseite vom \"Digitalen Empfang\" einbinden:\ndas event \"purchase\"\ns.purchaseID mit einer systemisch generierten eineindeutigen ID\ns.products=\";KA Digitaler Empfang;1;2.90\"\ns.eVar12 (VPKN aus JVM-Kampagnencontroller Cookie)\ns.eVar13 (Kampagnen-ID \"source\" aus JVM-Kampagnencontroller Cookie)\n\nIn die Templates werden bereits die PHP-Variablen analog zum MiniBP (MBP) geschrieben. \nDie Variablen müssen nur noch im PHP-Controller gesetzt werden.\n\ngggggggggggg",
+        "project": {
+            "title": "DE_P032 - Digitaler Empfang",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 9,
+            "id": "754715af-e6c8-49c44c-9dad-fce90d9c5ac11060"
+        },
+        "assignee": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-c3c300-35c4432ec3241468"
+        },
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb7b7-35c4432ec3243091"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "LOW",
+        "id": "eed640ac-952d-4c6c-bafd-9989606e16b31f495"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254821201000,
+        "endDate": -99999999999999,
+        "title": "Testing NL-Formulare",
+        "description": "- Benachrichtigung durch emarsys abwarten, dass Anpassungen abgeschlossen sind\r\n- Newsletter Testversand mit Frau Jahn abstimmen\r\n- Newsletter Testversand durchführen\r\n- Testing in allen Browsern durchführen\r\n- Feedback an KDG ",
+        "project": {
+            "title": "DE_P027 - Newsletter",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 16,
+            "id": "864eefe3-255d-4aa5-b3e5-b827d9543b75a64c1661"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a3216-bb00-35c4432ec3241146"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 9,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "b2161eff-7b1d-4841-a143-7b8381cca6cd8c0c3037"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254731900000,
+        "endDate": -99999999999999,
+        "title": "AReview Grobkonzept",
+        "description": "Bitte Dok gegen lesen und kommentieren (090923_konzept_usabilitytest_maßnahmen.doc)\r\n\\\\Projects\\share\\PROJECTS\\00_Aufträge ohne Projektnummer\\2009-09-23 KDG Usability Optimierung",
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [
+            {
+                "duration": 0,
+                "startDate": 0,
+                "endDate": 1,
+                "title": "St1 Installation Plugin \"Whining\"",
+                "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+                "project": {
+                    "title": "e_2009_139_kdgRetainer0409 - OM",
+                    "progressIsDefault": true,
+                    "endDateIsDefault": true,
+                    "startDateIsDefault": true,
+                    "statusIsDefault": true,
+                    "taskCount": 0,
+                    "effortIsDefault": false,
+                    "durationIsDefault": true,
+                    "id": "9f197726-8d39-4259-a33f-07ecbe7150fa2360"
+                },
+                "assignee": {
+                    "lastName": null,
+                    "birthDate": null,
+                    "firstName": "Felix",
+                    "email": "felix.schreiber@ion2s.com",
+                    "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb70"
+                },
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243576"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [
+                    "CSS/HTML Umsetzung",
+                    "Grafik Design",
+                    "Javascript Umsetzung"
+                ],
+                "subtasks": [],
+                "effort": 1,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "93761d3e8176-4703-ab5c-fcaf3520-b9ca2512"
+            },
+            {
+                "duration": 0,
+                "startDate": 1254739843000,
+                "endDate": -99999999999999,
+                "title": "St 2 Shops Update",
+                "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+                "project": {
+                    "title": "DE_P002 - Allg. Maintenance",
+                    "progressIsDefault": false,
+                    "startDateIsDefault": false,
+                    "endDateIsDefault": false,
+                    "statusIsDefault": true,
+                    "durationIsDefault": true,
+                    "effortIsDefault": false,
+                    "taskCount": 832,
+                    "id": "40012c66-3750-4b6b-8efa-37f758a06a5e2917"
+                },
+                "assignee": null,
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242293"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [],
+                "subtasks": [],
+                "effort": 2,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "ad936c11f7e7-495c-a953-8891dd07-9b901622"
+            }
+        ],
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241256"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0.52,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "5584d38b-b797-41dc-97e1-76206eedf82f1758"
+    },
+    {
+        "duration": 0,
+        "startDate": 0,
+        "endDate": 1,
+        "title": "Installation Plugin \"Whining\"",
+        "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a413905"
+        },
+        "assignee": {
+            "email": "a@a.com",
+            "firstName": "DefaultUser",
+            "lastName": null,
+            "birthDate": null,
+            "id": "1560ff35-4954-4034-8f36-93c9cdfd2163827"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243363"
+        },
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "fcaf3502-ab5c-4703-b9ca-93766c3e87e61516"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739843000,
+        "endDate": -99999999999999,
+        "title": "Shops Update",
+        "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+        "project": {
+            "title": "DE_P002 - Allg. Maintenance",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 832,
+            "id": "40012c66-3750-4b6b-8efa-37f758a06a5e613"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324648"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 2,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "8891d0d7-a953-495c-9b90-ad931d11f1772857"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739942000,
+        "endDate": -99999999999999,
+        "title": "Nachträglich den Tracker ändern",
+        "description": "Man vergisst ofte den Tracker sinngemäß zu setzen bei de4r Anlage eines Ticket. Nachträglich kann man den nocht mehr ändern :-(",
+        "project": null,
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243782"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "6303ec9a-1e62-44b2-a4b5-1b1b9aff64542893"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254743218000,
+        "endDate": -99999999999999,
+        "title": "Lust TV planen",
+        "description": "* Tickets erstellen und Material anfordern",
+        "project": {
+            "title": "DE_P003 - Sender",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 217,
+            "id": "6ffb210c-89e8-4485-996a-d07d8876005e1539"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242106"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "73ff0032-d2cc-4006-8d07-c77969ca45cc1699"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738197000,
+        "endDate": -99999999999999,
+        "title": "Installation 2. Redmine-Version",
+        "description": "Installation einer zweiten Redmine-Version zum Austesten verschiedener Plugins, bevor diese in der laufenden Version installiert werden.",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a411841"
+        },
+        "assignee": {
+            "email": "1392719960207@s.com",
+            "firstName": "",
+            "lastName": null,
+            "birthDate": null,
+            "id": "ee47b4e9-9a6f-48c0-8c01-50a9728a4f161641"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324691"
+        },
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "546256a6-d1bd-4879-9949-7075171f90981544"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738738000,
+        "endDate": -99999999999999,
+        "title": "Installation verschiedener Plugins",
+        "description": "Nachfolgende Plugins bitte zunächst in zweiter Redmine Version installieren:\r\n\r\n* Charts Plugin\r\n* Developer Rates Plugin\r\n* Effort Estimate Plugin\r\n* ezSummary Plugin\r\n* Graphs Plugin\r\n* Issue Group Plugin\r\n* Projects Tree View Plugin\r\n* Question Plugin\r\n* Schedules Plugin\r\n* Stuff to do Plugin\r\n* Subtasks Plugin\r\n* To do Lists Plugin\r\n* Workload Plugin\r\n\r\nErst nach erfolgter Abstimmung mit Michael und/ oder Kerstin in laufender Redmine Version installieren! ",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a4165"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241829"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "d3facda2-a8f5-4521-a543-3d32b138a972889"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738904000,
+        "endDate": -99999999999999,
+        "title": "Installation Theme Basecamp",
+        "description": "Installation der Theme \"Basecamp\" in beiden Redmine Versionen",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f623b9f86a412842"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324716"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "HIGH",
+        "id": "f285d476-2461-4085-8e86-40200c4f5be42409"
+    },
+    {
+        "duration": 3600,
+        "startDate": 1254819476000,
+        "endDate": 1274819476000,
+        "title": "CSS",
+        "description": "- Überflüssige und alte CSS Definitionen entfernen",
+        "project": {
+            "title": "141_Likereal",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 4,
+            "id": "647866a2-a522-4fcd-8c58-7740b9c503272999"
+        },
+        "assignee": {
+            "lastName": null,
+            "birthDate": null,
+            "firstName": "Felix",
+            "email": "felix.schreiber@ion2s.com",
+            "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb3507"
+        },
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243689"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "ARCHIVED",
+        "priority": "NORMAL",
+        "id": "61139e31-9546-438f-8feb-a382af2112821008"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819660000,
+        "endDate": -99999999999999,
+        "title": "JS Includes optimieren",
+        "description": "Bibliotheken zusammenfassen zu einer Datei (copy and paste) bzw. von Google laden (laut Konzept)",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e21503"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec324986"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c1505b3a-7874-49f4-8e43-a9abe0104a592600"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819825000,
+        "endDate": -99999999999999,
+        "title": "Imagegrößen ergänzen",
+        "description": "* Images immer mit den Attributen width und height versehen\r\n* Regelmäßig prüfen\r\n* Report an Dawid",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afb8f99e21007"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241417"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c5cca217-3fe3-4a63-b5af-8889a48fbe91529"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254820391000,
+        "endDate": -99999999999999,
+        "title": "ale Datenhaltung",
+        "description": "- Technische Recherche dezentrale Datenhaltung o.ä.: möglichst geringe und kalkulierbare Serverauslastung \r\n- Ziel: Dokument mit Übersicht der Möglichkeiten, ggf. Schaubild",
+        "project": {
+            "title": "143_artsnothers_AMEX",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 15,
+            "id": "ed8fcf22-bebf-4cc8-bb12-f770ace077131303"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241321"
+        },
+        "observed": true,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "230c7899-1ce9-4146-939b-759d7e680ac81150"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819042000,
+        "endDate": -99999999999999,
+        "title": "Tracking ergänzen",
+        "description": "folgende Variable auf dem Bestellformular vom \"Digitalen Empfang\" einbinden:\ns.products=\";KA Digitaler Empfang;0;0\"\n\nfolgende Variablen auf der Bestätigungsseite vom \"Digitalen Empfang\" einbinden:\ndas event \"purchase\"\ns.purchaseID mit einer systemisch generierten eineindeutigen ID\ns.products=\";KA Digitaler Empfang;1;2.90\"\ns.eVar12 (VPKN aus JVM-Kampagnencontroller Cookie)\ns.eVar13 (Kampagnen-ID \"source\" aus JVM-Kampagnencontroller Cookie)\n\nIn die Templates werden bereits die PHP-Variablen analog zum MiniBP (MBP) geschrieben. \nDie Variablen müssen nur noch im PHP-Controller gesetzt werden.\n\ngggggggggggg",
+        "project": {
+            "title": "DE_P032 - Digitaler Empfang",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 9,
+            "id": "754715af-e6c8-49d0-9dad-fce90d9c5ac11493"
+        },
+        "assignee": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3242483"
+        },
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3241433"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "LOW",
+        "id": "eed640ac-952d-4c6c-bafd-9989606e131f1839"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254821201000,
+        "endDate": -99999999999999,
+        "title": "Testing NL-Formulare",
+        "description": "- Benachrichtigung durch emarsys abwarten, dass Anpassungen abgeschlossen sind\r\n- Newsletter Testversand mit Frau Jahn abstimmen\r\n- Newsletter Testversand durchführen\r\n- Testing in allen Browsern durchführen\r\n- Feedback an KDG ",
+        "project": {
+            "title": "DE_P027 - Newsletter",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 16,
+            "id": "864eefe3-255d-4aa5-b3e5-b827d975a64c3975"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3243357"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 9,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "b2161eff-7b1d-4841-a143-71cca6cd8c0c271"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254731900000,
+        "endDate": -99999999999999,
+        "title": "AReview Grobkonzept",
+        "description": "Bitte Dok gegen lesen und kommentieren (090923_konzept_usabilitytest_maßnahmen.doc)\r\n\\\\Projects\\share\\PROJECTS\\00_Aufträge ohne Projektnummer\\2009-09-23 KDG Usability Optimierung",
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [
+            {
+                "duration": 0,
+                "startDate": 0,
+                "endDate": 1,
+                "title": "St1 Installation Plugin \"Whining\"",
+                "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+                "project": {
+                    "title": "e_2009_139_kdgRetainer0409 - OM",
+                    "progressIsDefault": true,
+                    "endDateIsDefault": true,
+                    "startDateIsDefault": true,
+                    "statusIsDefault": true,
+                    "taskCount": 0,
+                    "effortIsDefault": false,
+                    "durationIsDefault": true,
+                    "id": "9f197726-8d39-42539-a33f-07ecbe7150fa3345"
+                },
+                "assignee": {
+                    "lastName": null,
+                    "birthDate": null,
+                    "firstName": "Felix",
+                    "email": "felix.schreiber@ion2s.com",
+                    "id": "e8dcba4b-6e86-4a9c-a957-ae271df62cddb1084"
+                },
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-085a-4c8a-bb00-35c34432ec324495"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [
+                    "CSS/HTML Umsetzung",
+                    "Grafik Design",
+                    "Javascript Umsetzung"
+                ],
+                "subtasks": [],
+                "effort": 1,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "93761d3e48176-4703-ab5c-fcaf3520-b9ca1873"
+            },
+            {
+                "duration": 0,
+                "startDate": 1254739843000,
+                "endDate": -99999999999999,
+                "title": "St 2 Shops Update",
+                "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+                "project": {
+                    "title": "DE_P002 - Allg. Maintenance",
+                    "progressIsDefault": false,
+                    "startDateIsDefault": false,
+                    "endDateIsDefault": false,
+                    "statusIsDefault": true,
+                    "durationIsDefault": true,
+                    "effortIsDefault": false,
+                    "taskCount": 832,
+                    "id": "40012c66-35750-4b6b-8efa-37f758a06a5e1945"
+                },
+                "assignee": null,
+                "creator": {
+                    "email": "dev@ion2s.com",
+                    "firstName": "Redmine",
+                    "lastName": null,
+                    "birthDate": null,
+                    "id": "c712c7ff-0685a-4c8a-bb00-35c4432ec324818"
+                },
+                "observed": true,
+                "parentId": null,
+                "subtaskCount": 0,
+                "services": [],
+                "subtasks": [],
+                "effort": 2,
+                "progressIsDefault": true,
+                "startDateIsDefault": true,
+                "endDateIsDefault": true,
+                "statusIsDefault": true,
+                "progress": 0,
+                "status": "COMPLETED",
+                "priority": "NORMAL",
+                "id": "ad936c11f7e77-495c-a953-8891dd07-9b901494"
+            }
+        ],
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-48c8a-bb00-35c4432ec324716"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0.52,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "5584d38b-b797-41dc9-97e1-76206eedf82f2287"
+    },
+    {
+        "duration": 0,
+        "startDate": 0,
+        "endDate": 1,
+        "title": "Installation Plugin \"Whining\"",
+        "description": "Installation Plugin \"Whining\" direkt in laufender Redmine Version",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4fa12-8ff7-f623b9f86a413758"
+        },
+        "assignee": {
+            "email": "a@a.com",
+            "firstName": "DefaultUser",
+            "lastName": null,
+            "birthDate": null,
+            "id": "1560ff35-4954-4034-81f36-93c9cdfd21631505"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4cf8a-bb00-35c4432ec3241199"
+        },
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "fcaf3502-ab5c-4703-cb9ca-93766c3e87e6236"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739843000,
+        "endDate": -99999999999999,
+        "title": "Shops Update",
+        "description": "Bitte die 2 Dokument aus dem Anhang vergleichen. Wenn Unterschiede dann bitte einpflegen in CMS.",
+        "project": {
+            "title": "DE_P002 - Allg. Maintenance",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 832,
+            "id": "40012cc66-3750-4b6b-8efa-37f758a06a5e717"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432ec3c243588"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 2,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "8891ed0d7-a953-495c-9b90-ad93e1d11f177940"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254739942000,
+        "endDate": -99999999999999,
+        "title": "Nachträglich den Tracker ändern",
+        "description": "Man vergisst ofte den Tracker sinngemäß zu setzen bei de4r Anlage eines Ticket. Nachträglich kann man den nocht mehr ändern :-(",
+        "project": null,
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c44ac32ec32417"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "6303ec9a-1e62-44b2-a4b5-1b1aeb9aff64543994"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254743218000,
+        "endDate": -99999999999999,
+        "title": "Lust TV planen",
+        "description": "* Tickets erstellen und Material anfordern",
+        "project": {
+            "title": "DE_P003 - Sender",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 217,
+            "id": "6ffb210c-89e8-4485-9ad96a-d07d8876005e3354"
+        },
+        "assignee": null,
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bbcc00-35c4432ec324418"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "73ff0032-d2cc-4006-8d07-c7712969ca45cc2404"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738197000,
+        "endDate": -99999999999999,
+        "title": "Installation 2. Redmine-Version",
+        "description": "Installation einer zweiten Redmine-Version zum Austesten verschiedener Plugins, bevor diese in der laufenden Version installiert werden.",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f6223b9f86a412985"
+        },
+        "assignee": {
+            "email": "1392719960207@s.com",
+            "firstName": "",
+            "lastName": null,
+            "birthDate": null,
+            "id": "ee47b4e9-9a6f-48c0-8c01-501239728a4f16592"
+        },
+        "observed": true,
+        "parentId": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c123ec3243909"
+        },
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design"
+        ],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "546256a6-d1bd-4879-1119-7075171f9098698"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738738000,
+        "endDate": -99999999999999,
+        "title": "Installation verschiedener Plugins",
+        "description": "Nachfolgende Plugins bitte zunächst in zweiter Redmine Version installieren:\r\n\r\n* Charts Plugin\r\n* Developer Rates Plugin\r\n* Effort Estimate Plugin\r\n* ezSummary Plugin\r\n* Graphs Plugin\r\n* Issue Group Plugin\r\n* Projects Tree View Plugin\r\n* Question Plugin\r\n* Schedules Plugin\r\n* Stuff to do Plugin\r\n* Subtasks Plugin\r\n* To do Lists Plugin\r\n* Workload Plugin\r\n\r\nErst nach erfolgter Abstimmung mit Michael und/ oder Kerstin in laufender Redmine Version installieren! ",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f62222f86a413746"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c443444243340"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 4,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "d3facda2-a8f5-4521-a543-3d32b1354842780"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254738904000,
+        "endDate": -99999999999999,
+        "title": "Installation Theme Basecamp",
+        "description": "Installation der Theme \"Basecamp\" in beiden Redmine Versionen",
+        "project": {
+            "title": "ion2s_Business Development",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 26,
+            "id": "aa11f519-7409-4f12-8ff7-f62234234a413856"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-3acacacc324437"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "HIGH",
+        "id": "f285d476-2461-4085-8e86-4020afafafe41293"
+    },
+    {
+        "duration": 3600,
+        "startDate": 1254819476000,
+        "endDate": 1274819476000,
+        "title": "CSS",
+        "description": "- Überflüssige und alte CSS Definitionen entfernen",
+        "project": {
+            "title": "141_Likereal",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 4,
+            "id": "647866a2-a522-4fcd-8c58-77aeae9c503271902"
+        },
+        "assignee": {
+            "lastName": null,
+            "birthDate": null,
+            "firstName": "Felix",
+            "email": "felix.schreiber@ion2s.com",
+            "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddeeab3347"
+        },
+        "observed": false,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4dadadd42627"
+        },
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 0,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "ARCHIVED",
+        "priority": "NORMAL",
+        "id": "61139e31-9546-438f-8feb-a382dede12821511"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819660000,
+        "endDate": -99999999999999,
+        "title": "JS Includes optimieren",
+        "description": "Bibliotheken zusammenfassen zu einer Datei (copy and paste) bzw. von Google laden (laut Konzept)",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d3adadb8f99e21248"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35dedeec324224"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c1505b3a-7874-49f4-8e43-a9abdbdb4a592058"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819825000,
+        "endDate": -99999999999999,
+        "title": "Imagegrößen ergänzen",
+        "description": "* Images immer mit den Attributen width und height versehen\r\n* Regelmäßig prüfen\r\n* Report an Dawid",
+        "project": {
+            "title": "DE_P022 - Speedoptimierung",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 8,
+            "id": "8bf1ec8d-0628-4ada-8b41-d30afbab99e233"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb00-35c4432baba41751"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 1,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "c5cca217-3fe3-4a63-b5af-888adb8fbe913332"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254820391000,
+        "endDate": -99999999999999,
+        "title": "ale Datenhaltung",
+        "description": "- Technische Recherche dezentrale Datenhaltung o.ä.: möglichst geringe und kalkulierbare Serverauslastung \r\n- Ziel: Dokument mit Übersicht der Möglichkeiten, ggf. Schaubild",
+        "project": {
+            "title": "143_artsnothers_AMEX",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 15,
+            "id": "ed8fcf22-bebf-adbadbc8-bb12-f770ace077131782"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712adbadb-085a-4c8a-bb00-35c4432ec324339"
+        },
+        "observed": true,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "adbdabd3-1ce9-4146-939b-759d7e680ac83032"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254819042000,
+        "endDate": -99999999999999,
+        "title": "Tracking ergänzen",
+        "description": "folgende Variable auf dem Bestellformular vom \"Digitalen Empfang\" einbinden:\ns.products=\";KA Digitaler Empfang;0;0\"\n\nfolgende Variablen auf der Bestätigungsseite vom \"Digitalen Empfang\" einbinden:\ndas event \"purchase\"\ns.purchaseID mit einer systemisch generierten eineindeutigen ID\ns.products=\";KA Digitaler Empfang;1;2.90\"\ns.eVar12 (VPKN aus JVM-Kampagnencontroller Cookie)\ns.eVar13 (Kampagnen-ID \"source\" aus JVM-Kampagnencontroller Cookie)\n\nIn die Templates werden bereits die PHP-Variablen analog zum MiniBP (MBP) geschrieben. \nDie Variablen müssen nur noch im PHP-Controller gesetzt werden.\n\ngggggggggggg",
+        "project": {
+            "title": "DE_P032 - Digitaler Empfang",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": false,
+            "effortIsDefault": false,
+            "taskCount": 9,
+            "id": "754715af-e6c8-49c44c-9dad-fce90d9c5ac12705"
+        },
+        "assignee": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-c3c300-35c4432ec3241421"
+        },
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a-bb7b7-35c4432ec3243493"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [
+            "CSS/HTML Umsetzung",
+            "Grafik Design",
+            "Javascript Umsetzung"
+        ],
+        "subtasks": [],
+        "effort": 3,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "LOW",
+        "id": "eed640ac-952d-4c6c-bafd-9989606e16b31f842"
+    },
+    {
+        "duration": 0,
+        "startDate": 1254821201000,
+        "endDate": -99999999999999,
+        "title": "Testing NL-Formulare",
+        "description": "- Benachrichtigung durch emarsys abwarten, dass Anpassungen abgeschlossen sind\r\n- Newsletter Testversand mit Frau Jahn abstimmen\r\n- Newsletter Testversand durchführen\r\n- Testing in allen Browsern durchführen\r\n- Feedback an KDG ",
+        "project": {
+            "title": "DE_P027 - Newsletter",
+            "progressIsDefault": false,
+            "startDateIsDefault": false,
+            "endDateIsDefault": false,
+            "statusIsDefault": true,
+            "durationIsDefault": true,
+            "effortIsDefault": false,
+            "taskCount": 16,
+            "id": "864eefe3-255d-4aa5-b3e5-b827d9543b75a64c1993"
+        },
+        "assignee": null,
+        "creator": {
+            "email": "dev@ion2s.com",
+            "firstName": "Redmine",
+            "lastName": null,
+            "birthDate": null,
+            "id": "c712c7ff-085a-4c8a3216-bb00-35c4432ec3242867"
+        },
+        "observed": false,
+        "parentId": null,
+        "subtaskCount": 0,
+        "services": [],
+        "subtasks": [],
+        "effort": 9,
+        "progressIsDefault": true,
+        "startDateIsDefault": true,
+        "endDateIsDefault": true,
+        "statusIsDefault": true,
+        "progress": 0,
+        "status": "COMPLETED",
+        "priority": "NORMAL",
+        "id": "b2161eff-7b1d-4841-a143-7b8381cca6cd8c0c1376"
     }
 ]

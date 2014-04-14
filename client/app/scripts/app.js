@@ -6,7 +6,8 @@
         'ui.router',
         'poolingpeopleAppDirective',
         'poolingpeopleAppFilter',
-        'ngCookies'
+        'ngCookies',
+        'ngSanitize'
     ];
 
     angular.module('poolingpeopleApp', dependencies)
@@ -47,6 +48,7 @@
                             templateUrl: 'views/tasks.tpl.html',
                             parent: 'tasks',
                             controller: 'TasksCtrl',
+                            search: true,
                             navbar: false,
                             needAuth: true,
                             taskFilter: "alle"
@@ -57,6 +59,7 @@
                             templateUrl: 'views/tasks.tpl.html',
                             parent: 'tasks',
                             controller: 'TasksCtrl',
+                            search: true,
                             navbar: false,
                             needAuth: true,
                             taskFilter: "mine"
@@ -67,6 +70,7 @@
                             templateUrl: 'views/tasks.tpl.html',
                             parent: 'tasks',
                             controller: 'TasksCtrl',
+                            search: true,
                             navbar: false,
                             needAuth: true,
                             taskFilter: "other"
@@ -77,6 +81,7 @@
                             templateUrl: 'views/tasks.tpl.html',
                             parent: 'tasks',
                             controller: 'TasksCtrl',
+                            search: true,
                             navbar: false,
                             needAuth: true,
                             taskFilter: "observed"

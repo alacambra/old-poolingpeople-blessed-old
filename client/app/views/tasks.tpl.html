@@ -1,7 +1,9 @@
+
 <ol class="breadcrumb">
-    <li class="capitalize" ng-if="breadcrum.length > 1" ng-repeat="location in breadcrum" ng-show="!$last"><a ui-sref="{{location.route}}">{{location.name}}</a></li>
-    <li class="active capitalize">{{breadcrum[breadcrum.length - 1].name}}</li>
+    <li class="capitalize" ng-if="breadcrum.length > 1" ng-repeat="location in breadcrum" ng-show="!$last"><a ui-sref="{{location.route}}" ng-bind="location.name"></a></li>
+    <li class="active capitalize" ng-bind="breadcrum[breadcrum.length - 1].name"></li>
 </ol>
+
 <div>
     <table class="table table-hover">
         <thead>
@@ -89,7 +91,7 @@
                     </div>
                 </td>
             </tr>
-            <tr ng-class="{'warning': isChecked(task), 'success': task.priority == 'LOW', 'danger': task.priority == 'HIGH'}" ng-repeat-start="task in taskList | orderBy:sorting | startFrom: pagination.currentPage*pagination.itemsPerPage | limitTo:pagination.itemsPerPage">
+            <tr ng-class="{'warning': isChecked(task), 'success': task.priority == 'LOW', 'danger': task.priority == 'HIGH'}" ng-repeat-start="task in taskList | softFilter:navbar.search | orderBy:sorting | startFrom: pagination.currentPage*pagination.itemsPerPage | limitTo:pagination.itemsPerPage">
 
                 <td width="30" ng-click="checkItem(task, $event, true)">
                     <span ng-class="{'checkbox checkbox-checked': isChecked(task), 'checkbox checkbox-unchecked': !isChecked(task)}"></span>
@@ -99,7 +101,7 @@
                     <div class="editable" ng-if="!editingField(task, 'title')">
                         <a href="" ng-click="editField(task, 'title', true)">
                             <span class="glyphicon" ng-if="task.tasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !task.hideTasks, 'glyphicon-chevron-down': task.hideTasks }"></span>
-                            <span class="editable">{{ task.title}}</span> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
+                            <span class="editable" ng-bind-html="task.title | highlight:navbar.search"></span> <a href="" ng-if="hasSubtasks(task)" ng-click="toggleSubtasks(task)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubtasks[task.id], 'glyphicon glyphicon-chevron-down': showSubtasks[task.id]}"></span></a>
                             <span class="glyphicon glyphicon-pushpin" ng-if="task.observed"></span>
                         </a>
                     </div>
@@ -227,11 +229,11 @@
                     <span ng-class="{'checkbox checkbox-checked': isChecked(subtask), 'checkbox checkbox-unchecked': !isChecked(subtask)}"></span>
                 </td>
 
-                <td ng-click="checkItem(subtask, $event)">
+                <td ng-click="checkItem(subtask, $event)">  
                     <div class="editable" ng-if="!editingField(subtask, 'title')">
                         <a href="" ng-click="editField(subtask, 'title', true)">
                             <span class="glyphicon" ng-if="subtask.subtasks.length > 0" ng-class="{ 'glyphicon-chevron-right': !subtask.hidesubtasks, 'glyphicon-chevron-down': subtask.hidesubtasks }"></span>
-                            <span class="editable">{{ subtask.title}}</span> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
+                            <span class="editable" ng-bind-html="subtask.title | highlight:navbar.search"></span> <a href="" ng-if="hasSubsubtasks(subtask)" ng-click="toggleSubsubtasks(subtask)"><span ng-class="{'glyphicon glyphicon-chevron-right': !showSubsubtasks[subtask.id], 'glyphicon glyphicon-chevron-down': showSubsubtasks[subtask.id]}"></span></a>
                             <span class="glyphicon glyphicon-pushpin" ng-if="subtask.observed"></span>
                         </a>
                     </div>
@@ -361,7 +363,7 @@
             <li ng-repeat="i in []| range:(pagination.totalPages() + 1)"
                 ng-class="{active: i == pagination.currentPage}"
                 ng-click="pagination.setPage()">
-                <a href="" ng-click="pagination.gotoPage(i)" ng-if="pagination.showPaginationIndex(i)">{{ i + 1}}</a>
+                <a href="" ng-click="pagination.gotoPage(i)" ng-if="pagination.showPaginationIndex(i)" ng-bind="i + 1"></a>
             </li>
             <li ng-class="{disabled: pagination.currentPage == pagination.totalPages() }">
                 <a href ng-click="pagination.nextPage()">Next »</a>

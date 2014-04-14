@@ -51,10 +51,12 @@
         <![endif]-->
 
         <!-- Navigation -->
-        <nav class="navbar navbar-inverse navbar-fixed-top">
+        <nav class="navbar navbar-inverse navbar-fixed-top" ng-model="navbar" ng-init="navbar.search = ''">
             <div class="container">
                 <ul class="nav navbar-nav">
-                    <li ng-repeat="state in $state.get()" ng-class="{'active': ($state.current.name === state.name || $state.current.parent === state.name) }" ng-if="state.navbar">
+                    <li ng-repeat="state in $state.get()" ng-class="{
+                                'active':($state.current.name === state.name || $state.current.parent === state.name)
+                            }" ng-if="state.navbar">
                         <a ui-sref="{{ state.name}}" ng-if="!state.substates" class="capitalize"><span ng-bind="state.viewName"></span></a>
                         <a href="#" ng-if="state.substates" class="dropdown-toggle capitalize"><span ng-bind="state.viewName"></span> <b class="caret"></b></a>
                         <ul ng-if="state.substates" class="dropdown-menu">
@@ -62,9 +64,17 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
+                <ul class="nav navbar-nav navbar-right">
                     <li ng-hide="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="showLoginModal()">Log In</button></li>
                     <li ng-show="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="logOut()">Log Out</button></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-show="$state.current.search === true" ng-controller="SearchCtrl">
+                    <li class="form-inline" style="padding: 8px 26px">
+                        <div class="form-group has-success has-feedback">
+                            <input type="text" placeholder="Search..." class="form-control" ng-model="navbar.search" ng-change="notifySearch()">
+                            <a href="" style="padding: 0px 20px" ng-click="navbar.search = ''" class="custom-link glyphicon form-control-feedback" ng-class="{'glyphicon-remove': navbar.search.length > 0, 'glyphicon-search': !(navbar.search.length > 0)}"></a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>
@@ -86,6 +96,7 @@
         <script src="bower_components/stampit/dist/stampit.js"></script>
         <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
         <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
         <!-- endbower -->
         <!-- endbuild -->
 
@@ -104,6 +115,7 @@
         <script src="scripts/filters/filters.js"></script>
         <script src="scripts/directives/directives.js"></script>
         <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/search.js"></script>
         <script src="scripts/controllers/users.js"></script>
         <script src="scripts/controllers/tasks.js"></script>
         <script src="scripts/controllers/projects.js"></script>

@@ -21,7 +21,7 @@
                     currentPage: 0,
                     itemsPerPage: 10,
                     totalPages: function () {
-                        return parseInt($scope.taskList.length / this.itemsPerPage, 10);
+                        return parseInt(($filter('softFilter')($scope.taskList, $scope.navbar.search || "").length - 1) / this.itemsPerPage, 10);
                     },
                     showPaginationIndex: function () {
                         //return Math.abs(this.currentPage - n) < 2 || n < 2 || n > this.totalPages - 3;
@@ -42,6 +42,10 @@
                     }
 
                 };
+                
+                $scope.$on("search" , function() {
+                    if ($scope.pagination.currentPage > $scope.pagination.totalPages()) $scope.pagination.gotoPage($scope.pagination.totalPages());
+                })
 
                 $scope.getSelectedItems = function () {
                     var items = [];
