@@ -13,6 +13,7 @@ import poolingpeople.commons.entities.ChangeLog;
 import poolingpeople.commons.entities.Comment;
 import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.Project;
+import poolingpeople.commons.entities.Service;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.TaskPriority;
 import poolingpeople.commons.entities.TaskStatus;
@@ -259,6 +260,25 @@ public class TaskMixin implements Task{
 
 	@Override
 	public void addComment(Comment comment) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@JsonView(JsonViews.BasicTask.class)
+	@Override
+	public List<Service> getServiceList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void addNewService(Service service) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeService(Service service) {
 		// TODO Auto-generated method stub
 		
 	}

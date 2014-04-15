@@ -29,6 +29,10 @@ public class AuthenticationInterceptor {
 			if (!loggedUserContainer.userIsSuccessfullyLogged() && context.getMethod().getAnnotation(AuthNotRequired.class) == null) {
 				throw new WebApplicationException(Status.UNAUTHORIZED);
 			}
+			
+			else if(loggedUserContainer.userIsSuccessfullyLogged() && ! loggedUserContainer.isUserActivated()) {
+				throw new WebApplicationException(Status.UNAUTHORIZED);
+			}
 
 		}
 		return context.proceed();

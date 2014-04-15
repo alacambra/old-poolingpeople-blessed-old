@@ -3,10 +3,11 @@ package poolingpeople.commons.entities;
 import java.util.Collection;
 import java.util.List;
 
-public interface Task extends PoolingpeopleEntity{
-	
+public interface Task extends PoolingpeopleEntity {
+
 	/**
-	 * UUID of a node. 
+	 * UUID of a node.
+	 * 
 	 * @return
 	 */
 	String getId();
@@ -20,14 +21,15 @@ public interface Task extends PoolingpeopleEntity{
 	void setDescription(String description);
 
 	/*
-	 * @todo: Intercept nullables and return a defaulted injected value... if possible 
+	 * @todo: Intercept nullables and return a defaulted injected value... if
+	 * possible
 	 */
 	TaskPriority getPriority();
-	
+
 	void setPriority(TaskPriority priority);
 
 	TaskStatus getStatus();
-	
+
 	void setStatus(TaskStatus status);
 
 	Long getStartDate();
@@ -38,22 +40,26 @@ public interface Task extends PoolingpeopleEntity{
 
 	/**
 	 * Estimated duration of the task
+	 * 
 	 * @return
 	 */
 	Integer getDuration();
-	void setDefaultDuration(Integer progress); 
-	
+
+	void setDefaultDuration(Integer progress);
+
 	/**
 	 * Number of ours used to develop some aspect of the task
+	 * 
 	 * @param effort
 	 */
 	void addEffort(Effort effort);
+
 	Collection<Effort> getEfforts();
 
 	void deleteEffort(Effort effort);
-	
+
 	Integer getEffort();
-	
+
 	Project getProject();
 
 	void setDefaultStartDate(Long startDate);
@@ -81,29 +87,18 @@ public interface Task extends PoolingpeopleEntity{
 	void setAssignee(User u);
 
 	Task getParent();
+
 	String getParentId();
 
 	User getAssignee();
 
 	List<Task> getSubtasks();
-	
+
 	Integer getSubtaskCount();
-	
+
+	List<Service> getServiceList();
+
+	void addNewService(Service service);
+
+	void removeService(Service service);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

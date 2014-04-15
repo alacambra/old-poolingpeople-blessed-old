@@ -18,4 +18,6 @@ public interface ILoggedUserContainer {
 
 	boolean userIsSuccessfullyLogged();
 
+	boolean isUserActivated();
+
 }

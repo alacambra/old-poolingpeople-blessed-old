@@ -13,6 +13,7 @@ import poolingpeople.persistence.neo4j.entities.PersistedChangeLogAttributeUpdat
 import poolingpeople.persistence.neo4j.entities.PersistedComment;
 import poolingpeople.persistence.neo4j.entities.PersistedEffort;
 import poolingpeople.persistence.neo4j.entities.PersistedProject;
+import poolingpeople.persistence.neo4j.entities.PersistedService;
 import poolingpeople.persistence.neo4j.entities.PersistedTask;
 import poolingpeople.persistence.neo4j.entities.PersistedUser;
 
@@ -44,6 +45,9 @@ public class InstanceProvider {
 	private Instance<PersistedChangeLog> persistedChangeLogSource;
 	 
 	private HashMap<Class<?>, Instance<?>> instancesSources;
+
+	@Inject
+	private Instance<PersistedService> persistedServiceSource;
 	
 	public HashMap<Class<?>, Instance<?>> getInstancesSources() {
 		
@@ -60,6 +64,7 @@ public class InstanceProvider {
 		instancesSources.put(PersistedProject.class, persistedProjectSource);
 		instancesSources.put(PersistedChangeLogAttributeUpdateAction.class, persistedChangeLogAttributeUpdateActionSource);
 		instancesSources.put(PersistedChangeLog.class, persistedChangeLogSource);
+		instancesSources.put(PersistedService.class, persistedServiceSource);
 		return instancesSources; 
 				
 	}

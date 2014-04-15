@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    	               "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="layout.xhtml"> 
+	<ui:define name="title">Create new Service</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Title" />
+				<h:inputText value="#{serviceModel.service.title}" />
+
+				<h:outputLabel value="Description" />
+				<h:inputTextarea value="#{serviceModel.service.description}" />
+
+				<h:outputLabel value="Active status" />
+				<h:selectBooleanCheckbox value="#{serviceModel.service.activeStatus}" />
+
+			</h:panelGrid>
+			<h:commandButton value="Create Service" action="#{serviceModel.createService}" >
+					<f:ajax execute="@form" render=":serviceList :errors"/>
+			</h:commandButton>
+		</h:form>
+
+		<hr />
+
+		<h1>Servicelist</h1>
+		<h:dataTable id="serviceList" value="#{serviceModel.getAllServices()}"
+			var="service" border="1">
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Title" />
+				</f:facet>
+				<h:outputText value="#{service.title}"></h:outputText>
+			</h:column>
+	
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Description" />
+				</f:facet>
+				<h:outputText value="#{service.description}"></h:outputText>
+			</h:column>
+			
+			<h:column>
+				<f:facet name="header">
+					<h:outputText value="Active" />
+				</f:facet>
+				<h:selectBooleanCheckbox value="#{service.activeStatus}" disabled="true"/>
+			</h:column>
+	
+	<h:column>
+			<f:facet name="header">
+				<h:outputText value="Edit"/>
+			</f:facet>
+				<h:button value="Edit" outcome="edit_service.xhtml?id=#{service.id}"/>
+			</h:column>
+	
+		</h:dataTable>
+
+	</ui:define>
+</ui:composition>
+</html>

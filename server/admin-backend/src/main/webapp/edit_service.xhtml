@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    	               "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core">
+<ui:composition template="layout.xhtml">
+	<f:metadata>
+		<f:viewParam name="id" value="#{serviceModel.service.id}" />
+		<f:viewAction action="#{serviceModel.getServiceById}" />
+	</f:metadata>
+	<ui:define name="title">Edit Service</ui:define>
+	<ui:define name="content">
+		<h:form>
+			<h:panelGrid columns="2">
+				<h:outputLabel value="Title" />
+				<h:inputText value="#{serviceModel.service.title}" />
+
+				<h:outputLabel value="Description" />
+				<h:inputTextarea value="#{serviceModel.service.description}" />
+
+				<h:outputLabel value="Active status" />
+				<h:selectBooleanCheckbox
+					value="#{serviceModel.service.activeStatus}" />
+
+			</h:panelGrid>
+			<h:commandButton value="Update Service"
+				action="#{serviceModel.updateService}" />
+		</h:form>
+	</ui:define>
+</ui:composition>
+</html>

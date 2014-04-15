@@ -7,13 +7,16 @@ import poolingpeople.commons.entities.ChangeLog;
 import poolingpeople.commons.entities.Comment;
 import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.Project;
+import poolingpeople.commons.entities.Service;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.TaskPriority;
 import poolingpeople.commons.entities.TaskStatus;
 import poolingpeople.commons.entities.User;
-import poolingpeople.persistence.neo4j.*;
-import poolingpeople.persistence.neo4j.exceptions.*;
-import poolingpeople.persistence.neo4j.inheritance.*;
+import poolingpeople.persistence.neo4j.inheritance.BottomObject;
+import poolingpeople.persistence.neo4j.inheritance.Inheritable;
+import poolingpeople.persistence.neo4j.inheritance.PropagationType;
+import poolingpeople.persistence.neo4j.inheritance.Slave;
+import poolingpeople.persistence.neo4j.inheritance.TopObject;
 public class ManagedTask implements Task {
 
 	@Override
@@ -263,6 +266,25 @@ public class ManagedTask implements Task {
 
 	@Override
 	public void addComment(Comment comment) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<Service> getServiceList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+ 
+
+	@Override
+	public void addNewService(Service service) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeService(Service service) {
 		// TODO Auto-generated method stub
 		
 	}

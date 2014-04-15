@@ -11,6 +11,7 @@ import poolingpeople.commons.entities.Comment;
 import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.IgnoreAttribute;
 import poolingpeople.commons.entities.Project;
+import poolingpeople.commons.entities.Service;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.TaskPriority;
 import poolingpeople.commons.entities.TaskStatus;
@@ -32,7 +33,6 @@ public class TaskDTO implements Task {
 	private Project project;
 	private User assignee;
 	private Task parent;
-	private List<Task> subTasks = new ArrayList<>();
 
 	@IgnoreAttribute
 	@Override
@@ -203,12 +203,10 @@ public class TaskDTO implements Task {
 
 	@Override
 	public void addSubtask(Task child) {
-		subTasks.add(child);
 	}
 
 	@Override
 	public void removeSubtask(Task child) {
-		subTasks.remove(child);
 	}
 
 	@Override
@@ -239,12 +237,12 @@ public class TaskDTO implements Task {
 
 	@Override
 	public List<Task> getSubtasks() {
-		return subTasks; 
+		return null;
 	}
 
 	@Override
 	public Integer getSubtaskCount() {
-		return subTasks.size();
+		return duration;
 	}
 
 	@Override
@@ -272,5 +270,22 @@ public class TaskDTO implements Task {
 		
 	}
 
+	@Override
+	public List<Service> getServiceList() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
+
+	@Override
+	public void addNewService(Service service) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void removeService(Service service) {
+		// TODO Auto-generated method stub
+		
+	}
 }

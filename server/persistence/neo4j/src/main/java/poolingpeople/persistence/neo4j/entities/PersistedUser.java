@@ -138,59 +138,15 @@ public class PersistedUser extends AbstractPersistedModel<PersistedUser> impleme
 		createRelationshipTo((PersistedComment)comment, Relations.COMMENTED);
 	}
 
+	@Override
+	public boolean getActivation() {
+		String isActivated = getStringProperty(NodePropertyName.IS_ACTIVATED);
+		return  (isActivated== null) ? false : Boolean.valueOf(isActivated);
+	}
+
+	@Override
+	public void setActivation(boolean activation) {
+		setProperty(NodePropertyName.IS_ACTIVATED, Boolean.toString(activation));
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
