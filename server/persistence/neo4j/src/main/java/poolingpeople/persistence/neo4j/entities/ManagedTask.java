@@ -5,6 +5,7 @@ import java.util.List;
 
 import poolingpeople.commons.entities.ChangeLog;
 import poolingpeople.commons.entities.Comment;
+import poolingpeople.commons.entities.Creator;
 import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.Project;
 import poolingpeople.commons.entities.Service;
@@ -287,6 +288,18 @@ public class ManagedTask implements Task {
 	public void removeService(Service service) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void setCreator(Creator creator) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Creator getCreator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

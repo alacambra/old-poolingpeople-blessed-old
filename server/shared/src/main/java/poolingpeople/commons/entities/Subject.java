@@ -1,13 +1,5 @@
 package poolingpeople.commons.entities;
 
-public interface Subject {
-	String getFirstName();
-
-	String getLastName();
-
-	void setFirstName(String firstName);
-
-	void setLastName(String lastName);
-	
+public interface Subject extends Creator {
 	void writeComment(Comment comment);
 }

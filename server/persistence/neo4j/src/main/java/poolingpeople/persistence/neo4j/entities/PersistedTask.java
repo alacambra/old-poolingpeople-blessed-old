@@ -10,6 +10,7 @@ import javax.ejb.Stateless;
 import org.neo4j.graphdb.Direction;
 
 import poolingpeople.commons.entities.ChangeLog;
+import poolingpeople.commons.entities.Creator;
 import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.Project;
 import poolingpeople.commons.entities.Service;
@@ -596,6 +597,36 @@ public class PersistedTask extends AbstractPersistedModel<PersistedTask> impleme
 	@Override
 	public void addNewService(Service service) {
 		createRelationshipTo((AbstractPersistedModel<?>) service, Relations.HAS_SERVICE);
+	}
+
+	@Override
+	public void setCreator(Creator creator) {
+		setProperty(NodePropertyName.FIRSTNAME, creator.getFirstName());
+		setProperty(NodePropertyName.LASTNAME, creator.getLastName());
+	}
+
+	@Override
+	public Creator getCreator() {
+		return new Creator() {
+			
+			@Override
+			public void setLastName(String lastName) {
+			}
+			
+			@Override
+			public void setFirstName(String firstName) {
+			}
+			
+			@Override
+			public String getLastName() {
+				return PersistedTask.this.getStringProperty(NodePropertyName.LASTNAME);
+			}
+			
+			@Override
+			public String getFirstName() {
+				return PersistedTask.this.getStringProperty(NodePropertyName.FIRSTNAME);
+			}
+		};
 	}
 
 }

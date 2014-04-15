@@ -12,6 +12,9 @@ public interface Task extends PoolingpeopleEntity {
 	 */
 	String getId();
 
+	void setCreator(Creator creator);
+	Creator getCreator();
+	
 	String getTitle();
 
 	void setTitle(String title);
