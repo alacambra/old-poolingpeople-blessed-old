@@ -12,6 +12,7 @@ import org.neo4j.graphdb.Direction;
 import poolingpeople.commons.entities.ChangeLog;
 import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.Project;
+import poolingpeople.commons.entities.Service;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.TaskPriority;
 import poolingpeople.commons.entities.TaskStatus;
@@ -577,6 +578,24 @@ public class PersistedTask extends AbstractPersistedModel<PersistedTask> impleme
 	@Override
 	public List<ChangeLog> getChangeLogList() {
 		return getRelatedNodes(Relations.HAS_CHANGE_LOG, PersistedChangeLog.class, ChangeLog.class, Direction.OUTGOING);
+	}
+
+	@Override
+	public List<Service> getServiceList() {
+		return getRelatedNodes(Relations.HAS_SERVICE, PersistedService.class, Service.class, Direction.OUTGOING);
+	}
+
+	@Override
+	public void removeService(Service service) {
+		if (!relationExistsTo((AbstractPersistedModel<?>) service, Relations.HAS_SERVICE)) {
+			throw new RelationNotFoundException();
+		}
+		removeRelationTo((AbstractPersistedModel<?>) service, Relations.HAS_SERVICE);
+	}
+
+	@Override
+	public void addNewService(Service service) {
+		createRelationshipTo((AbstractPersistedModel<?>) service, Relations.HAS_SERVICE);
 	}
 
 }
