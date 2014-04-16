@@ -601,32 +601,12 @@ public class PersistedTask extends AbstractPersistedModel<PersistedTask> impleme
 
 	@Override
 	public void setCreator(Creator creator) {
-		setProperty(NodePropertyName.FIRSTNAME, creator.getFirstName());
-		setProperty(NodePropertyName.LASTNAME, creator.getLastName());
+		createRelationshipTo((AbstractPersistedModel<?>) creator, Relations.CREATOR);
 	}
 
 	@Override
 	public Creator getCreator() {
-		return new Creator() {
-			
-			@Override
-			public void setLastName(String lastName) {
-			}
-			
-			@Override
-			public void setFirstName(String firstName) {
-			}
-			
-			@Override
-			public String getLastName() {
-				return PersistedTask.this.getStringProperty(NodePropertyName.LASTNAME);
-			}
-			
-			@Override
-			public String getFirstName() {
-				return PersistedTask.this.getStringProperty(NodePropertyName.FIRSTNAME);
-			}
-		};
+		return getRelatedNode(Relations.CREATOR, PersistedUser.class, Direction.OUTGOING);
 	}
 
 }
