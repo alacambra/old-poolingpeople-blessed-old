@@ -130,7 +130,6 @@ public class UserMixin implements User{
 	}
 
 	@Override
-	@JsonIgnore
 	public List<Task> getObservedTasks() {
 		// TODO Auto-generated method stub
 		return null;
