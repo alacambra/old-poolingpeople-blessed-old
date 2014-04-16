@@ -279,7 +279,7 @@ public class ManagedTask implements Task {
  
 
 	@Override
-	public void addNewService(Service service) {
+	public void addService(Service service) {
 		// TODO Auto-generated method stub
 		
 	}

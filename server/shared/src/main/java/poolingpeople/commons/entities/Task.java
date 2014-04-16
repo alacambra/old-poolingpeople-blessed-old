@@ -101,7 +101,7 @@ public interface Task extends PoolingpeopleEntity {
 
 	List<Service> getServiceList();
 
-	void addNewService(Service service);
+	void addService(Service service);
 
 	void removeService(Service service);
 }

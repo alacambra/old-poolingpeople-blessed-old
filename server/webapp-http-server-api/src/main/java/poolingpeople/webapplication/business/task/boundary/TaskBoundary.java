@@ -21,6 +21,7 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 
+import poolingpeople.commons.entities.Service;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.User;
 import poolingpeople.persistence.neo4j.Neo4jTransaction;
@@ -248,5 +249,18 @@ public class TaskBoundary extends AbstractBoundary{
 		
 		return error ? Response.noContent().header("X-Warning", true).build() : Response.noContent().build();
 //		return Response.status(Status.METHOD_NOT_ALLOWED).build();
+	}
+
+	/************************************* SERVICE - TASK *************************************/
+	@PUT 
+	@Path(idPattern + "/in/service/{serviceId:" + uuidRegexPattern + "}")
+	public Response assignServiceToTask(@PathParam("id") String taskId, @PathParam("serviceId") String serviceId){
+
+		Task task = entityFactory.getTaskById(taskId);
+		Service service = entityFactory.getServiceById(serviceId);
+		
+		task.addService(service);
+		
+		return Response.noContent().build();
 	}
 }

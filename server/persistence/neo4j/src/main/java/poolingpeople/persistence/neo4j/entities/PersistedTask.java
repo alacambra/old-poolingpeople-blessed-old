@@ -595,7 +595,7 @@ public class PersistedTask extends AbstractPersistedModel<PersistedTask> impleme
 	}
 
 	@Override
-	public void addNewService(Service service) {
+	public void addService(Service service) {
 		createRelationshipTo((AbstractPersistedModel<?>) service, Relations.HAS_SERVICE);
 	}
 
