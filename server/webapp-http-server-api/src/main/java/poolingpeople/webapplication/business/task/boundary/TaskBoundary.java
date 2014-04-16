@@ -21,6 +21,7 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.JsonMappingException;
 
+import poolingpeople.commons.entities.Service;
 import poolingpeople.commons.entities.Task;
 import poolingpeople.commons.entities.User;
 import poolingpeople.persistence.neo4j.Neo4jTransaction;
@@ -83,7 +84,9 @@ public class TaskBoundary extends AbstractBoundary{
 	JsonMappingException, IOException {
 		Task dtoTask = mapper.readValue(json, TaskDTO.class);
 		Task task = entityFactory.createTask(dtoTask);
-		task.setAssignee(loggedUserContainer.getUser());
+		User loggedInUser = loggedUserContainer.getUser();
+		task.setAssignee(loggedInUser);
+		task.setCreator(loggedUserContainer.getUser());
 		return Response.ok().entity(mapper.writeValueAsString(new IdWrapper(task.getId()))).build();
 	}
 
@@ -133,7 +136,9 @@ public class TaskBoundary extends AbstractBoundary{
 		Task parentTask = entityFactory.getTaskById(parentId);
 		Task dtoTask = mapper.readValue(json, TaskDTO.class);
 		Task task = entityFactory.createTask(dtoTask);
-		task.setAssignee(loggedUserContainer.getUser());
+		User loggedInUser = loggedUserContainer.getUser();
+		task.setAssignee(loggedInUser);
+		task.setCreator(loggedUserContainer.getUser());
 		parentTask.addSubtask(task);
 
 		return Response.ok().entity(mapper.writeValueAsString(new IdWrapper(task.getId()))).build();
@@ -248,5 +253,18 @@ public class TaskBoundary extends AbstractBoundary{
 		
 		return error ? Response.noContent().header("X-Warning", true).build() : Response.noContent().build();
 //		return Response.status(Status.METHOD_NOT_ALLOWED).build();
+	}
+
+	/************************************* SERVICE - TASK *************************************/
+	@PUT 
+	@Path(idPattern + "/in/service/{serviceId:" + uuidRegexPattern + "}")
+	public Response assignServiceToTask(@PathParam("id") String taskId, @PathParam("serviceId") String serviceId){
+
+		Task task = entityFactory.getTaskById(taskId);
+		Service service = entityFactory.getServiceById(serviceId);
+		
+		task.addService(service);
+		
+		return Response.noContent().build();
 	}
 }

@@ -12,6 +12,9 @@ public interface Task extends PoolingpeopleEntity {
 	 */
 	String getId();
 
+	void setCreator(Creator creator);
+	Creator getCreator();
+	
 	String getTitle();
 
 	void setTitle(String title);
@@ -98,7 +101,7 @@ public interface Task extends PoolingpeopleEntity {
 
 	List<Service> getServiceList();
 
-	void addNewService(Service service);
+	void addService(Service service);
 
 	void removeService(Service service);
 }

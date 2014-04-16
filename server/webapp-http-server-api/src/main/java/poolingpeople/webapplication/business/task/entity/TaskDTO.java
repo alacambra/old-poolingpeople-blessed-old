@@ -8,6 +8,7 @@ import org.codehaus.jackson.annotate.JsonIgnore;
 
 import poolingpeople.commons.entities.ChangeLog;
 import poolingpeople.commons.entities.Comment;
+import poolingpeople.commons.entities.Creator;
 import poolingpeople.commons.entities.Effort;
 import poolingpeople.commons.entities.IgnoreAttribute;
 import poolingpeople.commons.entities.Project;
@@ -278,7 +279,7 @@ public class TaskDTO implements Task {
 
 
 	@Override
-	public void addNewService(Service service) {
+	public void addService(Service service) {
 		// TODO Auto-generated method stub
 		
 	}
@@ -287,5 +288,17 @@ public class TaskDTO implements Task {
 	public void removeService(Service service) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public void setCreator(Creator creator) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Creator getCreator() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
