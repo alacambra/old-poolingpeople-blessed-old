@@ -299,11 +299,6 @@ public class Neo4jEntityFactory implements EntityFactory {
 						Service.class);
 	}
 
-	@Override
-	public List<Task> getTasksByUser(User user) {
-		return getUserTasksWithExlusion(user, true);
-	}
-
 	private List<Task> getUserTasksWithExlusion(User user, boolean mutualExusion) {
 		List<Task> allTask = getAllTask();
 		List<Task> resultingTaskList = new ArrayList<>();
@@ -323,7 +318,12 @@ public class Neo4jEntityFactory implements EntityFactory {
 	}
 
 	@Override
-	public List<Task> getTaskExcludingTasksFromUser(User user) {
-		return getUserTasksWithExlusion(user, false);
+	public List<Task> getTasksByUser(String userId) {
+		return getUserTasksWithExlusion(getUserById(userId), true);
+	}
+
+	@Override
+	public List<Task> getTaskExcludingTasksFromUser(String userId) {
+		return getUserTasksWithExlusion(getUserById(userId), false);
 	}
 }
