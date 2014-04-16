@@ -32,7 +32,7 @@ public class ServiceBoundary extends AbstractBoundary{
 	@Produces(MediaType.APPLICATION_JSON)
 	public Response getServiceOfTask(@PathParam("id") String taskId)
 			throws JsonGenerationException, JsonMappingException, IOException {
-		List<Service> servicesOfTask = entityFactory.getTaskById(taskId).getServiceList();
+		List<Service> servicesOfTask = entityFactory.getTaskById(taskId).getServices();
 		String response = mapper.writeValueAsString(servicesOfTask);
 		return Response.ok().entity(response).build();
 		

@@ -272,9 +272,13 @@ public class TaskDTO implements Task {
 	}
 
 	@Override
-	public List<Service> getServiceList() {
+	public List<Service> getServices() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+	
+	public void setServices() {
+		
 	}
 
 

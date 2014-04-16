@@ -99,7 +99,7 @@ public interface Task extends PoolingpeopleEntity {
 
 	Integer getSubtaskCount();
 
-	List<Service> getServiceList();
+	List<Service> getServices();
 
 	void addService(Service service);
 
