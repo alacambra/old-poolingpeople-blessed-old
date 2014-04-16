@@ -2,8 +2,6 @@ package poolingpeople.webapplication.business.service.boundary;
 
 import java.util.List;
 
-import jdk.nashorn.internal.runtime.regexp.joni.constants.NodeType;
-
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.neo4j.graphdb.Node;
