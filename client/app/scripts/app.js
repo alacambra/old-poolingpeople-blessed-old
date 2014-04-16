@@ -146,7 +146,6 @@
                 });
 
                 $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {
-
                     if (toState.needAuth && !SessionService.loggedIn()) {
                         event.preventDefault();
                         $rootScope.$broadcast("requiredAuth", toState, toParams, fromState, fromParams);

@@ -64,7 +64,7 @@
                         </ul>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
+                <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
                     <li ng-hide="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="showLoginModal()">Log In</button></li>
                     <li ng-show="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="logOut()">Log Out</button></li>
                 </ul>
