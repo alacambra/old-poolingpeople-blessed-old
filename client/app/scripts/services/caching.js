@@ -31,6 +31,21 @@
                         q.resolve(APICache.get('tasks'));
                         return q.promise;
                     },
+                    getMyTasks: function (size, start) {
+                        var q = $q.defer();
+                        q.resolve(APICache.get('myTasks'));
+                        return q.promise;
+                    },
+                    getOtherTasks: function (size, start) {
+                        var q = $q.defer();
+                        q.resolve(APICache.get('otherTasks'));
+                        return q.promise;
+                    },
+                    getObservedTasks: function (size, start) {
+                        var q = $q.defer();
+                        q.resolve(APICache.get('observedTasks'));
+                        return q.promise;
+                    },
                     getEfforts: function (taskId) {
                         var q = $q.defer();
                         q.resolve(APICache.get('efforts.' + taskId));

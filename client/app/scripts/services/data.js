@@ -125,6 +125,21 @@
                             return ModelsService.getTaskList(data);
                         });
                     },
+                    getMyTasks: function (size, start) {
+                        return getDataSource('myTasks').getMyTasks(size, start).then(function (data) {
+                            return ModelsService.getTaskList(data);
+                        });
+                    },
+                    getOtherTasks: function (size, start) {
+                        return getDataSource('otherTasks').getOtherTasks(size, start).then(function (data) {
+                            return ModelsService.getTaskList(data);
+                        });
+                    },
+                    getObservedTasks: function (size, start) {
+                        return getDataSource('observedTasks').getObservedTasks(size, start).then(function (data) {
+                            return ModelsService.getTaskList(data);
+                        });
+                    },
                     createTask: function (data) {
                         return getDataSource().createTask(data.getDTO());
                     },
@@ -144,6 +159,13 @@
                         return getDataSource().deleteTask(id);
                     },
                     /* END CRUD */
+
+                    observeTask: function (idTask) {
+                        return getDataSource().observeTask(idTask);
+                    },
+                    unobserveTask: function (idTask) {
+                        return getDataSource().unobserveTask(idTask);
+                    },
 
                     assignTaskToUser: function (idTask, idUser) {
                         return getDataSource().assignTaskToUser(idTask, idUser);

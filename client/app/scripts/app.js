@@ -51,7 +51,7 @@
                             search: true,
                             navbar: false,
                             needAuth: true,
-                            taskFilter: "alle"
+                            taskFilter: "all"
                         }, {
                             url: '/mine',
                             name: 'mine',
@@ -137,12 +137,12 @@
                     if (firstTime) {
                         firstTime = false;
                         if (!_.isUndefined($cookieStore.get('lastState')) && $state.current.name === "home") {
-                            $state.go($cookieStore.get('lastState'))
+                            $state.go($cookieStore.get('lastState'));
                         }
                     } else {
                         saveLastState($state.current);
                     }
-
+                    $state.reload();
                 });
 
                 $rootScope.$on('$stateChangeStart', function (event, toState, toParams, fromState, fromParams) {

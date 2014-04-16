@@ -169,8 +169,15 @@
 
                 $scope.toggleRemember = function (items) {
                     doAction(items, function (item, index) {
-                        item.observed = !item.observed;
-                        DataProvider.updateTask(item.id, item);
+                        if (!item.observed) {
+                            DataProvider.observeTask(item.id).then(function(result) {
+                                item.observed = true;
+                            });
+                        } else {
+                            DataProvider.unobserveTask(item.id).then(function(result) {
+                                item.observed = false;
+                            });
+                        }
                     });
                 };
 
@@ -270,11 +277,36 @@
 
                 var loadTasks = function () {
                     LoadStatusService.setStatus("tasks.taskList", LoadStatusService.RESOLVING);
-                    DataProvider.getTasks().then(function (tasks) {
-                        $scope.taskList = tasks;
-                    }).finally(function () {
-                        LoadStatusService.setStatus("tasks.taskList", LoadStatusService.COMPLETED);
-                    });
+                    switch ($state.current.taskFilter) {
+                        case "observed":
+                            DataProvider.getObservedTasks().then(function (tasks) {
+                                $scope.taskList = tasks;
+                            }).finally(function () {
+                                LoadStatusService.setStatus("tasks.taskList", LoadStatusService.COMPLETED);
+                            });
+                            break;
+                        case "other":
+                            DataProvider.getOtherTasks().then(function (tasks) {
+                                $scope.taskList = tasks;
+                            }).finally(function () {
+                                LoadStatusService.setStatus("tasks.taskList", LoadStatusService.COMPLETED);
+                            });
+                            break;
+                        case "mine":
+                            DataProvider.getMyTasks().then(function (tasks) {
+                                $scope.taskList = tasks;
+                            }).finally(function () {
+                                LoadStatusService.setStatus("tasks.taskList", LoadStatusService.COMPLETED);
+                            });
+                            break;
+                        default:
+                            DataProvider.getTasks().then(function (tasks) {
+                                $scope.taskList = tasks;
+                            }).finally(function () {
+                                LoadStatusService.setStatus("tasks.taskList", LoadStatusService.COMPLETED);
+                            });
+                            break;
+                    }
                 }, loadUsers = function () {
                     DataProvider.getUsers().then(function (users) {
                         $scope.assignableUsers = users;

@@ -113,6 +113,24 @@
 					return [200, JSON.stringify(tasks)];
 				});
 
+				// URI: GET - /tasks/mine
+				$httpBackend.whenGET(/\/tasks\/mine(\?size=\w+(&start=\w+)?)?$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(tasks.slice(0, 16))];
+				});
+
+				// URI: GET - /tasks/others
+				$httpBackend.whenGET(/\/tasks\/others(\?size=\w+(&start=\w+)?)?$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(tasks.slice(16))];
+				});
+
+				// URI: GET - /tasks/observed
+				$httpBackend.whenGET(/\/tasks\/observed(\?size=\w+(&start=\w+)?)?$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(tasks.slice(0, 40))];
+				});
+
 				// URI: GET /projects/:projectId/tasks
 				$httpBackend.whenGET(/\/projects\/[\w-]\/tasks$/).respond(function (method, url, data, headers) {
 					console.log(method + ' - ' + url);
@@ -208,6 +226,18 @@
 
 				// URI: DELETE /tasks/:taskId/efforts/:effortId
 				$httpBackend.whenDELETE(/\/tasks\/[\w-]+\/efforts\/[\w-]+$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200];
+				});
+
+				// URI: POST /tasks/:taskId/observe
+				$httpBackend.whenPOST(/\/tasks\/[\w-]+\/observe$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(efforts)];
+				});
+
+				// URI: DELETE /tasks/:taskId/unobserve
+				$httpBackend.whenPOST(/\/tasks\/[\w-]+\/unobserve$/).respond(function (method, url, data, headers) {
 					console.log(method + ' - ' + url);
 					return [200];
 				});

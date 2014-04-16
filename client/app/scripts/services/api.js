@@ -176,6 +176,39 @@
                         });
                         return q.promise;
                     },
+                    getMyTasks: function (size, start) {
+                        var q = $q.defer();
+                        $http.get(baseUrl + "/tasks/mine" + pagination(size, start))
+                            .success(function (data, status, headers, config) {
+                                CachingService.put("myTasks", data);
+                                q.resolve(data, status, headers, config);
+                            }).error(function (data, status, headers, config) {
+                            q.reject(data, status, headers, config);
+                        });
+                        return q.promise;
+                    },
+                    getObservedTasks: function (size, start) {
+                        var q = $q.defer();
+                        $http.get(baseUrl + "/tasks/observed" + pagination(size, start))
+                            .success(function (data, status, headers, config) {
+                                CachingService.put("observedTasks", data);
+                                q.resolve(data, status, headers, config);
+                            }).error(function (data, status, headers, config) {
+                            q.reject(data, status, headers, config);
+                        });
+                        return q.promise;
+                    },
+                    getOtherTasks: function (size, start) {
+                        var q = $q.defer();
+                        $http.get(baseUrl + "/tasks/others" + pagination(size, start))
+                            .success(function (data, status, headers, config) {
+                                CachingService.put("otherTasks", data);
+                                q.resolve(data, status, headers, config);
+                            }).error(function (data, status, headers, config) {
+                            q.reject(data, status, headers, config);
+                        });
+                        return q.promise;
+                    },
                     createTask: function (data) {
                         var q = $q.defer();
                         $http.post(baseUrl + "/tasks/", data)
@@ -211,6 +244,26 @@
                     assignTaskToUser: function (idTask, idUser) {
                         var q = $q.defer();
                         $http.put(baseUrl + "/tasks/" + idTask + "/to/user/" + idUser)
+                            .success(function (data, status, headers, config) {
+                                q.resolve(data, status, headers, config);
+                            }).error(function (data, status, headers, config) {
+                            q.reject(data, status, headers, config);
+                        });
+                        return q.promise;
+                    },
+                    observeTask: function (idTask) {
+                        var q = $q.defer();
+                        $http.post(baseUrl + "/tasks/" + idTask + "/observe")
+                            .success(function (data, status, headers, config) {
+                                q.resolve(data, status, headers, config);
+                            }).error(function (data, status, headers, config) {
+                            q.reject(data, status, headers, config);
+                        });
+                        return q.promise;
+                    },
+                    unobserveTask: function (idTask) {
+                        var q = $q.defer();
+                        $http.post(baseUrl + "/tasks/" + idTask + "/unobserve")
                             .success(function (data, status, headers, config) {
                                 q.resolve(data, status, headers, config);
                             }).error(function (data, status, headers, config) {
