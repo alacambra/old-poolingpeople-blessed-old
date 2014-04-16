@@ -36,8 +36,8 @@
 				});
 			}])
 
-		.run(['$httpBackend', '$log', '$timeout',
-			function ($httpBackend, $log, $timeout) {
+		.run(['$httpBackend', '$log',
+			function ($httpBackend, $log) {
 				var baseUrl = 'rest',
 					projects = null,
 					users = null,
@@ -45,6 +45,7 @@
 					efforts = null,
 					comments = null,
 					changelog = null,
+					services = null,
 					user = [
 						{
 						    "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb",
@@ -81,6 +82,10 @@
 
 				$.get('fixtures/comments.json', function (data) {
 					comments = data;
+				});
+
+				$.get('fixtures/services.json', function (data) {
+					services = data;
 				});
 
 				$httpBackend.whenGET(/.*\.tpl\.html/).passThrough();
@@ -231,6 +236,24 @@
 					data = JSON.parse(data);
 					data.id = 'e-' + parseInt(Math.random() * 10000, 10);
 					return [200, JSON.stringify(data)];
+				});
+
+				// URI: GET /services
+				$httpBackend.whenGET(/\/services$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(services)];
+				});
+
+				// URI: GET /services/:id/in/service/:id
+				$httpBackend.whenPUT(/\/tasks\/[\w-]+\/in\/service\/[\w-]+$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(services)];
+				});
+
+				// URI: DELETE /services/:id/in/service/:id
+				$httpBackend.whenDELETE(/\/tasks\/[\w-]+\/in\/service\/[\w-]+$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(services)];
 				});
 			}]);
 }());

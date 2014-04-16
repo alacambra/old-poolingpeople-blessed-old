@@ -92,7 +92,7 @@
                             ng-model="modal.service"
                             class="form-control"
                             id="servicesInput"
-                            ng-options="service for service in modal.servicesAvailable | orderBy:'toString()'"
+                            ng-options="service as service.title for service in modal.servicesAvailable | orderBy:'title'"
                             ng-change="addService()"
                             ng-disabled="!modal.servicesAvailable.length > 0"></select>
                 </div>
@@ -100,12 +100,12 @@
                     <b>Übernehmen</b> 
                     <div class="btn-group btn-group-sm" style="margin-left: 10px">
                         <button type="button" class="btn btn-default" ng-click="setDefault('services', true); refreshServices()">Ja</button>
-                        <button type="button" class="btn btn-default" ng-click="setDefault('services', false)">Nein</button>
+                        <button type="button" class="btn btn-default" ng-click="setDefault('services', false); originServices = []">Nein</button>  
                     </div>
                 </div>
                 <div class="col-sm-5 col-md-offset-3" ng-if="modal.task.services.length > 0 && modal.askIfDefault.services === undefined"">
                     <ul class="list-unstyled" style="padding-top: 10px">
-                        <li ng-repeat="service in modal.task.services"><a href="" ng-click="deleteService(service)"><span class="glyphicon glyphicon-remove"></span> {{service}}</a></li>
+                        <li ng-repeat="service in modal.task.services"><a href="" ng-click="deleteService(service)"><span class="glyphicon glyphicon-remove"></span> {{service.title}}</a></li>
                     </ul>
                 </div>
             </div>

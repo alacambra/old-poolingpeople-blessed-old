@@ -41,6 +41,50 @@
                     createComment: function (id, data) {
                         return getDataSource().createComment(id, data);
                     },
+                    /* SERVICES */
+
+                    getServices: function () {
+                        return getDataSource().getServices();
+                    },
+                    addService: function (taskId, serviceId) {
+                        return getDataSource().addService(taskId, serviceId);
+                    },
+                    removeService: function (taskId, serviceId) {
+                        return getDataSource().removeService(taskId, serviceId);
+                    },
+                    addServices: function (taskId, services) {
+                        var that = this,
+                            requests = [];
+                        angular.forEach(services, function (service) {
+                            requests.push(that.addService(taskId, service.id));
+                        });
+                        var that = this,
+                            q = $q.all(requests);
+                        return q;
+                    },
+                    removeServices: function (taskId, services) {
+                        var that = this,
+                            requests = [];
+                        angular.forEach(services, function (service) {
+                            requests.push(that.removeService(taskId, service.id));
+                        });
+                        var that = this,
+                            q = $q.all(requests);
+                        return q;
+                    },
+                    commitServices: function (taskId, servicesToAdd, servicesToDelete) {
+                        var that = this,
+                            requests = [];
+                        if (servicesToAdd.length > 0) {
+                            requests.push(this.addServices(taskId, servicesToAdd));
+                        }
+                        if (servicesToDelete.length > 0) {
+                            requests.push(this.removeServices(taskId, servicesToDelete));
+                        }
+                        var that = this,
+                            q = $q.all(requests);
+                        return q;
+                    },
                     /* User */
 
                     /* CRUD */

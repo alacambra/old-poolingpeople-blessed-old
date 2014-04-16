@@ -13,8 +13,10 @@
                     assignableUsers: [],
                     disabled: options.disabled,
                     askIfDefault: options.askIfDefault ? options.askIfDefault : {},
-                    servicesAvailable: ["CSS/HTML Umsetzung", "Grafik Design", "Javascript Umsetzung"]
+                    servicesAvailable: []
                 };
+
+                $scope.originServices = angular.copy($scope.modal.task.services);
 
                 $scope.form = {
                     task: null,
@@ -34,14 +36,61 @@
                     });
                 };
 
+                var loadServices = function () {
+                    var taskServices = angular.copy($scope.modal.task.services);
+                    $scope.modal.servicesAvailable = [""];
+                    DataProvider.getServices().then(function (services) {
+                        $scope.modal.servicesAvailable = [];
+                        $scope.modal.task.services = [];
+                        angular.forEach(services, function (service) {
+                            if (_.find(taskServices, function (taskService) {
+                                return _.isEqual(taskService, service);
+                            })) {
+                                $scope.addService(service);
+                            } else {
+                                $scope.modal.servicesAvailable.push(service);
+                            }
+                        });
+                        $scope.refreshServices(taskServices);
+                    }, function (response) {
+                        $scope.error = 'Couldn\'t load services: ' + response;
+                    });
+                };
+
                 var saveTask = function () {
+
+                    var servicesToAdd = [], servicesToDelete = [];
+
+
+                    angular.forEach($scope.originServices, function (originService) {
+                        var match = _.find($scope.modal.task.services, function (service) {
+                            return _.isEqual(_.omit(service, "$$hashKey"), originService)
+                        });
+
+                        if (!match)
+                            servicesToDelete.push(_.omit(originService, "$$hashKey"));
+                    });
+
+                    angular.forEach($scope.modal.task.services, function (service) {
+                        var match = _.find($scope.originServices, function (originService) {
+                            return _.isEqual(_.omit(service, "$$hashKey"), originService)
+                        });
+
+                        if (!match)
+                            servicesToAdd.push(_.omit(service, "$$hashKey"));
+                    });
+
                     LoadStatusService.setStatus("taskModal.save", LoadStatusService.RESOLVING);
                     if (!_.isNull($scope.modal.parentTask)) {
                         DataProvider.createSubtaskInTask($scope.modal.parentTask.id, $scope.modal.task).then(function (response) {
                             var newTask = _.extend($scope.modal.task, response);
                             DataProvider.assignTaskToUser(response.id, $scope.modal.task.assignee.id).then(function (response) {
-                                $modalInstance.close(newTask);
-                            }).finally(function (response) {
+                                DataProvider.commitServices(newTask.id, servicesToAdd, servicesToDelete).then(function (response) {
+                                    $modalInstance.close(newTask);
+                                }).finally(function (response) {
+                                    LoadStatusService.setStatus("taskModal.save", LoadStatusService.COMPLETED);
+                                });
+                            }, function (response) {
                                 LoadStatusService.setStatus("taskModal.save", LoadStatusService.COMPLETED);
                             });
                         }, function (response) {
@@ -53,8 +102,12 @@
                             DataProvider.createTask($scope.modal.task).then(function (response) {
                                 var newTask = _.extend($scope.modal.task, response, {creator: SessionService.userData()});
                                 DataProvider.assignTaskToUser(response.id, $scope.modal.task.assignee.id).then(function (response) {
-                                    $modalInstance.close(newTask);
-                                }).finally(function (response) {
+                                    DataProvider.commitServices(newTask.id, servicesToAdd, servicesToDelete).then(function (response) {
+                                        $modalInstance.close(newTask);
+                                    }).finally(function (response) {
+                                        LoadStatusService.setStatus("taskModal.save", LoadStatusService.COMPLETED);
+                                    });
+                                }, function (response) {
                                     LoadStatusService.setStatus("taskModal.save", LoadStatusService.COMPLETED);
                                 });
                             }, function (response) {
@@ -63,7 +116,15 @@
                             });
                         } else {
                             DataProvider.updateTask($scope.modal.task.id, $scope.modal.task).then(function (response) {
-                                $modalInstance.close($scope.modal.task);
+                                DataProvider.assignTaskToUser($scope.modal.task.id, $scope.modal.task.assignee.id).then(function (response) {
+                                    DataProvider.commitServices($scope.modal.task.id, servicesToAdd, servicesToDelete).then(function (response) {
+                                        $modalInstance.close($scope.modal.task);
+                                    }).finally(function (response) {
+                                        LoadStatusService.setStatus("taskModal.save", LoadStatusService.COMPLETED);
+                                    });
+                                }, function (response) {
+                                    LoadStatusService.setStatus("taskModal.save", LoadStatusService.COMPLETED);
+                                });
                             }, function (response) {
                                 $scope.error = 'Couldn\'t save task';
                             }).finally(function () {
@@ -77,6 +138,7 @@
                 var init = (function () {
 
                     loadUsers();
+                    loadServices();
 
                 }());
 
@@ -112,18 +174,18 @@
                     $scope.modal.datepicker = {};
                     $scope.modal.datepicker[datepicker] = true;
                 };
-                
-                $scope.refreshServices = function() {
-                    $scope.modal.servicesAvailable = _.difference($scope.modal.servicesAvailable, $scope.modal.task.services);
+
+                $scope.refreshServices = function (services) {
+                    $scope.modal.servicesAvailable = _.difference($scope.modal.servicesAvailable, services || $scope.modal.task.services);
                 };
-                
-                $scope.addService = function() {
-                    $scope.modal.task.services.push($scope.modal.service);
-                    $scope.modal.servicesAvailable = _.without($scope.modal.servicesAvailable, $scope.modal.service);
+
+                $scope.addService = function (service) {
+                    $scope.modal.task.services.push(service || $scope.modal.service);
+                    $scope.modal.servicesAvailable = _.without($scope.modal.servicesAvailable, service || $scope.modal.service);
                     $scope.modal.service = "";
-                    
+
                 };
-                
+
                 $scope.deleteService = function (service) {
                     $scope.modal.task.services = _.without($scope.modal.task.services, service);
                     $scope.modal.servicesAvailable.push(service);
