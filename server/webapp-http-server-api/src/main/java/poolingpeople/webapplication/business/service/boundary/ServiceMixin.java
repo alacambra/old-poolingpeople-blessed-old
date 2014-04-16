@@ -2,6 +2,8 @@ package poolingpeople.webapplication.business.service.boundary;
 
 import java.util.List;
 
+import jdk.nashorn.internal.runtime.regexp.joni.constants.NodeType;
+
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.neo4j.graphdb.Node;
@@ -9,6 +11,7 @@ import org.neo4j.graphdb.Node;
 import poolingpeople.commons.entities.ChangeLog;
 import poolingpeople.commons.entities.Comment;
 import poolingpeople.commons.entities.Service;
+import poolingpeople.persistence.neo4j.PoolingpeopleObjectType;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class ServiceMixin implements Service {
@@ -21,6 +24,11 @@ public class ServiceMixin implements Service {
 	
 	@JsonIgnore
 	public Node getNode() {
+		return null;
+	}
+
+	@JsonIgnore
+	public PoolingpeopleObjectType getNodeType() {
 		return null;
 	}
 
