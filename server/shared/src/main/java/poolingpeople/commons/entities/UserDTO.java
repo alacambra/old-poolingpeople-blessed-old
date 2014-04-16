@@ -121,4 +121,16 @@ public class UserDTO implements User {
 	public void setActivation(boolean activation) {
 		this.activation = activation;
 	}
+
+	@Override
+	public List<Task> getObservedTasks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setObservedTasks(Task task) {
+		// TODO Auto-generated method stub
+		
+	}
 }

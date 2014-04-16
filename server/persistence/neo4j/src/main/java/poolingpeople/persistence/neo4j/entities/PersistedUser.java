@@ -149,4 +149,14 @@ public class PersistedUser extends AbstractPersistedModel<PersistedUser> impleme
 		setProperty(NodePropertyName.IS_ACTIVATED, Boolean.toString(activation));
 	}
 
+	@Override
+	public List<Task> getObservedTasks() {
+		return getRelatedNodes(Relations.OBSERVED, PersistedTask.class, Task.class, Direction.OUTGOING);
+	}
+
+	@Override
+	public void setObservedTasks(Task task) {
+		createRelationshipTo((AbstractPersistedModel<?>) task, Relations.OBSERVED);
+	}
+
 }
