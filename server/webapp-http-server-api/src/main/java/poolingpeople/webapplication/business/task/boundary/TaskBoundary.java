@@ -84,7 +84,9 @@ public class TaskBoundary extends AbstractBoundary{
 	JsonMappingException, IOException {
 		Task dtoTask = mapper.readValue(json, TaskDTO.class);
 		Task task = entityFactory.createTask(dtoTask);
-		task.setAssignee(loggedUserContainer.getUser());
+		User loggedInUser = loggedUserContainer.getUser();
+		task.setAssignee(loggedInUser);
+		task.setCreator(loggedUserContainer.getUser());
 		return Response.ok().entity(mapper.writeValueAsString(new IdWrapper(task.getId()))).build();
 	}
 
@@ -134,7 +136,9 @@ public class TaskBoundary extends AbstractBoundary{
 		Task parentTask = entityFactory.getTaskById(parentId);
 		Task dtoTask = mapper.readValue(json, TaskDTO.class);
 		Task task = entityFactory.createTask(dtoTask);
-		task.setAssignee(loggedUserContainer.getUser());
+		User loggedInUser = loggedUserContainer.getUser();
+		task.setAssignee(loggedInUser);
+		task.setCreator(loggedUserContainer.getUser());
 		parentTask.addSubtask(task);
 
 		return Response.ok().entity(mapper.writeValueAsString(new IdWrapper(task.getId()))).build();
