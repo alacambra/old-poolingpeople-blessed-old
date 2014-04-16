@@ -10,6 +10,10 @@ public interface EntityFactory {
 
 	Task getTaskById(String uuid);
 
+	List<Task> getTasksByUser(String userId);
+	
+	List<Task> getTaskExcludingTasksFromUser(String userId);
+	
 	Task createTask(Task task);
 
 	List<Task> getAllTask();

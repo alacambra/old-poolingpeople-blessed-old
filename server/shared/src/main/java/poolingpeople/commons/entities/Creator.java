@@ -1,6 +1,10 @@
 package poolingpeople.commons.entities;
 
 public interface Creator {
+	String getId();
+	
+	String getEmail();
+	
 	String getFirstName();
 
 	String getLastName();

@@ -131,7 +131,8 @@ public enum Relations implements RelationshipType {
 				Arrays.asList(PoolingpeopleObjectType.TASK, PoolingpeopleObjectType.PROJECT, PoolingpeopleObjectType.USER)}
 		}))), 
 		HAS_SERVICE(PoolingpeopleObjectType.TASK, PoolingpeopleObjectType.SERVICE), 
-		OBSERVED(PoolingpeopleObjectType.USER, PoolingpeopleObjectType.TASK)
+		OBSERVED(PoolingpeopleObjectType.USER, PoolingpeopleObjectType.TASK), 
+		CREATOR(PoolingpeopleObjectType.USER, PoolingpeopleObjectType.TASK)
 	;
 	
 	private Map<Object, Object> validPairs;
