@@ -18,7 +18,6 @@ import poolingpeople.webapplication.business.boundary.JsonViews;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class UserMixin implements User{
 
-	
 	@JsonIgnore
 	public Node getNode() {
 		return null;
@@ -126,6 +125,19 @@ public class UserMixin implements User{
 	
 	@Override
 	public void setActivation(boolean activation) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	@JsonIgnore
+	public List<Task> getObservedTasks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setObservedTasks(Task task) {
 		// TODO Auto-generated method stub
 		
 	}

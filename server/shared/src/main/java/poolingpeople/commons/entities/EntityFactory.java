@@ -2,11 +2,10 @@ package poolingpeople.commons.entities;
 
 import java.util.List;
 
-
 public interface EntityFactory {
 
 	PoolingpeopleEntity getPoolingpeopleEntity(String uuid);
-	
+
 	void deleteTask(String uuid);
 
 	Task getTaskById(String uuid);
@@ -41,8 +40,12 @@ public interface EntityFactory {
 	Effort createEffort(Effort effort);
 
 	List<Comment> getObjectComments(PoolingpeopleEntity entity);
-	Comment createCommentOnObject(Comment comment, PoolingpeopleEntity entity, Subject author);
+
+	Comment createCommentOnObject(Comment comment, PoolingpeopleEntity entity,
+			Subject author);
+
 	void deleteComment(String commentId);
+
 	Comment getComment(String commentId);
 
 	Comment createCommentOnObject(Comment comment, String uuid, Subject author);
@@ -62,4 +65,5 @@ public interface EntityFactory {
 	List<User> getAllUsers(int pageSize);
 
 	List<Service> getAllServices(int pageSize);
+
 }
