@@ -298,4 +298,32 @@ public class Neo4jEntityFactory implements EntityFactory {
 						PersistedService.class,
 						Service.class);
 	}
+
+	@Override
+	public List<Task> getTasksByUser(User user) {
+		return getUserTasksWithExlusion(user, true);
+	}
+
+	private List<Task> getUserTasksWithExlusion(User user, boolean mutualExusion) {
+		List<Task> allTask = getAllTask();
+		List<Task> resultingTaskList = new ArrayList<>();
+		
+		for (Task task : allTask) {
+			if (mutualExusion) {
+				if (task.getAssignee().equals(user))
+					resultingTaskList.add(task);
+			}
+			else {
+				if (! task.getAssignee().equals(user))
+					resultingTaskList.add(task);
+			}
+		}
+		
+		return resultingTaskList;
+	}
+
+	@Override
+	public List<Task> getTaskExcludingTasksFromUser(User user) {
+		return getUserTasksWithExlusion(user, false);
+	}
 }
