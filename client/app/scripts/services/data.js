@@ -41,6 +41,50 @@
                     createComment: function (id, data) {
                         return getDataSource().createComment(id, data);
                     },
+                    /* SERVICES */
+
+                    getServices: function () {
+                        return getDataSource().getServices();
+                    },
+                    addService: function (taskId, serviceId) {
+                        return getDataSource().addService(taskId, serviceId);
+                    },
+                    removeService: function (taskId, serviceId) {
+                        return getDataSource().removeService(taskId, serviceId);
+                    },
+                    addServices: function (taskId, services) {
+                        var that = this,
+                            requests = [];
+                        angular.forEach(services, function (service) {
+                            requests.push(that.addService(taskId, service.id));
+                        });
+                        var that = this,
+                            q = $q.all(requests);
+                        return q;
+                    },
+                    removeServices: function (taskId, services) {
+                        var that = this,
+                            requests = [];
+                        angular.forEach(services, function (service) {
+                            requests.push(that.removeService(taskId, service.id));
+                        });
+                        var that = this,
+                            q = $q.all(requests);
+                        return q;
+                    },
+                    commitServices: function (taskId, servicesToAdd, servicesToDelete) {
+                        var that = this,
+                            requests = [];
+                        if (servicesToAdd.length > 0) {
+                            requests.push(this.addServices(taskId, servicesToAdd));
+                        }
+                        if (servicesToDelete.length > 0) {
+                            requests.push(this.removeServices(taskId, servicesToDelete));
+                        }
+                        var that = this,
+                            q = $q.all(requests);
+                        return q;
+                    },
                     /* User */
 
                     /* CRUD */
@@ -81,6 +125,21 @@
                             return ModelsService.getTaskList(data);
                         });
                     },
+                    getMyTasks: function (size, start) {
+                        return getDataSource('myTasks').getMyTasks(size, start).then(function (data) {
+                            return ModelsService.getTaskList(data);
+                        });
+                    },
+                    getOtherTasks: function (size, start) {
+                        return getDataSource('otherTasks').getOtherTasks(size, start).then(function (data) {
+                            return ModelsService.getTaskList(data);
+                        });
+                    },
+                    getObservedTasks: function (size, start) {
+                        return getDataSource('observedTasks').getObservedTasks(size, start).then(function (data) {
+                            return ModelsService.getTaskList(data);
+                        });
+                    },
                     createTask: function (data) {
                         return getDataSource().createTask(data.getDTO());
                     },
@@ -100,6 +159,13 @@
                         return getDataSource().deleteTask(id);
                     },
                     /* END CRUD */
+
+                    observeTask: function (idTask) {
+                        return getDataSource().observeTask(idTask);
+                    },
+                    unobserveTask: function (idTask) {
+                        return getDataSource().unobserveTask(idTask);
+                    },
 
                     assignTaskToUser: function (idTask, idUser) {
                         return getDataSource().assignTaskToUser(idTask, idUser);

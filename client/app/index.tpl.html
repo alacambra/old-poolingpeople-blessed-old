@@ -14,113 +14,127 @@
 
 <!--[if gt IE 8]><!-->
 <html class="no-js">
-<!--<![endif]-->
+    <!--<![endif]-->
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
 
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-    <!-- build:css styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/ng-table/ng-table.css" />
-    <!-- endbower -->
-    <!-- endbuild -->
+        <!-- build:css styles/vendor.css -->
+        <!-- bower:css -->
+        <link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="bower_components/ng-table/ng-table.css" />
+        <!-- endbower -->
+        <!-- endbuild -->
 
-    <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-</head>
+        <!-- build:css({.tmp,app}) styles/main.css -->
+        <link rel="stylesheet" href="styles/main.css">
+        <!-- endbuild -->
+    </head>
 
-<!-- @if ENV == 'DEVELOPMENT' -->
-<body ng-app="poolingpeopleAppDev">
-<!-- @endif -->
+    <!-- @if ENV == 'DEVELOPMENT' -->
+    <body ng-app="poolingpeopleAppDev">
+        <!-- @endif -->
 
-<!-- @if ENV == 'PRODUCTION' -->
-<body ng-app="poolingpeopleApp">
-<!-- @endif -->
+        <!-- @if ENV == 'PRODUCTION' -->
+    <body ng-app="poolingpeopleApp">
+        <!-- @endif -->
 
-<!--[if lt IE 7]>
-<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
-    your browser</a> to improve your experience.</p>
-<![endif]-->
+        <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade
+            your browser</a> to improve your experience.</p>
+        <![endif]-->
 
-<!-- Navigation -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <ul class="nav navbar-nav">
-			<li ng-repeat="state in $state.get()" ng-class="{ active: $state.current.name === state.name }" ng-if="state.navbar">
-				<a ui-sref="{{ state.name }}" class="capitalize" ng-bind="state.name"></a>
-			</li>
-        </ul>
-		<ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
-			<li ng-hide="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="showLoginModal()">Log In</button></li>
-			<li ng-show="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="logOut()">Log Out</button></li>
-		</ul>
-    </div>
-</nav>
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" ng-model="navbar" ng-init="navbar.search = ''">
+            <div class="container">
+                <ul class="nav navbar-nav">
+                    <li ng-repeat="state in $state.get()" ng-class="{
+                                'active':($state.current.name === state.name || $state.current.parent === state.name)
+                            }" ng-if="state.navbar">
+                        <a ui-sref="{{ state.name}}" ng-if="!state.substates" class="capitalize"><span ng-bind="state.viewName"></span></a>
+                        <a href="#" ng-if="state.substates" class="dropdown-toggle capitalize"><span ng-bind="state.viewName"></span> <b class="caret"></b></a>
+                        <ul ng-if="state.substates" class="dropdown-menu">
+                            <li ng-repeat="substate in state.substates"><a class="capitalize" ui-sref="{{ substate.name}}"><span ng-bind="substate.viewName"></span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
+                    <li ng-hide="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="showLoginModal()">Log In</button></li>
+                    <li ng-show="loggedIn()"><button class="btn btn-default navbar-btn" ng-click="logOut()">Log Out</button></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right" ng-show="$state.current.search === true" ng-controller="SearchCtrl">
+                    <li class="form-inline" style="padding: 8px 26px">
+                        <div class="form-group has-success has-feedback">
+                            <input type="text" placeholder="Search..." class="form-control" ng-model="navbar.search" ng-change="notifySearch()">
+                            <a href="" style="padding: 0px 20px" ng-click="navbar.search = ''" class="custom-link glyphicon form-control-feedback" ng-class="{'glyphicon-remove': navbar.search.length > 0, 'glyphicon-search': !(navbar.search.length > 0)}"></a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="container" ui-view=""></div>
 
-<!-- Add your site or application content here -->
-<div class="container" ui-view=""></div>
+        <!--[if lt IE 9]>
+        <script src="bower_components/es5-shim/es5-shim.js"></script>
+        <script src="bower_components/json3/lib/json3.min.js"></script>
+        <![endif]-->
 
-<!--[if lt IE 9]>
-<script src="bower_components/es5-shim/es5-shim.js"></script>
-<script src="bower_components/json3/lib/json3.min.js"></script>
-<![endif]-->
+        <!-- build:js scripts/vendor.js -->
+        <!-- bower:js -->
+        <script src="bower_components/jquery/jquery.js"></script>
+        <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
+        <script src="bower_components/underscore/underscore.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="bower_components/momentjs/moment.js"></script>
+        <script src="bower_components/stampit/dist/stampit.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <!-- endbower -->
+        <!-- endbuild -->
 
-<!-- build:js scripts/vendor.js -->
-<!-- bower:js -->
-<script src="bower_components/jquery/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
-<script src="bower_components/underscore/underscore.js"></script>
-<script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="bower_components/momentjs/moment.js"></script>
-<script src="bower_components/stampit/dist/stampit.js"></script>
-<script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="bower_components/angular-cookies/angular-cookies.js"></script>
-<!-- endbower -->
-<!-- endbuild -->
+        <!-- @if ENV == 'DEVELOPMENT' -->
+        <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+        <!-- @endif -->
 
-<!-- @if ENV == 'DEVELOPMENT' -->
-<script src="bower_components/angular-mocks/angular-mocks.js"></script>
-<!-- @endif -->
-
-<!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="scripts/app.js"></script>
-<!-- @if ENV == 'DEVELOPMENT' -->
-<script src="scripts/fake_server.js"></script>
-<!-- @endif -->
-<script src="scripts/models/models.js"></script>
-<script src="scripts/models/models_service.js"></script>
-<script src="scripts/models/stamps.js"></script>
-<script src="scripts/filters/filters.js"></script>
-<script src="scripts/directives/directives.js"></script>
-<script src="scripts/controllers/home.js"></script>
-<script src="scripts/controllers/users.js"></script>
-<script src="scripts/controllers/tasks.js"></script>
-<script src="scripts/controllers/projects.js"></script>
-<script src="scripts/controllers/process_modal.js"></script>
-<script src="scripts/controllers/task_modal.js"></script>
-<script src="scripts/controllers/login.js"></script>
-<script src="scripts/controllers/login_modal.js"></script>
-<script src="scripts/controllers/confirm_modal.js"></script>
-<script src="scripts/controllers/effort_modal.js"></script>
-<script src="scripts/controllers/log.js"></script>
-<script src="scripts/models/models.js"></script>
-<script src="scripts/models/models_service.js"></script>
-<script src="scripts/models/stamps.js"></script>
-<script src="scripts/services/api.js"></script>
-<script src="scripts/services/data.js"></script>
-<script src="scripts/services/base64.js"></script>
-<script src="scripts/services/session.js"></script>
-<script src="scripts/services/load_status.js"></script>
-<script src="scripts/services/caching.js"></script>
-<!-- endbuild -->
-</body>
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <!-- @if ENV == 'DEVELOPMENT' -->
+        <script src="scripts/fake_server.js"></script>
+        <!-- @endif -->
+        <script src="scripts/models/models.js"></script>
+        <script src="scripts/models/models_service.js"></script>
+        <script src="scripts/models/stamps.js"></script>
+        <script src="scripts/filters/filters.js"></script>
+        <script src="scripts/directives/directives.js"></script>
+        <script src="scripts/controllers/home.js"></script>
+        <script src="scripts/controllers/search.js"></script>
+        <script src="scripts/controllers/users.js"></script>
+        <script src="scripts/controllers/tasks.js"></script>
+        <script src="scripts/controllers/projects.js"></script>
+        <script src="scripts/controllers/process_modal.js"></script>
+        <script src="scripts/controllers/task_modal.js"></script>
+        <script src="scripts/controllers/login.js"></script>
+        <script src="scripts/controllers/login_modal.js"></script>
+        <script src="scripts/controllers/confirm_modal.js"></script>
+        <script src="scripts/controllers/effort_modal.js"></script>
+        <script src="scripts/controllers/log.js"></script>
+        <script src="scripts/models/models.js"></script>
+        <script src="scripts/models/models_service.js"></script>
+        <script src="scripts/models/stamps.js"></script>
+        <script src="scripts/services/api.js"></script>
+        <script src="scripts/services/data.js"></script>
+        <script src="scripts/services/base64.js"></script>
+        <script src="scripts/services/session.js"></script>
+        <script src="scripts/services/load_status.js"></script>
+        <script src="scripts/services/caching.js"></script>
+        <!-- endbuild -->
+    </body>
 </html>

@@ -139,7 +139,7 @@
                     }
                 };
             }])
-
+        
         .directive('setFocus', ['$log', '$timeout',
             function ($log, $timeout) {
                 return {
@@ -157,13 +157,14 @@
             function ($log, $document) {
                 return {
                     restrict: 'A',
-                    priority: 1000,
+                    priority: 1,
                     link: function ($scope, $elem, $attrs) {
+                        $document.unbind('click');
                         $document.bind('click', function (event) {
                             var clickedOut = false,
                                 ancestors = angular.element(event.target).parents(),
                                 $target = angular.element(event.target);
-                            if ($target.is(':visible')) {
+                            if ($target.is(':visible') && $elem[0] !== $target[0]) {
                                 clickedOut = true;
                                 angular.forEach(ancestors, function (element) {
                                     if (element === $elem[0]) {
@@ -172,8 +173,8 @@
                                 });
                                 if (clickedOut === true) {
                                     $scope.$apply(function () {
-                                        $scope.$eval($attrs.ngClickOut);
                                         $document.unbind('click');
+                                        $scope.$eval($attrs.ngClickOut);
                                     });
                                 }
                             }

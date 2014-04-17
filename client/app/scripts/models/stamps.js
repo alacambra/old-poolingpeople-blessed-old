@@ -73,11 +73,14 @@
                 },
 
                 getDTO: function(omittedFields) {
-                    return _.omit(this, ['id', 'project', 'assignee', 'subtasks'].concat(omittedFields || []))
+                    return _.omit(this, ['id', 'project', 'assignee', 'subtasks', 'creator', 'services'].concat(omittedFields || []))
                 }
 
             }).state({
                 title: null,
+                creator: null,
+                observed: false,
+                services: [],
                 description: null,
                 status: null,
                 priority: 'NORMAL',

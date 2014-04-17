@@ -36,8 +36,8 @@
 				});
 			}])
 
-		.run(['$httpBackend', '$log', '$timeout',
-			function ($httpBackend, $log, $timeout) {
+		.run(['$httpBackend', '$log',
+			function ($httpBackend, $log) {
 				var baseUrl = 'rest',
 					projects = null,
 					users = null,
@@ -45,6 +45,7 @@
 					efforts = null,
 					comments = null,
 					changelog = null,
+					services = null,
 					user = [
 						{
 						    "id": "e8dcba4b-6e86-4a9c-a957-ae27df62cddb",
@@ -83,6 +84,10 @@
 					comments = data;
 				});
 
+				$.get('fixtures/services.json', function (data) {
+					services = data;
+				});
+
 				$httpBackend.whenGET(/.*\.tpl\.html/).passThrough();
 
 				// URI: GET - /projects
@@ -106,6 +111,24 @@
 				$httpBackend.whenGET(/\/tasks(\?size=\w+(&start=\w+)?)?$/).respond(function (method, url, data, headers) {
 					console.log(method + ' - ' + url);
 					return [200, JSON.stringify(tasks)];
+				});
+
+				// URI: GET - /tasks/mine
+				$httpBackend.whenGET(/\/tasks\/mine(\?size=\w+(&start=\w+)?)?$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(tasks.slice(0, 16))];
+				});
+
+				// URI: GET - /tasks/others
+				$httpBackend.whenGET(/\/tasks\/others(\?size=\w+(&start=\w+)?)?$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(tasks.slice(16))];
+				});
+
+				// URI: GET - /tasks/observed
+				$httpBackend.whenGET(/\/tasks\/observed(\?size=\w+(&start=\w+)?)?$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(tasks.slice(0, 40))];
 				});
 
 				// URI: GET /projects/:projectId/tasks
@@ -207,6 +230,18 @@
 					return [200];
 				});
 
+				// URI: POST /tasks/:taskId/observe
+				$httpBackend.whenPOST(/\/tasks\/[\w-]+\/observe$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(efforts)];
+				});
+
+				// URI: DELETE /tasks/:taskId/unobserve
+				$httpBackend.whenPOST(/\/tasks\/[\w-]+\/unobserve$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200];
+				});
+
 				// URI: PUT /tasks/:taskId/efforts/:effortId
 				$httpBackend.whenPUT(/\/tasks\/[\w-]+\/efforts\/[\w-]+$/).respond(function (method, url, data, headers) {
 					console.log(method + ' - ' + url);
@@ -231,6 +266,24 @@
 					data = JSON.parse(data);
 					data.id = 'e-' + parseInt(Math.random() * 10000, 10);
 					return [200, JSON.stringify(data)];
+				});
+
+				// URI: GET /services
+				$httpBackend.whenGET(/\/services$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(services)];
+				});
+
+				// URI: GET /services/:id/in/service/:id
+				$httpBackend.whenPUT(/\/tasks\/[\w-]+\/in\/service\/[\w-]+$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(services)];
+				});
+
+				// URI: DELETE /services/:id/in/service/:id
+				$httpBackend.whenDELETE(/\/tasks\/[\w-]+\/in\/service\/[\w-]+$/).respond(function (method, url, data, headers) {
+					console.log(method + ' - ' + url);
+					return [200, JSON.stringify(services)];
 				});
 			}]);
 }());
