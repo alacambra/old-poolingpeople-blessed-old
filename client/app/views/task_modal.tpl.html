@@ -2,7 +2,7 @@
     <div class="modal-header" style="position: relative">
         <button type="button" class="close" ng-click="close()">&times;</button>
         <h4 class="modal-title">{{ modal.title}}</h4>
-        <span ng-if="modal.task.creator" class="created-by">Created by {{ modal.task.creator.firstName}} {{ modal.task.creator.lastName}}</span>
+        <span ng-if="modal.task.creator !== null" class="created-by">Created by {{ modal.task.creator.firstName}} {{ modal.task.creator.lastName}}</span>
     </div>
     <div class="modal-body">
         <form name="form.task" class="form-horizontal" role="form" novalidate="">
