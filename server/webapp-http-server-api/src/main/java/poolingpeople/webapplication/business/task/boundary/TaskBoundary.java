@@ -330,4 +330,32 @@ public class TaskBoundary extends AbstractBoundary{
 		
 		return Response.noContent().build();
 	}
+
+	@POST
+	@Path(idPattern + "/observe")
+	public Response observeTask(@PathParam("id") String taskId) throws JsonParseException,
+	JsonMappingException, IOException {
+
+		Task task = entityFactory.getTaskById(taskId);
+		User loggedInUser = loggedUserContainer.getUser();
+		
+		loggedInUser.observeTask(task);
+
+		return Response.noContent().build();
+	}
+
+	@POST
+	@Path(idPattern + "/unobserve")
+	public Response unobserveTask(@PathParam("id") String taskId) throws JsonParseException,
+	JsonMappingException, IOException {
+
+		Task task = entityFactory.getTaskById(taskId);
+		User loggedInUser = loggedUserContainer.getUser();
+		
+		loggedInUser.unobserveTask(task);
+		
+		return Response.noContent().build();
+	}
+	
+	
 }

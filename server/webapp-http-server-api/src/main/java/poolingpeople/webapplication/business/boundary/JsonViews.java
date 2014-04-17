@@ -85,5 +85,9 @@ public class JsonViews {
 	
 	/************************************Changelog VIEW***************************************************/
 	public interface BasicChangelog extends Shared{} 
+	/**/
+	public interface BasicUser extends Shared{}
+	public interface FullUser extends BasicUser{}
+
 	
 }

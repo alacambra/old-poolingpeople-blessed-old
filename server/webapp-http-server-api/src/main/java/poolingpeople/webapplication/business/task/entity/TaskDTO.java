@@ -34,6 +34,7 @@ public class TaskDTO implements Task {
 	private Project project;
 	private User assignee;
 	private Task parent;
+	private Boolean observed;
 
 	@IgnoreAttribute
 	@Override
@@ -127,7 +128,6 @@ public class TaskDTO implements Task {
 	}
 
 	@Override
-	@JsonIgnore
 	public void addEffort(Effort effort) {
 		throw new RootApplicationException("Inaccessible method");
 		
