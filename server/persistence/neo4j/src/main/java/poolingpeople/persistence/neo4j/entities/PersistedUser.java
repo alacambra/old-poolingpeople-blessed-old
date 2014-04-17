@@ -155,8 +155,13 @@ public class PersistedUser extends AbstractPersistedModel<PersistedUser> impleme
 	}
 
 	@Override
-	public void setObservedTasks(Task task) {
+	public void observeTask(Task task) {
 		createRelationshipTo((AbstractPersistedModel<?>) task, Relations.OBSERVED);
+	}
+
+	@Override
+	public void unobserveTask(Task task) {
+		removeRelationTo((AbstractPersistedModel<?>) task, Relations.OBSERVED);
 	}
 
 }

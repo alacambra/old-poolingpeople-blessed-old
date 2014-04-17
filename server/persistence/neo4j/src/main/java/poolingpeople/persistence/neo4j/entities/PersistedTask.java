@@ -582,7 +582,7 @@ public class PersistedTask extends AbstractPersistedModel<PersistedTask> impleme
 	}
 
 	@Override
-	public List<Service> getServiceList() {
+	public List<Service> getServices() {
 		return getRelatedNodes(Relations.HAS_SERVICE, PersistedService.class, Service.class, Direction.OUTGOING);
 	}
 

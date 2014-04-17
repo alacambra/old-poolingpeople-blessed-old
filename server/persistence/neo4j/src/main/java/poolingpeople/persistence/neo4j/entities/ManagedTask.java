@@ -272,7 +272,7 @@ public class ManagedTask implements Task {
 	}
 
 	@Override
-	public List<Service> getServiceList() {
+	public List<Service> getServices() {
 		// TODO Auto-generated method stub
 		return null;
 	}

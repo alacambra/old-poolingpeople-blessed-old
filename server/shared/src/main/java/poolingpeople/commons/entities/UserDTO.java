@@ -129,7 +129,13 @@ public class UserDTO implements User {
 	}
 
 	@Override
-	public void setObservedTasks(Task task) {
+	public void observeTask(Task task) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void unobserveTask(Task task) {
 		// TODO Auto-generated method stub
 		
 	}

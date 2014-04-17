@@ -36,6 +36,7 @@ import poolingpeople.webapplication.business.boundary.AuthNotRequired;
 import poolingpeople.webapplication.business.boundary.AuthValidator;
 import poolingpeople.webapplication.business.boundary.CatchWebAppException;
 import poolingpeople.webapplication.business.boundary.IdWrapper;
+import poolingpeople.webapplication.business.boundary.JsonViews;
 
 @Path("users")
 @Stateless
@@ -78,7 +79,7 @@ public class UserBoundary {
 			}
 		}
 		
-		String r = mapper.writeValueAsString(activatedUser);
+		String r = mapper.writerWithView(JsonViews.BasicUser.class).writeValueAsString(activatedUser);
 		return Response.ok().entity(r).build();
 	}
 

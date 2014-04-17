@@ -31,8 +31,11 @@ import poolingpeople.webapplication.business.boundary.CatchWebAppException;
 import poolingpeople.webapplication.business.boundary.ChangelogManager;
 import poolingpeople.webapplication.business.boundary.IdWrapper;
 import poolingpeople.webapplication.business.boundary.JsonViews;
+import poolingpeople.webapplication.business.boundary.LoggedUserContainer;
+import poolingpeople.webapplication.business.boundary.LoggedUserContainerProducer;
 import poolingpeople.webapplication.business.boundary.UpdateTask;
 import poolingpeople.webapplication.business.task.entity.TaskDTO;
+import poolingpeople.webapplication.business.user.boundary.UserBoundary;
 
 @Path("tasks")
 @Stateless
@@ -66,6 +69,53 @@ public class TaskBoundary extends AbstractBoundary{
 		String r = mapper.writerWithView(JsonViews.BasicTask.class).writeValueAsString(list);
 		return Response.ok().entity(r).build();
 	}
+
+	@GET
+	@Path("/mine")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getAllMyTasks() throws JsonGenerationException,
+	JsonMappingException, IOException {
+		
+		 List<Task> list = new ArrayList<>();
+		 for ( Task t : entityFactory.getTasksByUser(loggedUserContainer.getUser().getId())) {
+			 if ( t.getParent() == null ) {
+				 list.add(t);
+			 }
+		 }
+		
+		String r = mapper.writerWithView(JsonViews.BasicTask.class).writeValueAsString(list);
+		return Response.ok().entity(r).build();
+	}
+
+	@GET
+	@Path("/others")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getOtherTasks() throws JsonGenerationException,
+	JsonMappingException, IOException {
+		
+		 List<Task> list = new ArrayList<>();
+		 for ( Task t : entityFactory.getTaskExcludingTasksFromUser(loggedUserContainer.getUser().getId())) {
+			 if ( t.getParent() == null ) {
+				 list.add(t);
+			 }
+		 }
+		
+		String r = mapper.writerWithView(JsonViews.BasicTask.class).writeValueAsString(list);
+		return Response.ok().entity(r).build();
+	}
+
+	@GET
+	@Path("/observed")
+	@Produces(MediaType.APPLICATION_JSON)
+	public Response getObservedTasks() throws JsonGenerationException,
+	JsonMappingException, IOException {
+		
+		 List<Task> list = loggedUserContainer.getUser().getTasks();
+		
+		String r = mapper.writerWithView(JsonViews.BasicTask.class).writeValueAsString(list);
+		return Response.ok().entity(r).build();
+	}
+	
 	
 	// should this also be removed ?
 	@GET
@@ -256,6 +306,7 @@ public class TaskBoundary extends AbstractBoundary{
 	}
 
 	/************************************* SERVICE - TASK *************************************/
+	
 	@PUT 
 	@Path(idPattern + "/in/service/{serviceId:" + uuidRegexPattern + "}")
 	public Response assignServiceToTask(@PathParam("id") String taskId, @PathParam("serviceId") String serviceId){
@@ -267,4 +318,44 @@ public class TaskBoundary extends AbstractBoundary{
 		
 		return Response.noContent().build();
 	}
+
+	@DELETE
+	@Path(idPattern + "/in/service/{serviceId:" + uuidRegexPattern + "}")
+	public Response deleteServiceFromTask(@PathParam("id") String taskId, @PathParam("serviceId") String serviceId){
+
+		Task task = entityFactory.getTaskById(taskId);
+		Service service = entityFactory.getServiceById(serviceId);
+		
+		task.removeService(service);
+		
+		return Response.noContent().build();
+	}
+
+	@POST
+	@Path(idPattern + "/observe")
+	public Response observeTask(@PathParam("id") String taskId) throws JsonParseException,
+	JsonMappingException, IOException {
+
+		Task task = entityFactory.getTaskById(taskId);
+		User loggedInUser = loggedUserContainer.getUser();
+		
+		loggedInUser.observeTask(task);
+
+		return Response.noContent().build();
+	}
+
+	@POST
+	@Path(idPattern + "/unobserve")
+	public Response unobserveTask(@PathParam("id") String taskId) throws JsonParseException,
+	JsonMappingException, IOException {
+
+		Task task = entityFactory.getTaskById(taskId);
+		User loggedInUser = loggedUserContainer.getUser();
+		
+		loggedInUser.unobserveTask(task);
+		
+		return Response.noContent().build();
+	}
+	
+	
 }

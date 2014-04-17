@@ -267,7 +267,7 @@ public class TaskMixin implements Task{
 
 	@JsonView(JsonViews.BasicTask.class)
 	@Override
-	public List<Service> getServiceList() {
+	public List<Service> getServices() {
 		// TODO Auto-generated method stub
 		return null;
 	}

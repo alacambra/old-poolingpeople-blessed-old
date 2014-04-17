@@ -130,13 +130,20 @@ public class UserMixin implements User{
 	}
 
 	@Override
+	@JsonView(JsonViews.FullUser.class)
 	public List<Task> getObservedTasks() {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public void setObservedTasks(Task task) {
+	public void observeTask(Task task) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void unobserveTask(Task task) {
 		// TODO Auto-generated method stub
 		
 	}
