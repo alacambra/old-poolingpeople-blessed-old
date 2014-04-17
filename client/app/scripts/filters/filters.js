@@ -146,7 +146,7 @@
                     var searchKeys = (search || "").split(" ") || [];
                     var wordsFound = 0;
                     angular.forEach(searchKeys, function (key) {
-                        if (item.title.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+                        if ((item.title || "").toLowerCase().indexOf(key.toLowerCase()) !== -1) {
                             wordsFound = wordsFound + 1;
                         }
 
